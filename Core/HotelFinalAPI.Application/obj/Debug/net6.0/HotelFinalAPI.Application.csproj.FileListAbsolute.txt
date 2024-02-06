@@ -1,0 +1,15 @@
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\bin\Debug\net6.0\HotelFinalAPI.Application.deps.json
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\bin\Debug\net6.0\HotelFinalAPI.Application.dll
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\bin\Debug\net6.0\HotelFinalAPI.Application.pdb
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\HotelFinalAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\HotelFinalAPI.Application.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\HotelFinalAPI.Application.AssemblyInfo.cs
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\HotelFinalAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\HotelFinalAPI.Application.dll
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\refint\HotelFinalAPI.Application.dll
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\HotelFinalAPI.Application.pdb
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\ref\HotelFinalAPI.Application.dll
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\bin\Debug\net6.0\HotelFinalAPI.Domain.dll
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\bin\Debug\net6.0\HotelFinalAPI.Domain.pdb
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\HotelFinalAPI.Application.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Application\obj\Debug\net6.0\HotelFinalAPI.Application.csproj.CopyComplete

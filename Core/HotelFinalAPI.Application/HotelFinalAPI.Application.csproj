@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="AutoMapper\" />
+    <Folder Include="DTOs\UserDTOs\" />
+    <Folder Include="Enums\" />
+    <Folder Include="IRepositories\" />
+    <Folder Include="Validators\" />
+    <Folder Include="Services\Persistance\IRepositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HotelFinalAPI.Domain\HotelFinalAPI.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
