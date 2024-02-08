@@ -17,6 +17,8 @@ namespace HotelFinalAPI.Persistance.Configurations.EntityConfigs
             builder.HasOne<Guest>(b => b.Guest)
                 .WithMany(g => g.Bills)
                 .HasForeignKey(g => g.GuestId);
+                //.OnDelete(DeleteBehavior.Cascade);//bu table silinse bununla elaqeli butun tableler silinecek deye anladim
+                //default olaraq cascade dir
 
             builder.Property(b => b.GuestId).IsRequired();
             builder.Property(b => b.Amount).IsRequired();//.HasColumnType("decimal(10,2)");

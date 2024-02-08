@@ -15,3 +15,6 @@ C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistanc
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\refint\HotelFinalAPI.Persistance.dll
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.pdb
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\ref\HotelFinalAPI.Persistance.dll
+C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\bin\Debug\net6.0\HotelFinalAPI.Persistance.runtimeconfig.json
+C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.sourcelink.json
+C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.genruntimeconfig.cache

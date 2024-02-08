@@ -1,3 +1,7 @@
+using HotelFinalAPI.Persistance.Contexts;
+using HotelFinalAPI.Persistance.Registration;
+using Microsoft.EntityFrameworkCore;
+
 namespace HotelFinalAPI.API
 {
     public class Program
@@ -8,10 +12,15 @@ namespace HotelFinalAPI.API
 
             // Add services to the container.
 
+            builder.Services.AddPersistanceRegistration();
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            //builder.Services.AddDbContext<ApplicationDbContext>(option =>
+            //   option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 

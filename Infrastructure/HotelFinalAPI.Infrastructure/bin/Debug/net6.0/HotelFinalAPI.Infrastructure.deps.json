@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "HotelFinalAPI.Infrastructure/1.0.0": {
+        "dependencies": {
+          "HotelFinalAPI.Application": "1.0.0"
+        },
+        "runtime": {
+          "HotelFinalAPI.Infrastructure.dll": {}
+        }
+      },
+      "HotelFinalAPI.Application/1.0.0": {
+        "dependencies": {
+          "HotelFinalAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "HotelFinalAPI.Application.dll": {}
+        }
+      },
+      "HotelFinalAPI.Domain/1.0.0": {
+        "runtime": {
+          "HotelFinalAPI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HotelFinalAPI.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HotelFinalAPI.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HotelFinalAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
