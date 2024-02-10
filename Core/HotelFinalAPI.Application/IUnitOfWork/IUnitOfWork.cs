@@ -10,8 +10,8 @@ namespace HotelFinalAPI.Application.IUnitOfWork
 {
     public interface IUnitOfWork
     {
-        IRepository<TEntity> GetReadRepository<TEntity>() where TEntity : BaseEntity;
-        IRepository<TEntity> GetWriteRepository<TEntity>() where TEntity : BaseEntity;
+        IReadRepository<TEntity> GetReadRepository<TEntity>() where TEntity : BaseEntity;
+        IWriteRepository<TEntity> GetWriteRepository<TEntity>() where TEntity : BaseEntity;
         Task<int> SaveChangesAsync();
     }
 }

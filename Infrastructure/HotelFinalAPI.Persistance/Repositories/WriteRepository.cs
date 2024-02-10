@@ -59,8 +59,8 @@ namespace HotelFinalAPI.Persistance.Repositories
             return entityEntry.State == EntityState.Modified;
         }
 
-        public async Task<int> SaveAsync()
-            => await _context.SaveChangesAsync();
+        //public async Task<int> SaveAsync()
+        //    => await _context.SaveChangesAsync();
 
     }
 }

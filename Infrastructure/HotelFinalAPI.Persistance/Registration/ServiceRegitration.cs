@@ -3,6 +3,7 @@ using HotelFinalAPI.Application.IRepositories.IEmployeeRepos;
 using HotelFinalAPI.Application.IRepositories.IGuestRepos;
 using HotelFinalAPI.Application.IRepositories.IReservationRepos;
 using HotelFinalAPI.Application.IRepositories.IRoomRepos;
+using HotelFinalAPI.Application.IUnitOfWork;
 using HotelFinalAPI.Persistance.Configurations;
 using HotelFinalAPI.Persistance.Contexts;
 using HotelFinalAPI.Persistance.Repositories.BillRepos;
@@ -10,6 +11,7 @@ using HotelFinalAPI.Persistance.Repositories.EmployeeRepos;
 using HotelFinalAPI.Persistance.Repositories.GuestRepos;
 using HotelFinalAPI.Persistance.Repositories.ReservationRepos;
 using HotelFinalAPI.Persistance.Repositories.RoomRepos;
+using HotelFinalAPI.Persistance.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -41,6 +43,8 @@ namespace HotelFinalAPI.Persistance.Registration
 
             services.AddScoped<IRoomReadRepository, RoomReadRepository>();
             services.AddScoped<IRoomWriteRepository, RoomWriteRepository>();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }

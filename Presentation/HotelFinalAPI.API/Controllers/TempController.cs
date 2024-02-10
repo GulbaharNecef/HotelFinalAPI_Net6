@@ -1,4 +1,6 @@
-﻿using HotelFinalAPI.Application.IRepositories.IEmployeeRepos;
+﻿using HotelFinalAPI.Application.IRepositories;
+using HotelFinalAPI.Application.IRepositories.IEmployeeRepos;
+using HotelFinalAPI.Application.IUnitOfWork;
 using HotelFinalAPI.Domain.Entities.DbEntities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,39 +11,45 @@ namespace HotelFinalAPI.API.Controllers
     [ApiController]
     public class TempController : ControllerBase
     {
-        IEmployeeReadRepository _employeeReadRepository;
-        IEmployeeWriteRepository _employeeWriteRepository;
+        
+        IReadRepository<Employee> _employeeReadRepository;
+        IWriteRepository<Employee> _employeeWriteRepository;
 
-        public TempController(IEmployeeReadRepository employeeReadRepository, IEmployeeWriteRepository employeeWriteRepository)
+        //IUnitOfWork<Employee> _unitOfWork;
+        IUnitOfWork _unitOfWork;
+
+        public TempController(IUnitOfWork unitOfWork )
         {
-            _employeeReadRepository = employeeReadRepository;
-            _employeeWriteRepository = employeeWriteRepository;
+            _unitOfWork = unitOfWork;
+            _employeeReadRepository = _unitOfWork.GetReadRepository<Employee>();   
+            _employeeWriteRepository = _unitOfWork.GetWriteRepository<Employee>();
         }
-        [HttpGet]
-        public async Task Get()
+        [HttpPost("[action]")]
+        public async Task AddEmployeeRange()
         {
            await _employeeWriteRepository.AddRangeAsync(new()
             {
-                new() { FirstName = "Ruqeyya", LastName = "Zeynalova", Email="rzeynalova@gmail.com", Role="Maintenance"},
+                new() { FirstName = "Elmar", LastName = "Babayev", Email="ebabayev@gmail.com", Role="General Manager"},
                 //new() {Id = Guid.NewGuid(), FirstName = "Tunar", LastName = "Elizade", Email="elizade@gmail.com", Role="Hotel Manager"}
             });
-            var count = await _employeeWriteRepository.SaveAsync();
+            var count = await _unitOfWork.SaveChangesAsync();
         }
-        [HttpGet("GetById")]
-        public async Task<Employee> GetById(string id = "7DD9B0A7-0549-4BBB-C8CE-08DC2971FC08")
+        [HttpGet("[action]")]
+        public async Task<Employee> GetById(string id = "30F5D13B-4C16-4D11-8B37-08DC2A51128A")
         {
             Employee emp = await _employeeReadRepository.GetByIdAsync(id, false);
-            emp.FirstName = "Nazile";
-            await _employeeWriteRepository.SaveAsync();
+            emp.FirstName = "Eyyub";
+            await _unitOfWork.SaveChangesAsync();
             return emp;
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
         public async Task AddEmployee()
         {
             await _employeeWriteRepository.AddAsync(new() { FirstName = "Sevda", LastName = "Meherremli", Email = "sevdameherremli@gmail.com", Role = "Host or hostess" });
-            await _employeeWriteRepository.SaveAsync();
+            await _unitOfWork.SaveChangesAsync();
         }
+
 
     }
 }

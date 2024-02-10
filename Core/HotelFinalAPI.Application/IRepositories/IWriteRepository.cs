@@ -14,7 +14,7 @@ namespace HotelFinalAPI.Application.IRepositories
         Task<bool> RemoveByIdAsync(string id);
         bool Remove(T model);
         bool Update(T model);
-        Task<int> SaveAsync();
+        //Task<int> SaveAsync();
         bool RemoveRange(List<T> models);
 
     }
