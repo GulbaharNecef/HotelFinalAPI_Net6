@@ -10,9 +10,12 @@
     <Folder Include="AutoMapper\" />
     <Folder Include="DTOs\UserDTOs\" />
     <Folder Include="Enums\" />
-    <Folder Include="IRepositories\" />
     <Folder Include="Validators\" />
     <Folder Include="Services\Persistance\IRepositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.26" />
   </ItemGroup>
 
   <ItemGroup>

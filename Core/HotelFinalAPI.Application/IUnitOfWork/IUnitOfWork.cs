@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelFinalAPI.Application.IUnitOfWork
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
     }
 }

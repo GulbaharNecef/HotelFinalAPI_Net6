@@ -1,4 +1,5 @@
-﻿using HotelFinalAPI.Domain.Entities.DbEntities;
+﻿using HotelFinalAPI.Domain.Entities.BaseEntities;
+using HotelFinalAPI.Domain.Entities.DbEntities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +28,6 @@ namespace HotelFinalAPI.Persistance.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            //optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -37,6 +37,23 @@ namespace HotelFinalAPI.Persistance.Contexts
 
             //configuration fayllarini qeydiyyatdan kecirdim, bu sacn edir assembly ni IEntityTypeConfigurationdan torenmis any config clasini register edir
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly(), t => t.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEntityTypeConfiguration<>)));
+        }
+
+        //bu method ne vaxt ki saveChanges metodu tetiklenecek(write repositorydeki) ilk once gelib buu override edilmis halini calisdiracaq sonra save edecek
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            //ChangeTracker : DbContext de bir propertydir. Entity ler uzerinden yapilan deyisikliklerin ve ya yeni eklenen verinin yakalanmasini saglayan property dir.Update Operasyonlarinda track edilen verileri yakalayip elde etmemizi saglar
+            // bu islem intersektor adlanir, yeni insert ve ya updade islemlerinde araya girib gerekli datalari elave edecek
+            var datas = ChangeTracker.Entries<BaseEntity>();
+            foreach (var data in datas)
+            {
+                var result = data.State switch
+                {
+                    EntityState.Added => data.Entity.CreatedDate = DateTime.Now,
+                    EntityState.Modified => data.Entity.UpdatedDate = DateTime.Now
+                };
+            }
+            return await base.SaveChangesAsync(cancellationToken);
         }
     }
 }

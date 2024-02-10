@@ -1392,7 +1392,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "HotelFinalAPI.Domain": "1.0.0"
+          "HotelFinalAPI.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.26"
         },
         "compile": {
           "bin/placeholder/HotelFinalAPI.Application.dll": {}

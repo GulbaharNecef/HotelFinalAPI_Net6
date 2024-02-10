@@ -16,7 +16,6 @@ namespace HotelFinalAPI.Persistance.Configurations.EntityConfigs
             builder.Property(e => e.FirstName).IsRequired().HasMaxLength(50);
             builder.Property(e => e.LastName).IsRequired().HasMaxLength(50);
             builder.Property(e => e.Email).IsRequired().HasMaxLength(100);
-            builder.Property(e => e.Password).IsRequired(); //bunu yoxla gor databasede max length ile yaradibmi default olaraq
             builder.Property(e => e.Role).IsRequired().HasMaxLength(100);
         }
     }
