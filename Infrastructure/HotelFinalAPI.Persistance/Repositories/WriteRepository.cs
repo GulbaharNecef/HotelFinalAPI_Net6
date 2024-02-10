@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelFinalAPI.Persistance.Implementation.Services.Repositories
+namespace HotelFinalAPI.Persistance.Repositories
 {
     public class WriteRepository<T> : IWriteRepository<T> where T : BaseEntity
     {
@@ -61,6 +61,6 @@ namespace HotelFinalAPI.Persistance.Implementation.Services.Repositories
 
         public async Task<int> SaveAsync()
             => await _context.SaveChangesAsync();
-           
+
     }
 }

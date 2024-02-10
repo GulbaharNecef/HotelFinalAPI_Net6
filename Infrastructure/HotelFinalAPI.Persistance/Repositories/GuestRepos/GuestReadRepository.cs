@@ -1,17 +1,18 @@
 ﻿using HotelFinalAPI.Application.IRepositories.IGuestRepos;
 using HotelFinalAPI.Domain.Entities.DbEntities;
 using HotelFinalAPI.Persistance.Contexts;
+using HotelFinalAPI.Persistance.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelFinalAPI.Persistance.Implementation.Services.Repositories.GuestRepos
+namespace HotelFinalAPI.Persistance.Repositories.GuestRepos
 {
-    public class GuestWriteRepository : WriteRepository<Guest>, IGuestWriteRepository
+    public class GuestReadRepository : ReadRepository<Guest>, IGuestReadRepository
     {
-        public GuestWriteRepository(ApplicationDbContext context) : base(context)
+        public GuestReadRepository(ApplicationDbContext context) : base(context)
         {
         }
     }

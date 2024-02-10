@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelFinalAPI.Persistance.Implementation.Services.Repositories
+namespace HotelFinalAPI.Persistance.Repositories
 {
     public class ReadRepository<T> : IReadRepository<T> where T : BaseEntity
     {
@@ -35,7 +35,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services.Repositories
         public async Task<T> GetSingle(Expression<Func<T, bool>> method, bool tracking = true)
         {
             var query = Table.AsQueryable();
-            if(!tracking) 
+            if (!tracking)
                 query = query.AsNoTracking();
             return query.FirstOrDefault(method);
         }
@@ -43,7 +43,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services.Repositories
         public IQueryable<T> GetWhere(Expression<Func<T, bool>> method, bool tracking = true)
         {
             var query = Table.Where(method);
-            if(!tracking) 
+            if (!tracking)
                 query = query.AsNoTracking();
             return query;
         }
