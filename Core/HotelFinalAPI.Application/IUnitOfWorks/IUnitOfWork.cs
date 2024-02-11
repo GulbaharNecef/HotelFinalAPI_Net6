@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelFinalAPI.Application.IUnitOfWork
+namespace HotelFinalAPI.Application.IUnitOfWorks
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         IReadRepository<TEntity> GetReadRepository<TEntity>() where TEntity : BaseEntity;
         IWriteRepository<TEntity> GetWriteRepository<TEntity>() where TEntity : BaseEntity;

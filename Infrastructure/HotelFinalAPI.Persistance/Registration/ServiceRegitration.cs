@@ -3,7 +3,7 @@ using HotelFinalAPI.Application.IRepositories.IEmployeeRepos;
 using HotelFinalAPI.Application.IRepositories.IGuestRepos;
 using HotelFinalAPI.Application.IRepositories.IReservationRepos;
 using HotelFinalAPI.Application.IRepositories.IRoomRepos;
-using HotelFinalAPI.Application.IUnitOfWork;
+using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Persistance.Configurations;
 using HotelFinalAPI.Persistance.Contexts;
 using HotelFinalAPI.Persistance.Repositories.BillRepos;

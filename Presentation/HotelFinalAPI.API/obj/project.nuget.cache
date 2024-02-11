@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fXXTbRnKbZUzZE3vZioVH8wU7fUh66I1D2VlN6Rgk2M4qd8cmTvOZon10zGoUOruCp6gyH+3JqgNLM8pyid3rA==",
+  "dgSpecHash": "D9FrvuRCHHYlb1WRGAePil2u2Ev4le3nK0Bzt57KKWySnTL0VRWzK+IpYICUc9gVt1Bdl2KFX5z/ZLsEmNIDrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

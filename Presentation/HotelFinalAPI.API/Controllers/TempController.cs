@@ -1,6 +1,6 @@
 ﻿using HotelFinalAPI.Application.IRepositories;
 using HotelFinalAPI.Application.IRepositories.IEmployeeRepos;
-using HotelFinalAPI.Application.IUnitOfWork;
+using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Domain.Entities.DbEntities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

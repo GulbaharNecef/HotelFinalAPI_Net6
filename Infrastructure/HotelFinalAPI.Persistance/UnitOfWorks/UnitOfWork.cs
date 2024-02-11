@@ -1,5 +1,5 @@
 ﻿using HotelFinalAPI.Application.IRepositories;
-using HotelFinalAPI.Application.IUnitOfWork;
+using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Domain.Entities.BaseEntities;
 using HotelFinalAPI.Persistance.Contexts;
 using HotelFinalAPI.Persistance.Repositories;

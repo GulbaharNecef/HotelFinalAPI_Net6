@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Baalvp/36AZ/J+TUT6I963ONpWVJzVly1fIVTDPDsHcB+gRE89zILmCjv+l0pii8UC3EVr0lu0al2B5b38kVow==",
+  "dgSpecHash": "3vcHuLlOeIbxXXr8s+BcyvZyRSr0pcbVAXhOou6L/3deGP2OzGLHcrkOE46NuJLypL00pOZAkdDhbGY0yOAimQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.26\\microsoft.entityframeworkcore.6.0.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.26\\microsoft.entityframeworkcore.abstractions.6.0.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.26\\microsoft.entityframeworkcore.analyzers.6.0.26.nupkg.sha512",
