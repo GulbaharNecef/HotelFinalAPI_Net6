@@ -28,8 +28,4 @@
     <ProjectReference Include="..\..\Core\HotelFinalAPI.Application\HotelFinalAPI.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Implementation\Services\" />
-  </ItemGroup>
-
 </Project>

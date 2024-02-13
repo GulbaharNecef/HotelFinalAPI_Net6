@@ -1,0 +1,301 @@
+2024-02-13 09:47:07 [INF] Now listening on: https://localhost:7169
+2024-02-13 09:47:07 [INF] Now listening on: http://localhost:5277
+2024-02-13 09:47:07 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-13 09:47:07 [INF] Hosting environment: Development
+2024-02-13 09:47:07 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-02-13 09:47:09 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-13 09:47:10 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 1168.9131ms
+2024-02-13 09:47:10 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-13 09:47:10 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-13 09:47:10 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 12.3377ms
+2024-02-13 09:47:10 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 276.9261ms
+2024-02-13 09:47:10 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-13 09:47:11 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 464.7547ms
+2024-02-13 09:47:30 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp/GetById?id=30F5D13B-4C16-4D11-8B37-08DC2A51128A - -
+2024-02-13 09:47:30 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API)'
+2024-02-13 09:47:30 [INF] Route matched with {action = "GetById", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task`1[HotelFinalAPI.Domain.Entities.DbEntities.Employee] GetById(System.String) on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-02-13 10:28:18 [INF] Now listening on: https://localhost:7169
+2024-02-13 10:28:18 [INF] Now listening on: http://localhost:5277
+2024-02-13 10:28:18 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-13 10:28:18 [INF] Hosting environment: Development
+2024-02-13 10:28:18 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-02-13 10:28:20 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-13 10:28:21 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 785.9489ms
+2024-02-13 10:28:21 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-13 10:28:21 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-13 10:28:21 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 64.8022ms
+2024-02-13 10:28:22 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 217.9201ms
+2024-02-13 10:28:22 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-13 10:28:22 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 397.8621ms
+2024-02-13 10:29:08 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp/GetById?id=30F5D13B-4C16-4D11-8B37-08DC2A51128A - -
+2024-02-13 10:29:08 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API)'
+2024-02-13 10:29:09 [INF] Route matched with {action = "GetById", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task`1[HotelFinalAPI.Domain.Entities.DbEntities.Employee] GetById(System.String) on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-02-13 10:29:29 [INF] Seri Log is Working -> Information
+2024-02-13 10:29:29 [WRN] Seri Log is Working -> Warning
+2024-02-13 10:29:29 [ERR] Seri Log is Working -> Error
+2024-02-13 10:29:29 [FTL] Seri Log is Working -> Critical
+2024-02-13 10:29:31 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-02-13 10:29:32 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-02-13 10:29:34 [INF] Executed DbCommand (185ms) [Parameters=[@__Parse_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[CreatedDate], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Role], [e].[UpdatedDate]
+FROM [Employees] AS [e]
+WHERE [e].[Id] = @__Parse_0
+2024-02-13 10:34:53 [INF] Now listening on: https://localhost:7169
+2024-02-13 10:34:53 [INF] Now listening on: http://localhost:5277
+2024-02-13 10:34:53 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-13 10:34:53 [INF] Hosting environment: Development
+2024-02-13 10:34:53 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-02-13 10:34:54 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-13 10:34:55 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 492.1382ms
+2024-02-13 10:34:55 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-13 10:34:55 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-13 10:34:55 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 31.3776ms
+2024-02-13 10:34:55 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 149.3976ms
+2024-02-13 10:34:55 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-13 10:34:55 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 232.3885ms
+2024-02-13 10:35:26 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp/GetById?id=30F5D13B-4C16-4D11-8B37-08DC2A51128A - -
+2024-02-13 10:35:26 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API)'
+2024-02-13 10:35:26 [INF] Route matched with {action = "GetById", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task`1[HotelFinalAPI.Domain.Entities.DbEntities.Employee] GetById(System.String) on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-02-13 10:35:46 [INF] Seri Log is Working -> Information
+2024-02-13 10:35:47 [WRN] Seri Log is Working -> Warning
+2024-02-13 10:35:47 [ERR] Seri Log is Working -> Error
+2024-02-13 10:35:48 [FTL] Seri Log is Working -> Critical
+2024-02-13 10:35:51 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-02-13 10:35:51 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-02-13 10:35:53 [INF] Executed DbCommand (181ms) [Parameters=[@__Parse_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[CreatedDate], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Role], [e].[UpdatedDate]
+FROM [Employees] AS [e]
+WHERE [e].[Id] = @__Parse_0
+2024-02-13 10:36:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Domain.Entities.DbEntities.Employee'.
+2024-02-13 10:36:00 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API) in 34241.4414ms
+2024-02-13 10:36:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API)'
+2024-02-13 10:36:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Temp/GetById?id=30F5D13B-4C16-4D11-8B37-08DC2A51128A - - - 200 - application/json;+charset=utf-8 34452.4572ms
+2024-02-13 10:44:43 [INF] Now listening on: https://localhost:7169
+2024-02-13 10:44:43 [INF] Now listening on: http://localhost:5277
+2024-02-13 10:44:43 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-13 10:44:43 [INF] Hosting environment: Development
+2024-02-13 10:44:43 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-02-13 10:44:44 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-13 10:44:45 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 406.5217ms
+2024-02-13 10:44:45 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-13 10:44:45 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-13 10:44:45 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 31.6592ms
+2024-02-13 10:44:45 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 123.2265ms
+2024-02-13 10:44:45 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-13 10:44:45 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 238.7061ms
+2024-02-13 10:44:50 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Temp/AddEmployee - 0
+2024-02-13 10:44:50 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.AddEmployee (HotelFinalAPI.API)'
+2024-02-13 10:44:50 [INF] Route matched with {action = "AddEmployee", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task AddEmployee() on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-02-13 10:44:51 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-02-13 10:44:52 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-02-13 10:45:04 [INF] Executed DbCommand (71ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?' (Size = 100), @p6='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employees] ([Id], [CreatedDate], [Email], [FirstName], [LastName], [Role], [UpdatedDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2024-02-13 10:45:13 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.AddEmployee (HotelFinalAPI.API) in 23006.3207ms
+2024-02-13 10:45:13 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.AddEmployee (HotelFinalAPI.API)'
+2024-02-13 10:45:32 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Temp/AddEmployee - 0 - 200 0 - 42031.3717ms
+2024-02-13 10:52:06 [INF] Now listening on: https://localhost:7169
+2024-02-13 10:52:06 [INF] Now listening on: http://localhost:5277
+2024-02-13 10:52:06 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-13 10:52:06 [INF] Hosting environment: Development
+2024-02-13 10:52:06 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-02-13 10:52:07 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-13 10:52:07 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 412.3305ms
+2024-02-13 10:52:07 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-13 10:52:07 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-13 10:52:07 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 7.6523ms
+2024-02-13 10:52:07 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 95.6716ms
+2024-02-13 10:52:07 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-13 10:52:07 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.3836ms
+2024-02-13 10:52:12 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Temp/AddEmployee - 0
+2024-02-13 10:52:12 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.AddEmployee (HotelFinalAPI.API)'
+2024-02-13 10:52:12 [INF] Route matched with {action = "AddEmployee", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task AddEmployee() on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-02-13 10:52:14 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-02-13 10:52:14 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-02-13 10:53:59 [INF] Executed DbCommand (80ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?' (Size = 100), @p6='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employees] ([Id], [CreatedDate], [Email], [FirstName], [LastName], [Role], [UpdatedDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2024-02-13 10:53:59 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.AddEmployee (HotelFinalAPI.API) in 106619.7543ms
+2024-02-13 10:53:59 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.AddEmployee (HotelFinalAPI.API)'
+2024-02-13 10:53:59 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Temp/AddEmployee - 0 - 200 0 - 106717.5870ms
+2024-02-13 11:01:28 [INF] Now listening on: https://localhost:7169
+2024-02-13 11:01:28 [INF] Now listening on: http://localhost:5277
+2024-02-13 11:01:29 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-13 11:01:29 [INF] Hosting environment: Development
+2024-02-13 11:01:29 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-02-13 11:01:29 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-13 11:01:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 400.5920ms
+2024-02-13 11:01:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-13 11:01:30 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-13 11:01:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 21.4180ms
+2024-02-13 11:01:30 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 159.9767ms
+2024-02-13 11:01:30 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-13 11:01:30 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.6825ms
+2024-02-13 11:01:48 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Temp/AddEmployee - 0
+2024-02-13 11:01:48 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.AddEmployee (HotelFinalAPI.API)'
+2024-02-13 11:01:48 [INF] Route matched with {action = "AddEmployee", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task AddEmployee() on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-02-13 11:01:49 [INF] Check message
+2024-02-13 11:01:50 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-02-13 11:01:50 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-02-13 11:01:52 [INF] Executed DbCommand (66ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?' (Size = 100), @p6='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employees] ([Id], [CreatedDate], [Email], [FirstName], [LastName], [Role], [UpdatedDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2024-02-13 11:01:52 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.AddEmployee (HotelFinalAPI.API) in 3889.4266ms
+2024-02-13 11:01:52 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.AddEmployee (HotelFinalAPI.API)'
+2024-02-13 11:01:52 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Temp/AddEmployee - 0 - 200 0 - 3966.8647ms
+2024-02-13 15:38:47 [INF] Now listening on: https://localhost:7169
+2024-02-13 15:38:47 [INF] Now listening on: http://localhost:5277
+2024-02-13 15:38:47 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-13 15:38:47 [INF] Hosting environment: Development
+2024-02-13 15:38:47 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-02-13 15:38:48 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-13 15:38:49 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 944.4443ms
+2024-02-13 15:38:49 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-13 15:38:49 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-13 15:38:49 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 20.3274ms
+2024-02-13 15:38:50 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 211.1562ms
+2024-02-13 15:38:50 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-13 15:38:50 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 351.1348ms
+2024-02-13 19:19:25 [FTL] Application startup exception
+System.InvalidOperationException: An error occurred when configuring the exception handler middleware. Either the 'ExceptionHandlingPath' or the 'ExceptionHandler' property must be set in 'UseExceptionHandler()'. Alternatively, set one of the aforementioned properties in 'Startup.ConfigureServices' as follows: 'services.AddExceptionHandler(options => { ... });'.
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware..ctor(RequestDelegate next, ILoggerFactory loggerFactory, IOptions`1 options, DiagnosticListener diagnosticListener)
+   at Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.<>c__DisplayClass4_0.<SetExceptionHandlerMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-02-13 19:21:23 [FTL] Application startup exception
+System.InvalidOperationException: An error occurred when configuring the exception handler middleware. Either the 'ExceptionHandlingPath' or the 'ExceptionHandler' property must be set in 'UseExceptionHandler()'. Alternatively, set one of the aforementioned properties in 'Startup.ConfigureServices' as follows: 'services.AddExceptionHandler(options => { ... });'.
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware..ctor(RequestDelegate next, ILoggerFactory loggerFactory, IOptions`1 options, DiagnosticListener diagnosticListener)
+   at Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.<>c__DisplayClass4_0.<SetExceptionHandlerMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-02-13 19:38:16 [FTL] Application startup exception
+System.InvalidOperationException: An error occurred when configuring the exception handler middleware. Either the 'ExceptionHandlingPath' or the 'ExceptionHandler' property must be set in 'UseExceptionHandler()'. Alternatively, set one of the aforementioned properties in 'Startup.ConfigureServices' as follows: 'services.AddExceptionHandler(options => { ... });'.
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware..ctor(RequestDelegate next, ILoggerFactory loggerFactory, IOptions`1 options, DiagnosticListener diagnosticListener)
+   at Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.<>c__DisplayClass4_0.<SetExceptionHandlerMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-02-13 19:40:03 [INF] Now listening on: https://localhost:7169
+2024-02-13 19:40:03 [INF] Now listening on: http://localhost:5277
+2024-02-13 19:40:03 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-13 19:40:03 [INF] Hosting environment: Development
+2024-02-13 19:40:03 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-02-13 19:40:05 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-13 19:40:06 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 965.5501ms
+2024-02-13 19:40:06 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-13 19:40:06 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-13 19:40:06 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 49.0485ms
+2024-02-13 19:40:06 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 368.1430ms
+2024-02-13 19:40:06 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-13 19:40:07 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 365.5808ms
+2024-02-13 19:43:02 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp/GetById?id=30F5D13B-4C16-4D11-8B37-08DC2A51128A - -
+2024-02-13 19:43:02 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Temp/GetById
+Accept: text/plain
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-02-13 19:43:02 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API)'
+2024-02-13 19:43:02 [INF] Route matched with {action = "GetById", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task`1[HotelFinalAPI.Domain.Entities.DbEntities.Employee] GetById(System.String) on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-02-13 19:43:04 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API) in 2244.5583ms
+2024-02-13 19:43:05 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API)'
+2024-02-13 19:43:05 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Hata alindi
+   at HotelFinalAPI.API.Controllers.TempController.GetById(String id) in C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\Controllers\TempController.cs:line 48
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-02-13 19:43:05 [ERR] Hata alindi
+2024-02-13 19:43:05 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Temp/GetById?id=30F5D13B-4C16-4D11-8B37-08DC2A51128A - - - 500 - application/json 3546.6650ms
+2024-02-13 19:50:07 [INF] Now listening on: https://localhost:7169
+2024-02-13 19:50:07 [INF] Now listening on: http://localhost:5277
+2024-02-13 19:50:07 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-13 19:50:07 [INF] Hosting environment: Development
+2024-02-13 19:50:07 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-02-13 19:50:09 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-02-13 19:50:09 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 426.8277ms
+2024-02-13 19:50:09 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-02-13 19:50:09 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-02-13 19:50:09 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 43.1501ms
+2024-02-13 19:50:09 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 107.6313ms
+2024-02-13 19:50:10 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - -
+2024-02-13 19:50:10 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 174.9857ms
+2024-02-13 19:50:23 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp/GetById?id=30F5D13B-4C16-4D11-8B37-08DC2A51128A - -
+2024-02-13 19:50:23 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Temp/GetById
+Accept: text/plain
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-02-13 19:50:23 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API)'
+2024-02-13 19:50:23 [INF] Route matched with {action = "GetById", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task`1[HotelFinalAPI.Domain.Entities.DbEntities.Employee] GetById(System.String) on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-02-13 19:50:23 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API) in 402.5188ms
+2024-02-13 19:50:23 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.GetById (HotelFinalAPI.API)'
+2024-02-13 19:50:23 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Isciyi getirirken hata olusdu
+   at HotelFinalAPI.API.Controllers.TempController.GetById(String id) in C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\Controllers\TempController.cs:line 48
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-02-13 19:50:23 [ERR] Isciyi getirirken hata olusdu
+2024-02-13 19:50:23 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Temp/GetById?id=30F5D13B-4C16-4D11-8B37-08DC2A51128A - - - 500 - application/json 618.6480ms

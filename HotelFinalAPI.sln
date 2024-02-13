@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelFinalAPI.Application",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelFinalAPI.API", "Presentation\HotelFinalAPI.API\HotelFinalAPI.API.csproj", "{394DED7F-B840-4B1A-972F-A88B90870CA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelFinalAPI.Infrastructure", "Infrastructure\HotelFinalAPI.Infrastructure\HotelFinalAPI.Infrastructure.csproj", "{7BE3B30F-B0A9-44A9-A9BA-D1C4A92BD06D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelFinalAPI.Infrastructure", "Infrastructure\HotelFinalAPI.Infrastructure\HotelFinalAPI.Infrastructure.csproj", "{7BE3B30F-B0A9-44A9-A9BA-D1C4A92BD06D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelFinalAPI.Persistance", "Infrastructure\HotelFinalAPI.Persistance\HotelFinalAPI.Persistance.csproj", "{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelFinalAPI.Persistance", "Infrastructure\HotelFinalAPI.Persistance\HotelFinalAPI.Persistance.csproj", "{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

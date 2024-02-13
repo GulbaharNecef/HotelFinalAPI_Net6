@@ -1,4 +1,5 @@
 ﻿using HotelFinalAPI.Application.DTOs.GuestDTOs;
+using HotelFinalAPI.Application.DTOs.RoomDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
