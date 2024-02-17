@@ -10,7 +10,7 @@ namespace HotelFinalAPI.Application.DTOs.ReservationDTOs
     {
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
-        public Guid GuestId { get; set; }
-        public Guid RoomId { get; set; }
+        public string GuestId { get; set; }
+        public string RoomId { get; set; }
     }
 }

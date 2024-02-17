@@ -24,7 +24,6 @@ namespace HotelFinalAPI.Persistance.Configurations.EntityConfigs
             builder.Property(b => b.Amount).IsRequired();//.HasColumnType("decimal(10,2)");
                                                          //default decimal(18,2) olacaq, 18 precision,
                                                          //2 digits to the right of the decimal point 
-            builder.Property(b => b.Date).IsRequired();
             builder.Property(b => b.PaidStatus).IsRequired();
         }
     }

@@ -16,6 +16,5 @@ namespace HotelFinalAPI.Domain.Entities.DbEntities
         public Guid RoomId { get; set; }//foreign key
         public Guest Guest { get; set; } //navigation prop
         public Room Room { get; set; }//navigation prop
-
     }
 }

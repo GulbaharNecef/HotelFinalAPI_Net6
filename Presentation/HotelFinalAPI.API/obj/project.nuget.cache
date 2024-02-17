@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "pANi9ff4tj7lCdwpI9ElxV/exaQ31XS6fgNoc4rfRKj5VaDAIM1H2bD8/4Jfqi7Z9PebzihpdiXDMfnFWV0vTA==",
+  "dgSpecHash": "dAGPs5YYQVIX7Zs/naTWsSoj2sKGK/1VFaar3ySpx6FhHfoLbx+7JS9B0Gh14Ro81xEVTmVF+pxUbWUZebD7bA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

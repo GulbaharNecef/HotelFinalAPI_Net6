@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "NjBXkFtz8aXOEdVCH1i6UfE1+qRaMWc+McZTqGHBPwIhAvt0qeNrfyFfmBfAUIPDtWFep2CDiXdsLZV6dT9BWw==",
+  "dgSpecHash": "yEqrbccryxjNZcYwBZ4WqnlY6YpKCDJ4MDl9h2buG77bTJGuwA4N+YP7fqziEN1blngA+ZhOz2bHJWL1EHCYoQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Infrastructure\\HotelFinalAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.26\\microsoft.entityframeworkcore.6.0.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.26\\microsoft.entityframeworkcore.abstractions.6.0.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.26\\microsoft.entityframeworkcore.analyzers.6.0.26.nupkg.sha512",

@@ -10,7 +10,6 @@ namespace HotelFinalAPI.Application.DTOs.BillDTOs
     {
         public Guid Id { get; set; }
         public decimal Amount { get; set; }
-        public DateTime Date { get; set; }
         public bool PaidStatus { get; set; }
         public Guid GuestId { get; set; }
         public DateTime CreatedDate { get; set; }

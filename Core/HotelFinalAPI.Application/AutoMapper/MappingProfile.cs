@@ -1,5 +1,9 @@
 ﻿using AutoMapper;
 using HotelFinalAPI.Application.DTOs.BillDTOs;
+using HotelFinalAPI.Application.DTOs.EmployeeDTOs;
+using HotelFinalAPI.Application.DTOs.GuestDTOs;
+using HotelFinalAPI.Application.DTOs.ReservationDTOs;
+using HotelFinalAPI.Application.DTOs.RoomDTOs;
 using HotelFinalAPI.Domain.Entities.DbEntities;
 using System;
 using System.Collections.Generic;
@@ -15,6 +19,11 @@ namespace HotelFinalAPI.Application.AutoMapper
         public MappingProfile()
         {
             CreateMap<Bill, BillGetDTO>().ReverseMap();
+            CreateMap<Employee, EmployeeGetDTO>().ReverseMap();
+            CreateMap<Guest, GuestGetDTO>().ReverseMap();
+            CreateMap<Reservation, ReservationGetDTO>().ReverseMap();
+            CreateMap<Room, RoomGetDTO>().ReverseMap();
+
 
             //CreateMap<Bill, BillGetDTO>()
             //    .ForMember(dest => dest.BillId, act => act.MapFrom(src => src.Id))

@@ -1,5 +1,8 @@
+using FluentValidation.AspNetCore;
 using HotelFinalAPI.API.Extensions;
+using HotelFinalAPI.API.Registration;
 using HotelFinalAPI.Application.AutoMapper;
+using HotelFinalAPI.Application.Validators.Bills;
 using HotelFinalAPI.Persistance.Contexts;
 using HotelFinalAPI.Persistance.Registration;
 using Microsoft.EntityFrameworkCore;
@@ -18,8 +21,11 @@ namespace HotelFinalAPI.API
             // Add services to the container.
 
             builder.Services.AddPersistanceRegistration();
-
+            builder.Services.AddPresentationRegistration();
             builder.Services.AddAutoMapper(typeof(MappingProfile));
+            
+            
+            
 
 
             Logger log = new LoggerConfiguration()
@@ -32,8 +38,11 @@ namespace HotelFinalAPI.API
             //builder.Logging.AddSerilog(logger);adds a Serilog provider to the existing logging pipeline.
 
 
+            //BillCreateDTO verirem o bu clasin oldugu assembly deki butun validasiya classlarina isaredir.Application bir assembly dir:)
+            builder.Services.AddControllers()
+                .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<BillCreateValidator>());
+                //.ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
 
-            builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -48,7 +57,8 @@ namespace HotelFinalAPI.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            
+            //Upload edende bu middleware olmalidir
+            app.UseStaticFiles();
 
             //app.UseExceptionHandler();
             app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILogger<Program>>());
@@ -58,6 +68,8 @@ namespace HotelFinalAPI.API
             app.UseSerilogRequestLogging();
             
             app.UseHttpLogging();
+
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
 

@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\wwwroot\\resource\\images\\1635275941.png",
+      "PackagePath": "staticwebassets\\resource\\images\\1635275941.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\wwwroot\\resource\\images\\726934176.png",
+      "PackagePath": "staticwebassets\\resource\\images\\726934176.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.HotelFinalAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.HotelFinalAPI.API.props",
+      "PackagePath": "build\\HotelFinalAPI.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.HotelFinalAPI.API.props",
+      "PackagePath": "buildMultiTargeting\\HotelFinalAPI.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.HotelFinalAPI.API.props",
+      "PackagePath": "buildTransitive\\HotelFinalAPI.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

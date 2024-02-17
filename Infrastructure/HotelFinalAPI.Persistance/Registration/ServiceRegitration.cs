@@ -46,5 +46,6 @@ namespace HotelFinalAPI.Persistance.Registration
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
+
     }
 }

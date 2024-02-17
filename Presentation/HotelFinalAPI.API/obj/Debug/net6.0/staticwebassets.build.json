@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "fG+XHQbZZHkWMJBKgU/+lV5CqPKSN/6+pV+HNuw+Aio=",
+  "Hash": "6W0aHUe7bLEUPjqk8+oSHe3NO89xsmlDtUiASFxlc94=",
   "Source": "HotelFinalAPI.API",
   "BasePath": "_content/HotelFinalAPI.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "HotelFinalAPI.API\\wwwroot",
+      "Source": "HotelFinalAPI.API",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\wwwroot\\",
+      "BasePath": "_content/HotelFinalAPI.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\wwwroot\\resource\\images\\1635275941.png",
+      "SourceId": "HotelFinalAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\wwwroot\\",
+      "BasePath": "_content/HotelFinalAPI.API",
+      "RelativePath": "resource/images/1635275941.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\images\\1635275941.png"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\wwwroot\\resource\\images\\726934176.png",
+      "SourceId": "HotelFinalAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\wwwroot\\",
+      "BasePath": "_content/HotelFinalAPI.API",
+      "RelativePath": "resource/images/726934176.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\images\\726934176.png"
+    }
+  ]
 }

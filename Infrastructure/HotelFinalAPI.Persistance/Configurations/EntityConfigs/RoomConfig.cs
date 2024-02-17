@@ -17,9 +17,10 @@ namespace HotelFinalAPI.Persistance.Configurations.EntityConfigs
             //builder.Property(r => r.RoomId).IsRequired().HasMaxLength(256).HasColumnName("RoomId").HasColumnType(Guid.NewGuid().ToString());
 
             //builder.Property(r => r.RoomId).IsRequired();
-            builder.Property(r => r.RoomNumber).IsRequired();
+            builder.Property(r => r.RoomNumber).IsRequired().HasMaxLength(50);
             builder.Property(r => r.RoomType).IsRequired().HasMaxLength(50);
-            builder.Property(r => r.Status).IsRequired().HasMaxLength(20);
+            builder.Property(r => r.Status).IsRequired().HasMaxLength(50);
+            builder.Property(r => r.Price).IsRequired();
 
         }
     }
