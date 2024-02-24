@@ -12,7 +12,7 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
     {
         Task<GenericResponseModel<List<RoomGetDTO>>> GetAllRooms();
         Task<GenericResponseModel<RoomGetDTO>> GetRoomById(string id);
-        Task<GenericResponseModel<RoomGetDTO>> CreateRoom(RoomCreateDTO roomCreateDTO);
+        Task<GenericResponseModel<RoomCreateDTO>> CreateRoom(RoomCreateDTO roomCreateDTO);
         Task<GenericResponseModel<bool>> UpdateRoom(string id, RoomUpdateDTO roomUpdateDTO);
         Task<GenericResponseModel<bool>> DeleteRoom(string id);
     }

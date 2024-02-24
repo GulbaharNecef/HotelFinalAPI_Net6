@@ -21,6 +21,7 @@ namespace HotelFinalAPI.Persistance.Configurations.EntityConfigs
             //builder.HasMany<Bill>(r => r.Bills)
             //    .WithOne(g => g.Guest);
 
+            builder.Property(g => g.Id).IsRequired().HasDefaultValueSql("NEWID()");
             builder.Property(g => g.FirstName).IsRequired().HasMaxLength(50);
             builder.Property(g => g.LastName).IsRequired().HasMaxLength(50);
             builder.Property(g => g.Email).IsRequired().HasMaxLength(100);

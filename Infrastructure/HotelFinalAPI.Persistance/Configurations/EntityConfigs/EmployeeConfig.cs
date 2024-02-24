@@ -13,6 +13,7 @@ namespace HotelFinalAPI.Persistance.Configurations.EntityConfigs
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
+            builder.Property(e => e.Id).IsRequired().HasDefaultValueSql("NEWID()");
             builder.Property(e => e.FirstName).IsRequired().HasMaxLength(50);
             builder.Property(e => e.LastName).IsRequired().HasMaxLength(50);
             builder.Property(e => e.Email).IsRequired().HasMaxLength(100);

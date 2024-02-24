@@ -1,4 +1,5 @@
-﻿using HotelFinalAPI.Application.IRepositories.IBillRepos;
+﻿using HotelFinalAPI.Application.Abstraction.Services.Persistance;
+using HotelFinalAPI.Application.IRepositories.IBillRepos;
 using HotelFinalAPI.Application.IRepositories.IEmployeeRepos;
 using HotelFinalAPI.Application.IRepositories.IGuestRepos;
 using HotelFinalAPI.Application.IRepositories.IReservationRepos;
@@ -6,6 +7,7 @@ using HotelFinalAPI.Application.IRepositories.IRoomRepos;
 using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Persistance.Configurations;
 using HotelFinalAPI.Persistance.Contexts;
+using HotelFinalAPI.Persistance.Implementation.Services;
 using HotelFinalAPI.Persistance.Repositories.BillRepos;
 using HotelFinalAPI.Persistance.Repositories.EmployeeRepos;
 using HotelFinalAPI.Persistance.Repositories.GuestRepos;
@@ -45,6 +47,10 @@ namespace HotelFinalAPI.Persistance.Registration
             services.AddScoped<IRoomWriteRepository, RoomWriteRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped<IBillService, BillService>();
+            services.AddScoped<IRoomService, RoomService>();
+            
         }
 
     }

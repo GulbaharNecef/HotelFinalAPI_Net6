@@ -14,6 +14,6 @@ namespace HotelFinalAPI.Domain.Entities.DbEntities
         public string RoomType { get; set; }
         public string Status { get; set; }
         public decimal Price { get; set; }
-        public ICollection<Reservation> Reservations { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }//navigation property
     }
 }

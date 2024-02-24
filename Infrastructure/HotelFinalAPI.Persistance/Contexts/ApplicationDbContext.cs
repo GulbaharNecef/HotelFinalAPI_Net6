@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -47,11 +48,12 @@ namespace HotelFinalAPI.Persistance.Contexts
             var datas = ChangeTracker.Entries<BaseEntity>();
             foreach (var data in datas)
             {
-                 _ = data.State switch
+                _ = data.State switch
                 {
                     EntityState.Added => data.Entity.CreatedDate = DateTime.Now,
-                    EntityState.Modified => data.Entity.UpdatedDate = DateTime.Now
-                };
+                    EntityState.Modified => data.Entity.UpdatedDate = DateTime.Now,
+                    _ => DateTime.Now
+                } ;
             }
             return await base.SaveChangesAsync(cancellationToken);
         }

@@ -60,7 +60,7 @@ namespace HotelFinalAPI.API
             //Upload edende bu middleware olmalidir
             app.UseStaticFiles();
 
-            //app.UseExceptionHandler();
+            //app.UseExceptionHandler() -i extend etmisem)
             app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILogger<Program>>());
 
             //logs HTTP request details (such as method, path, status code, and timing), should come before other middlewares like authentication, routing, bunu yazdim deye her endpoint de manually loglama etmeye ehtiyac qalmir.(oz custom mesajimi yazmaq istemiremse)

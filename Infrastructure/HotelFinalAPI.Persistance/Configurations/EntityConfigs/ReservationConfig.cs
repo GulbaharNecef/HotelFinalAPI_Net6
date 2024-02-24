@@ -26,7 +26,7 @@ namespace HotelFinalAPI.Persistance.Configurations.EntityConfigs
                 .HasForeignKey(g => g.RoomId);
 
             //Property configuration
-            //builder.Property(r => r.ReservationId).IsRequired();
+            builder.Property(r => r.Id).IsRequired().HasDefaultValueSql("NEWID()");
             builder.Property(r => r.GuestId).IsRequired();
             builder.Property(r => r.RoomId).IsRequired();
             builder.Property(r => r.CheckInDate).IsRequired();

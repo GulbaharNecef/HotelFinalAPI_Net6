@@ -9,6 +9,8 @@
   <ItemGroup>
     <Folder Include="DTOs\UserDTOs\" />
     <Folder Include="Enums\" />
+    <Folder Include="Exceptions\GuestExceptions\" />
+    <Folder Include="Exceptions\ReservationExceptions\" />
   </ItemGroup>
 
   <ItemGroup>
