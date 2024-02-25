@@ -10,7 +10,6 @@ C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistanc
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.AssemblyInfoInputs.cache
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.AssemblyInfo.cs
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.csproj.CoreCompileInputs.cache
-C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.csproj.CopyComplete
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.dll
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\refint\HotelFinalAPI.Persistance.dll
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.pdb
@@ -18,3 +17,4 @@ C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistanc
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\bin\Debug\net6.0\HotelFinalAPI.Persistance.runtimeconfig.json
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.sourcelink.json
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFinalAPI.Persistance.genruntimeconfig.cache
+C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\obj\Debug\net6.0\HotelFin.22005B9F.Up2Date

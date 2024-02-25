@@ -11,8 +11,8 @@ C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastruc
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastructure\obj\Debug\net6.0\HotelFinalAPI.Infrastructure.AssemblyInfo.cs
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastructure\obj\Debug\net6.0\HotelFinalAPI.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastructure\obj\Debug\net6.0\HotelFinalAPI.Infrastructure.sourcelink.json
-C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastructure\obj\Debug\net6.0\HotelFinalAPI.Infrastructure.csproj.CopyComplete
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastructure\obj\Debug\net6.0\HotelFinalAPI.Infrastructure.dll
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastructure\obj\Debug\net6.0\refint\HotelFinalAPI.Infrastructure.dll
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastructure\obj\Debug\net6.0\HotelFinalAPI.Infrastructure.pdb
 C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastructure\obj\Debug\net6.0\ref\HotelFinalAPI.Infrastructure.dll
+C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Infrastructure\obj\Debug\net6.0\HotelFin.CABDE369.Up2Date

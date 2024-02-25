@@ -5,6 +5,7 @@ using HotelFinalAPI.Application.IRepositories.IGuestRepos;
 using HotelFinalAPI.Application.IRepositories.IReservationRepos;
 using HotelFinalAPI.Application.IRepositories.IRoomRepos;
 using HotelFinalAPI.Application.IUnitOfWorks;
+using HotelFinalAPI.Domain.Entities.IdentityEntities;
 using HotelFinalAPI.Persistance.Configurations;
 using HotelFinalAPI.Persistance.Contexts;
 using HotelFinalAPI.Persistance.Implementation.Services;
@@ -31,6 +32,8 @@ namespace HotelFinalAPI.Persistance.Registration
             services.AddDbContext<ApplicationDbContext>(option =>
             option.UseSqlServer(Configuration.ConnectionString()));
 
+            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddScoped<IBillReadRepository, BillReadRepository>();
             services.AddScoped<IBillWriteRepository, BillWriteRepository>();
 
@@ -50,7 +53,7 @@ namespace HotelFinalAPI.Persistance.Registration
 
             services.AddScoped<IBillService, BillService>();
             services.AddScoped<IRoomService, RoomService>();
-            
+
         }
 
     }

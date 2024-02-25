@@ -10,3 +10,4 @@ C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Domain\obj\Debug\net
 C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Domain\obj\Debug\net6.0\HotelFinalAPI.Domain.pdb
 C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Domain\obj\Debug\net6.0\ref\HotelFinalAPI.Domain.dll
 C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Domain\obj\Debug\net6.0\HotelFinalAPI.Domain.sourcelink.json
+C:\Users\Asus\source\repos\HotelFinalAPI\Core\HotelFinalAPI.Domain\obj\Debug\net6.0\HotelFinalAPI.Domain.csproj.AssemblyReference.cache

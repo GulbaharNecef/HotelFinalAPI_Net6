@@ -1,5 +1,6 @@
 ﻿using HotelFinalAPI.Domain.Entities.BaseEntities;
 using HotelFinalAPI.Domain.Entities.DbEntities;
+using HotelFinalAPI.Domain.Entities.IdentityEntities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -15,12 +16,12 @@ using System.Threading.Tasks;
 
 namespace HotelFinalAPI.Persistance.Contexts
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-        public DbSet<Bill> Bills {  get; set; }
+        public DbSet<Bill> Bills { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
@@ -53,7 +54,7 @@ namespace HotelFinalAPI.Persistance.Contexts
                     EntityState.Added => data.Entity.CreatedDate = DateTime.Now,
                     EntityState.Modified => data.Entity.UpdatedDate = DateTime.Now,
                     _ => DateTime.Now
-                } ;
+                };
             }
             return await base.SaveChangesAsync(cancellationToken);
         }
