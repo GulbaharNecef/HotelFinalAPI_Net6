@@ -11,6 +11,7 @@ using HotelFinalAPI.Application.RequestParameters;
 using HotelFinalAPI.Application.Validators.Bills;
 using HotelFinalAPI.Application.Validators.Employees;
 using HotelFinalAPI.Domain.Entities.DbEntities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,7 @@ namespace HotelFinalAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TempController : ControllerBase
     {
         

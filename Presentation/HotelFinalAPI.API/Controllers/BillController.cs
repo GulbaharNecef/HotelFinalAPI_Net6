@@ -21,7 +21,23 @@ namespace HotelFinalAPI.API.Controllers
             var result = await _billService.CreateBill(billCreateDTO);
             return StatusCode(result.StatusCode, result);
         }
-
+        //todo do these on all endpoints at the end, https://learn.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-8.0&tabs=visual-studio
+        ///<summary>
+        ///Gets all Bills
+        ///</summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "id": 1,
+        ///        "name": "Item #1",
+        ///        "isComplete": true
+        ///     }
+        ///
+        /// </remarks>
         [HttpGet("[action]")]
         public async Task<IActionResult> GetAllBills()//todo ask GetAll repository da sinxron dur , burda asynchron yazmaq dogrumu?
         {

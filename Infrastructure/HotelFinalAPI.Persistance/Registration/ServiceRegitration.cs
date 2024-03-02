@@ -1,4 +1,5 @@
-﻿using HotelFinalAPI.Application.Abstraction.Services.Persistance;
+﻿using HotelFinalAPI.Application.Abstraction.Services.Infrastructure.TokenServices;
+using HotelFinalAPI.Application.Abstraction.Services.Persistance;
 using HotelFinalAPI.Application.IRepositories.IBillRepos;
 using HotelFinalAPI.Application.IRepositories.IEmployeeRepos;
 using HotelFinalAPI.Application.IRepositories.IGuestRepos;
@@ -17,6 +18,7 @@ using HotelFinalAPI.Persistance.Repositories.RoomRepos;
 using HotelFinalAPI.Persistance.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,8 +33,21 @@ namespace HotelFinalAPI.Persistance.Registration
         {
             services.AddDbContext<ApplicationDbContext>(option =>
             option.UseSqlServer(Configuration.ConnectionString()));
-
-            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            /*
+             services.AddIdentity<AppUser, AppRole>(options => {
+                options.Password.RequiredLength = 3;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireDigit = false;
+            }).AddEntityFrameworkStores<ApplicationDbContext>();
+            */
+            services.AddIdentity<AppUser, AppRole>(options => {
+                options.Password.RequiredLength = 3;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireDigit = false;
+                //options.User.RequireUniqueEmail = true;
+            }).AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddScoped<IBillReadRepository, BillReadRepository>();
             services.AddScoped<IBillWriteRepository, BillWriteRepository>();
@@ -53,6 +68,8 @@ namespace HotelFinalAPI.Persistance.Registration
 
             services.AddScoped<IBillService, BillService>();
             services.AddScoped<IRoomService, RoomService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
 
         }
 

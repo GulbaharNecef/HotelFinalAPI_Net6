@@ -107,3 +107,4 @@ C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\bin\Debu
 C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\bin\Debug\net6.0\HotelFinalAPI.API.staticwebassets.runtime.json
 C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\obj\Debug\net6.0\HotelFin.29742EDA.Up2Date
+C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

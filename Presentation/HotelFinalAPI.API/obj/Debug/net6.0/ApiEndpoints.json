@@ -1,0 +1,349 @@
+[
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usernameOrEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "accessTokenLifeTime",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
+    "Method": "CreateBill",
+    "RelativePath": "api/Bill/CreateBill",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "billCreateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.BillDTOs.BillCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
+    "Method": "DeleteBill",
+    "RelativePath": "api/Bill/DeleteBill",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "billId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
+    "Method": "GetAllBills",
+    "RelativePath": "api/Bill/GetAllBills",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
+    "Method": "GetBillById",
+    "RelativePath": "api/Bill/GetBillById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
+    "Method": "GetBillsByGuestId",
+    "RelativePath": "api/Bill/GetBillsByGuestId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "guestId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
+    "Method": "GetBillsByPaidStatus",
+    "RelativePath": "api/Bill/GetBillsByPaidStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
+    "Method": "UpdateBill",
+    "RelativePath": "api/Bill/UpdateBill",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "billId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "billUpdateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.BillDTOs.BillUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoomController",
+    "Method": "AddRoom",
+    "RelativePath": "api/Room/AddRoom",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomCreateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.RoomDTOs.RoomCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoomController",
+    "Method": "DeleteRoom",
+    "RelativePath": "api/Room/DeleteRoom",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoomController",
+    "Method": "UpdateRoom",
+    "RelativePath": "api/Room/UpdateRoom",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "roomUpdateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.RoomDTOs.RoomUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.TempController",
+    "Method": "AddGuest",
+    "RelativePath": "api/Temp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "guestCreateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.GuestDTOs.GuestCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.TempController",
+    "Method": "AddEmployee",
+    "RelativePath": "api/Temp/AddEmployee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employee",
+        "Type": "HotelFinalAPI.Application.DTOs.EmployeeDTOs.EmployeeCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.TempController",
+    "Method": "AddEmployeeRange",
+    "RelativePath": "api/Temp/AddEmployeeRange",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.TempController",
+    "Method": "GetAllEmployees",
+    "RelativePath": "api/Temp/GetAllEmployees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.TempController",
+    "Method": "GetById",
+    "RelativePath": "api/Temp/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HotelFinalAPI.Domain.Entities.DbEntities.Employee",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.TempController",
+    "Method": "GetRangeEmployees",
+    "RelativePath": "api/Temp/GetRangeEmployees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Total",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.TempController",
+    "Method": "Upload",
+    "RelativePath": "api/Temp/Upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.UserController",
+    "Method": "CreateUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HotelFinalAPI.Application.DTOs.UserDTOs.UserCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "api/WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HotelFinalAPI.API.WeatherForecast, HotelFinalAPI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
