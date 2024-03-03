@@ -13,11 +13,17 @@ namespace HotelFinalAPI.API.Controllers
         {
             _authService = authService;   
         }
-        [HttpPost]
-        public async Task<IActionResult> Login(string usernameOrEmail, string password,int accessTokenLifeTime)
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Login([FromQuery]string usernameOrEmail, [FromQuery] string password /* ,int accessTokenLifeTime*/)
         {
-            //var result = await _authService.Login(usernameOrEmail, password);
-           var data =  await _authService.Login(usernameOrEmail, password, accessTokenLifeTime);
+           var data =  await _authService.Login(usernameOrEmail, password/*, 1*/);
+            return StatusCode(data.StatusCode, data);
+        }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> LoginWithRefreshToken([FromBody]string refreshToken)
+        {
+            var data = await _authService.RefreshTokenLoginAsync(refreshToken);
             return StatusCode(data.StatusCode, data);
         }
     }

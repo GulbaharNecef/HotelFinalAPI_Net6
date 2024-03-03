@@ -2,7 +2,7 @@
   {
     "ContainingType": "HotelFinalAPI.API.Controllers.AuthController",
     "Method": "Login",
-    "RelativePath": "api/Auth",
+    "RelativePath": "api/Auth/Login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,11 +16,22 @@
         "Name": "password",
         "Type": "System.String",
         "IsRequired": false
-      },
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.AuthController",
+    "Method": "LoginWithRefreshToken",
+    "RelativePath": "api/Auth/LoginWithRefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Name": "accessTokenLifeTime",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "refreshToken",
+        "Type": "System.String",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

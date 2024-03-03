@@ -42,8 +42,18 @@ namespace HotelFinalAPI.Infrastructure.Implementation.Services.TokenServices
             //Token olusturucu sinifindan bir ornek alalim
             JwtSecurityTokenHandler tokenHandler = new();
             token.AccessToken = tokenHandler.WriteToken(securityToken);
+            token.RefreshToken = CreateRefreshToken();
+
             return token;
 
+        }
+
+        public string CreateRefreshToken()
+        {
+            byte[] number = new byte[32];
+            using RandomNumberGenerator random = RandomNumberGenerator.Create();
+            random.GetBytes(number);
+            return Convert.ToBase64String(number);
         }
     }
 }

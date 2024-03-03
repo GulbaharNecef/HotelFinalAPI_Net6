@@ -1,5 +1,6 @@
 ﻿using HotelFinalAPI.Application.Abstraction.Services.Persistance;
 using HotelFinalAPI.Application.DTOs.UserDTOs;
+using HotelFinalAPI.Application.Exceptions;
 using HotelFinalAPI.Application.Models.ResponseModels;
 using HotelFinalAPI.Domain.Entities.IdentityEntities;
 using Microsoft.AspNetCore.Identity;
@@ -45,6 +46,18 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 return response;
             }
 
+        }
+
+        public async Task UpdateRefreshToken(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate)
+        {
+            if (user != null)
+            {
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenEndDate = accessTokenDate.AddMinutes(addOnAccessTokenDate);
+                await _userManager.UpdateAsync(user);
+            }
+            else
+                throw new UserNotFoundException();
         }
     }
 }

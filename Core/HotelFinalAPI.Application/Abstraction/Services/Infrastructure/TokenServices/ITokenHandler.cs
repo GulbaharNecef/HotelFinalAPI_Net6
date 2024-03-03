@@ -10,6 +10,6 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Infrastructure.TokenSer
     public interface ITokenHandler
     {
         Task<TokenDTO> CreateAccessTokenAsync(int minute);
-        //string CreateRefreshToken(string token);
+        string CreateRefreshToken();
     }
 }
