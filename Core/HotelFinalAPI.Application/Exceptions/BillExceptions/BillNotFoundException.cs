@@ -9,7 +9,7 @@ namespace HotelFinalAPI.Application.Exceptions.BillExceptions
     public class BillNotFoundException:NotFoundException 
     {
         //public string? ErrorCode { get; set; }
-        public BillNotFoundException() { }
+        public BillNotFoundException(): base("No bills found!") { }
         public BillNotFoundException(string billId): base ($"The bill with id : {billId} doesn't exists.") { }
         public BillNotFoundException(string message, Exception innerException): base (message, innerException) { }
 

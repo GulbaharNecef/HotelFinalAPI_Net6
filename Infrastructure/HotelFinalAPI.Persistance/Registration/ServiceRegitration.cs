@@ -16,6 +16,7 @@ using HotelFinalAPI.Persistance.Repositories.GuestRepos;
 using HotelFinalAPI.Persistance.Repositories.ReservationRepos;
 using HotelFinalAPI.Persistance.Repositories.RoomRepos;
 using HotelFinalAPI.Persistance.UnitOfWorks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -47,7 +48,8 @@ namespace HotelFinalAPI.Persistance.Registration
                 options.Password.RequireLowercase = false;
                 options.Password.RequireDigit = false;
                 //options.User.RequireUniqueEmail = true;
-            }).AddEntityFrameworkStores<ApplicationDbContext>();
+            }).AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
 
             services.AddScoped<IBillReadRepository, BillReadRepository>();
             services.AddScoped<IBillWriteRepository, BillWriteRepository>();

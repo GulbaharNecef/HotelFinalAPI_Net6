@@ -47,7 +47,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             SignInResult result = await _signInManager.CheckPasswordSignInAsync(user, password, false);
             if (result.Succeeded)
             {
-                TokenDTO token = await _tokenHandler.CreateAccessTokenAsync(Int32.Parse(_configuration["Token:AccessTokenLifeTimeInMinutes"]));
+                TokenDTO token = await _tokenHandler.CreateAccessTokenAsync(Int32.Parse(_configuration["Token:AccessTokenLifeTimeInMinutes"]),user);
                 await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, Int32.Parse(_configuration["Token:AddOnAccessTokenDate"]));
                 return new()
                 {
@@ -65,7 +65,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             AppUser? user = await  _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
             if (user != null && user.RefreshTokenEndDate > DateTime.UtcNow)
             {
-                TokenDTO token = await _tokenHandler.CreateAccessTokenAsync(Int32.Parse(_configuration["Token:AccessTokenLifeTimeInMinutes"]));
+                TokenDTO token = await _tokenHandler.CreateAccessTokenAsync(Int32.Parse(_configuration["Token:AccessTokenLifeTimeInMinutes"]),user);
                 await _userService.UpdateRefreshToken(token.RefreshToken, user, token.Expiration, Int32.Parse(_configuration["Token:AddOnAccessTokenDate"]));
                 response.Data = token;
                 response.StatusCode = 200;

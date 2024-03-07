@@ -12,7 +12,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Serilog.Context;
 using Serilog.Core;
+using System.Security.Claims;
 using System.Text;
 
 namespace HotelFinalAPI.API
@@ -62,7 +64,8 @@ namespace HotelFinalAPI.API
                     ValidAudience = builder.Configuration["Token:Audience"],
                     ValidIssuer = builder.Configuration["Token:Issuer"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
-                    LifetimeValidator = (notBefore, expires, securityToken, validationParameters) => expires != null ? expires > DateTime.UtcNow : false//to do see again jwt nin vaxti 5 deq uzanirdi, bununla 1 deq veriremse 1 deqe de bitir
+                    LifetimeValidator = (notBefore, expires, securityToken, validationParameters) => expires != null ? expires > DateTime.UtcNow : false,//to do see again jwt nin vaxti 5 deq uzanirdi, bununla 1 deq veriremse 1 deqe de bitir
+                    NameClaimType = ClaimTypes.Name // JWT uzerinde name claimine karsilik gelen degeri User.Identity.Name propertisindenn elde ede biliriz
                 });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -115,12 +118,13 @@ namespace HotelFinalAPI.API
             //Upload edende bu middleware olmalidir
             app.UseStaticFiles();
 
+            app.UseSerilogRequestLogging();
             //app.UseExceptionHandler() -i extend etmisem)
             app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILogger<Program>>());
 
             //logs HTTP request details (such as method, path, status code, and timing), should come before other middlewares like authentication, routing, bunu yazdim deye her endpoint de manually loglama etmeye ehtiyac qalmir.(oz custom mesajimi yazmaq istemiremse)
             //butun requestleri loglayir endpointin icinde _logger cagirmasamda cunki middlewaredi :)
-            app.UseSerilogRequestLogging();
+            
 
             app.UseHttpLogging();
 
@@ -131,6 +135,12 @@ namespace HotelFinalAPI.API
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.Use(async (context, next) =>
+            {
+                var username = context.User?.Identity?.IsAuthenticated != null || true ? context.User.Identity.Name : null;
+                LogContext.PushProperty("User_Name", username);
+                await next(context);
+            });
 
             app.MapControllers();
 

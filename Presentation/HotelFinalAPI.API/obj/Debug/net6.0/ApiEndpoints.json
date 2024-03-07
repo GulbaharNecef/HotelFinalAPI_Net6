@@ -40,7 +40,7 @@
     "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
     "Method": "CreateBill",
     "RelativePath": "api/Bill/CreateBill",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -130,7 +130,7 @@
     "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
     "Method": "UpdateBill",
     "RelativePath": "api/Bill/UpdateBill",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -215,6 +215,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.TempController",
+    "Method": "MethodForResetPasswordTemp",
+    "RelativePath": "api/Temp",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "HotelFinalAPI.API.Controllers.TempController",

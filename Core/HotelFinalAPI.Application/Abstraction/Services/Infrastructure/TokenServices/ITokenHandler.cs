@@ -1,4 +1,5 @@
 ﻿using HotelFinalAPI.Application.DTOs;
+using HotelFinalAPI.Domain.Entities.IdentityEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Infrastructure.TokenSer
 {
     public interface ITokenHandler
     {
-        Task<TokenDTO> CreateAccessTokenAsync(int minute);
+        Task<TokenDTO> CreateAccessTokenAsync(int minute,AppUser user);
         string CreateRefreshToken();
     }
 }

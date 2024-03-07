@@ -41,10 +41,9 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             GenericResponseModel<BillCreateDTO> response = new()
             {
                 Data = null,
-                Message = "Unsuccessful operation",
+                Message = "Unsuccessful operation while creating Bill",
                 StatusCode = 400
             };
-            //if (billCreateDTO == null) { throw new ArgumentNullException(); }
             var bill = new Bill()
             {
                 Amount = billCreateDTO.Amount,
@@ -61,7 +60,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 return response;
             }
 
-                return response;
+            return response;
         }
 
         public async Task<GenericResponseModel<bool>> DeleteBillById(string id)
@@ -70,195 +69,142 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             {
                 Data = false,
                 StatusCode = 400,
-                Message = "Unsuccessful"
+                Message = "Unsuccessful operation!"
             };
-            if (id is null)
-            {
-                return response;
-            }
-            var deletedBill = await _billReadRepository.GetByIdAsync(id);
-            if (deletedBill == null)
-            {
-                return response;
-            }
+            if (string.IsNullOrEmpty(id))
+                throw new ArgumentNullException(id);
 
-            _billWriteRepository.Remove(deletedBill);
-            int affectedRows = await _unitOfWork.SaveChangesAsync();
-            if (affectedRows > 0)
+            if (!Guid.TryParse(id, out Guid validId))
+                throw new InvalidIdFormatException();
+            else
             {
-                response.Data = true;
-                response.StatusCode = 200;
-                response.Message = "Bill deleted successfully";
-                return response;
+                var deletedBill = await _billReadRepository.GetByIdAsync(id);
+                if (deletedBill != null)
+                {
+                    _billWriteRepository.Remove(deletedBill);
+                    int affectedRows = await _unitOfWork.SaveChangesAsync();
+                    if (affectedRows > 0)
+                    {
+                        response.Data = true;
+                        response.StatusCode = 200;
+                        response.Message = "Bill deleted successfully";
+                        return response;
+                    }
+                }
+                else
+                    throw new BillNotFoundException(id);
             }
             return response;
         }
 
         public async Task<GenericResponseModel<List<BillGetDTO>>> GetAllBills()
         {
-            GenericResponseModel<List<BillGetDTO>> response = new()
-            {
-                Data = null,
-                Message = "Unsuccessful operation",
-                StatusCode = 400
-            };
-            var bills = _billReadRepository.GetAll(false).ToList();
-            if (bills == null)
-            {
-                throw new BillNotFoundException();
-            }
-            var billGetDTO = _mapper.Map<List<BillGetDTO>>(bills);
+            GenericResponseModel<List<BillGetDTO>> response = new();
 
-            response.Data = billGetDTO;
-            response.StatusCode = 200;
-            response.Message = "Successful";
-            return response;
+            var bills = _billReadRepository.GetAll(false).ToList();
+            if (bills.Count() > 0)//Count()=>Linq; Count=>ICollection)
+            {
+                var billGetDTO = _mapper.Map<List<BillGetDTO>>(bills);
+                response.Data = billGetDTO;
+                response.StatusCode = 200;
+                response.Message = "Successful";
+                return response;
+            }
+            throw new BillNotFoundException();
+
         }
 
         public async Task<GenericResponseModel<BillGetDTO>> GetBillById(string id)
-        {
-            try
-            {
-                GenericResponseModel<BillGetDTO> response = new()
-                {
-                    Data = null,
-                    StatusCode = 400,
-                    Message = "Unsuccessfull"
-                };
-                //if (string.IsNullOrEmpty(id))
-                //{
-                //    throw new BillNotFoundException(response.Message); // null gele bilmir validasiyaya gore ona gore heleki bunu ignore edirem
-                //}
+        {//todo id default filter sayesinde null gele bilmir deye heleki bunu ignore edirem? am i wrong? ya da her ehtimala IsNullOrEmpty yoxlayiram :| 
+            GenericResponseModel<BillGetDTO> response = new();
 
-                //throw new BillNotFoundException(Guid.Parse(id));
-                var isValidId = Guid.TryParse(id, out Guid validId);
-                if (isValidId)
-                {
-                    var bill = await _billReadRepository.GetByIdAsync(id);
-                    var billDTO = _mapper.Map<BillGetDTO>(bill);
-                    if (bill != null)
-                    {
-                        response.Data = billDTO;
-                        response.StatusCode = 200;
-                        response.Message = "Successful";
-                        return response;
-                    }
-                    else
-                        throw new BillNotFoundException(id);
-                }
-                else
-                    throw new InvalidIdFormatException(id);
+            if (string.IsNullOrEmpty(id))
+                throw new ArgumentNullException(id);
 
-            }
-            catch (BillNotFoundException e)
-            {
-                return new GenericResponseModel<BillGetDTO>
-                {
-                    Data = null,
-                    Message = e.Message,
-                    StatusCode = 500
-                };
-            }
-            catch (InvalidIdFormatException e)
-            {
-                Console.WriteLine(e.Message);
-                //_logger.LogInformation(e.Message);
+            if (!Guid.TryParse(id, out Guid validId))
+                throw new InvalidIdFormatException(id);
 
-                return new GenericResponseModel<BillGetDTO>
-                {
-                    Data = null,
-                    Message = e.Message,
-                    StatusCode = 500
-                };
+            var bill = await _billReadRepository.GetByIdAsync(id);
+            if (bill != null)
+            {
+                var billDTO = _mapper.Map<BillGetDTO>(bill);
+                response.Data = billDTO;
+                response.StatusCode = 200;
+                response.Message = "Successful";
+                return response;
             }
+            else
+                throw new BillNotFoundException(id);
         }
 
         public async Task<GenericResponseModel<List<BillGetDTO>>> GetBillsByGuestId(string guestId)
         {
-            GenericResponseModel<List<BillGetDTO>> response = new()
+            GenericResponseModel<List<BillGetDTO>> response = new();
+
+            if (string.IsNullOrEmpty(guestId))
+                throw new ArgumentNullException(guestId);
+
+            if (!Guid.TryParse(guestId, out Guid validId))
+                throw new InvalidIdFormatException(guestId);
+
+            var billsByGuest = _billReadRepository.Table.Where(b => b.GuestId == validId).ToList();
+            if (billsByGuest.Count > 0)//Count()=>Linq; Count=>ICollection)
             {
-                Data = null,
-                StatusCode = 400,
-                Message = "Unsuccessful"
-            };
-            //if (guestId == null)
-            //{
-            //    throw new BillNotFoundException($"with guestId{guestId}");
-            //}
-            if (Guid.TryParse(guestId, out Guid result))
-            {
-                var billsByGuest = _billReadRepository.Table.Where(b => b.GuestId == result).ToList();
-                if (billsByGuest.Count > 0)
-                {
-                    var billByGuestDTOList = _mapper.Map<List<BillGetDTO>>(billsByGuest);
-                    response.Data = billByGuestDTOList;
-                    response.StatusCode = 200;
-                    response.Message = "Successful to get Bills by GuestId";
-                    return response;
-                }
-                else
-                {//burda exception atacam, heleki bunu yazdim
-                    response.Data = null;
-                    response.StatusCode = 404;
-                    response.Message = $"There is no bill related to id: {guestId}";
-                }
+                var billByGuestDTOList = _mapper.Map<List<BillGetDTO>>(billsByGuest);
+                response.Data = billByGuestDTOList;
+                response.StatusCode = 200;
+                response.Message = "Successful to get Bills by GuestId";
+                return response;
             }
-            throw new BillNotFoundException();
+            else
+                throw new BillNotFoundException();
         }
 
         public async Task<GenericResponseModel<List<BillGetDTO>>> GetBillsByPaidStatus(string status)
         {
-            GenericResponseModel<List<BillGetDTO>> response = new()
-            {
-                Data = null,
-                StatusCode = 400,
-                Message = "Unsuccessful"
-            };
-            //if (status == null)
-            //    return response;
+            GenericResponseModel<List<BillGetDTO>> response = new();
+
+            if (string.IsNullOrEmpty(status))
+                throw new ArgumentNullException();
+
             if (bool.TryParse(status, out bool result))
             {
                 var billsByPaidStatus = await _billReadRepository.Table.Where(b => b.PaidStatus == result).ToListAsync();//ToList mi? yes axi IQueryabledir mi? ne elaqeee:)
-                var billsGetDTO = _mapper.Map<List<BillGetDTO>>(billsByPaidStatus);
-                if(billsByPaidStatus.Any()) //checks if there are any bills found
+                if (billsByPaidStatus.Any()) //checks if there are any bills found
                 {
+                    var billsGetDTO = _mapper.Map<List<BillGetDTO>>(billsByPaidStatus);
                     response.Data = billsGetDTO;
                     response.StatusCode = 200;
                     response.Message = "Successful";
                     return response;
                 }
-                else 
-                    throw new BillNotFoundException();//todo bu exceptionu burda coxluq ucun atmaq duzgundurmu? yes id qebul etmeyen constructor ise dusecek
+                else
+                    throw new BillNotFoundException();// bu exceptionu burda coxluq ucun atmaq duzgundurmu? yes id qebul etmeyen constructor ise dusecek
             }
             else
             {
-                return new GenericResponseModel<List<BillGetDTO>>
-                {
-                    Data = null,
-                    StatusCode = 400,
-                    Message = "Enter true or false as status of Bill"
-                };
+                response.Data = null;
+                response.StatusCode = 400;
+                response.Message = "Status value Bill must be True or False!";
+                return response;
             }
         }
 
         public async Task<GenericResponseModel<BillUpdateDTO>> UpdateBill(string id, BillUpdateDTO billUpdateDTO)
         {
-            GenericResponseModel<BillUpdateDTO> response = new()
-            {
-                Data = null,
-                StatusCode = 400,
-                Message = "Unsuccesful"
-            };
-            if (id == null || billUpdateDTO == null)
-                return response;
+            GenericResponseModel<BillUpdateDTO> response = new();
+            if (string.IsNullOrEmpty(id))
+                throw new ArgumentNullException("The 'id' parameter cannot be null or empty.", nameof(id));
+
+            if (!Guid.TryParse(id, out Guid result))
+                throw new InvalidIdFormatException(id);
 
             var updatedBill = await _billReadRepository.GetByIdAsync(id);
-            if (updatedBill == null)
-                return response;
+            if (updatedBill is null)
+                throw new BillNotFoundException(id);
 
             updatedBill.Amount = billUpdateDTO.Amount;
             updatedBill.PaidStatus = billUpdateDTO.PaidStatus;
-
             _billWriteRepository.Update(updatedBill);
             var affectedRows = await _unitOfWork.SaveChangesAsync();
             if (affectedRows > 0)
@@ -268,8 +214,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 response.Message = "Bill Updated successfully";
                 return response;
             }
-            return response;
-
+            throw new Exception("Unexpected error occurred while updating the bill.");//todo bu bele best practicedirmi acaba🤔
         }
     }
 }

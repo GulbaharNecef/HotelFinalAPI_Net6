@@ -33,6 +33,7 @@ namespace HotelFinalAPI.API.Extensions
                             NotFoundException => StatusCodes.Status404NotFound,
                             InvalidIdFormatException => StatusCodes.Status400BadRequest,
                             AuthenticationErrorException => StatusCodes.Status400BadRequest,
+                            ArgumentNullException => StatusCodes.Status400BadRequest,
                             _ => StatusCodes.Status500InternalServerError
                         };
 
@@ -40,7 +41,7 @@ namespace HotelFinalAPI.API.Extensions
                         {
                            // StatusCode = context.Response.StatusCode,
                             Message = contextFeature.Error.Message,
-                            Title = "Hata Alindi!"
+                            Title = "Error happened!"
                         }));
                     }
                 });

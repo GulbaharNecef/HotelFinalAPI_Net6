@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -7,7 +8,7 @@ namespace HotelFinalAPI.API.Registration
 {
     public static class ServiceRegistration
     {
-        
+
         public static void AddPresentationRegistration(this IServiceCollection services)
         {
             //addAuthentication
@@ -43,6 +44,16 @@ namespace HotelFinalAPI.API.Registration
                     }
                 });
             });
+
+            services.AddHttpLogging(logging =>
+            {
+                logging.LoggingFields = HttpLoggingFields.All;
+                logging.RequestHeaders.Add("sec-ch-ua");//kullaniciya dair butun teferruatli bilgileri getien key
+                logging.MediaTypeOptions.AddText("application/javascript");
+                logging.RequestBodyLogLimit = 4096;
+                logging.ResponseBodyLogLimit = 4096;
+            });
+
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",

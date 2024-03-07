@@ -15,7 +15,7 @@ namespace HotelFinalAPI.API.Controllers
             _billService = billService;
         }
 
-        [HttpGet("[action]")]
+        [HttpPost("[action]")]
         public async Task<IActionResult> CreateBill([FromBody] BillCreateDTO billCreateDTO)
         {
             var result = await _billService.CreateBill(billCreateDTO);
@@ -65,7 +65,7 @@ namespace HotelFinalAPI.API.Controllers
             var data = await _billService.GetBillsByPaidStatus(status);
             return StatusCode(data.StatusCode, data);
         }
-        [HttpPost("[action]")]
+        [HttpPut("[action]")]
         public async Task<IActionResult> UpdateBill(string billId, BillUpdateDTO billUpdateDTO)
         {
             var data = await _billService.UpdateBill(billId, billUpdateDTO);

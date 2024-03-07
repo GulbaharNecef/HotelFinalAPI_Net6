@@ -18160,3 +18160,1996 @@ HotelFinalAPI.Application.Exceptions.UserNotFoundException: User didn't found
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
 2024-03-03 20:50:58.042 +04:00 [ERR] Xeta bas verdi User didn't found
 2024-03-03 20:50:58.044 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7169/api/auth/LoginWithRefreshToken application/json 46 - 404 - application/json 29343.5659ms
+2024-03-03 22:09:26.522 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-03 22:09:27.085 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-03 22:09:27.088 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-03 22:09:27.138 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-03 22:09:27.139 +04:00 [INF] Hosting environment: Development
+2024-03-03 22:09:27.140 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-03 22:09:28.070 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-03 22:09:28.718 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 653.1133ms
+2024-03-03 22:09:28.722 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-03 22:09:28.723 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-03 22:09:28.734 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 11.9910ms
+2024-03-03 22:09:28.856 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 133.4392ms
+2024-03-03 22:09:29.112 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-03 22:09:29.520 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 408.3041ms
+2024-03-03 22:09:44.125 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/WeatherForecast - -
+2024-03-03 22:09:44.145 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/WeatherForecast
+Accept: text/plain
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-03 22:09:44.259 +04:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-03-03 22:09:44.271 +04:00 [INF] AuthenticationScheme: Admin was challenged.
+2024-03-03 22:09:44.273 +04:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2024-03-03 22:09:44.277 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/WeatherForecast - - - 401 0 - 152.5930ms
+2024-03-03 22:10:04.602 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-03 22:10:04.604 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-03 22:10:04.609 +04:00 [INF] CORS policy execution successful.
+2024-03-03 22:10:04.617 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-03 22:10:04.684 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-03 22:10:09.539 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-03 22:10:09.543 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-03 22:10:09.829 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-03 22:10:10.569 +04:00 [INF] Executed DbCommand (118ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-03 22:10:15.345 +04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-03 22:10:16.890 +04:00 [INF] Executed DbCommand (27ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-03 22:10:16.963 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-03 22:10:16.991 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 12295.7356ms
+2024-03-03 22:10:17.001 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-03 22:10:17.010 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Sun, 03 Mar 2024 18:10:16 GMT
+Server: Kestrel
+Access-Control-Allow-Origin: [Redacted]
+2024-03-03 22:10:17.056 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 12454.8572ms
+2024-03-03 22:10:40.067 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/WeatherForecast - -
+2024-03-03 22:10:40.069 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/WeatherForecast
+Accept: text/plain
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Authorization: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-03 22:10:40.183 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.WeatherForecastController.Get (HotelFinalAPI.API)'
+2024-03-03 22:10:40.186 +04:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[HotelFinalAPI.API.WeatherForecast] Get() on controller HotelFinalAPI.API.Controllers.WeatherForecastController (HotelFinalAPI.API).
+2024-03-03 22:10:40.191 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.API.WeatherForecast[]'.
+2024-03-03 22:10:40.195 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.WeatherForecastController.Get (HotelFinalAPI.API) in 6.7378ms
+2024-03-03 22:10:40.197 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.WeatherForecastController.Get (HotelFinalAPI.API)'
+2024-03-03 22:10:40.198 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Sun, 03 Mar 2024 18:10:39 GMT
+Server: Kestrel
+2024-03-03 22:10:40.199 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/WeatherForecast - - - 200 - application/json;+charset=utf-8 132.2158ms
+2024-03-04 23:38:23.519 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-04 23:38:25.217 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-04 23:38:25.218 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-04 23:38:25.296 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-04 23:38:25.298 +04:00 [INF] Hosting environment: Development
+2024-03-04 23:38:25.301 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-04 23:38:26.349 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-04 23:38:27.246 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 906.3161ms
+2024-03-04 23:38:27.265 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-04 23:38:27.266 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-04 23:38:27.313 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 47.4259ms
+2024-03-04 23:38:27.588 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 321.8780ms
+2024-03-04 23:38:27.879 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-04 23:38:28.319 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 440.7967ms
+2024-03-05 09:01:29.081 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-05 09:01:30.042 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-05 09:01:30.047 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-05 09:01:30.126 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-05 09:01:30.132 +04:00 [INF] Hosting environment: Development
+2024-03-05 09:01:30.133 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-05 09:01:31.092 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-05 09:01:31.544 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 459.3727ms
+2024-03-05 09:01:31.609 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-05 09:01:31.610 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-05 09:01:31.653 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 43.3940ms
+2024-03-05 09:01:31.757 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 146.9275ms
+2024-03-05 09:01:31.876 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-05 09:01:32.118 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 242.0703ms
+2024-03-05 09:02:26.442 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-05 09:02:26.463 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 09:02:26.471 +04:00 [INF] CORS policy execution successful.
+2024-03-05 09:02:26.483 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:02:26.542 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-05 09:02:34.422 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 09:02:34.424 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 09:02:34.751 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-05 09:02:35.570 +04:00 [INF] Executed DbCommand (106ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:02:42.933 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:04:24.085 +04:00 [INF] Executed DbCommand (25ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-05 09:04:24.171 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-05 09:04:24.196 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 117643.1355ms
+2024-03-05 09:04:24.200 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:04:24.208 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 05 Mar 2024 05:04:23 GMT
+Server: Kestrel
+Access-Control-Allow-Origin: [Redacted]
+2024-03-05 09:04:24.232 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 117789.8443ms
+2024-03-05 09:18:29.823 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-05 09:18:29.845 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 09:18:29.846 +04:00 [INF] CORS policy execution successful.
+2024-03-05 09:18:29.847 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:18:29.849 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-05 09:18:34.272 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-05 09:18:34.319 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:19:05.977 +04:00 [INF] Executed DbCommand (29ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:19:12.623 +04:00 [INF] Executed DbCommand (41ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-05 09:19:20.199 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-05 09:19:25.635 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 55784.8458ms
+2024-03-05 09:19:25.638 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:20:57.232 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 05 Mar 2024 05:19:24 GMT
+Server: Kestrel
+Access-Control-Allow-Origin: [Redacted]
+2024-03-05 09:20:57.238 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 147414.8012ms
+2024-03-05 09:26:55.132 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-05 09:26:55.133 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 09:26:55.135 +04:00 [INF] CORS policy execution successful.
+2024-03-05 09:26:55.137 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:26:55.138 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-05 09:27:37.155 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-05 09:27:37.441 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-05 09:27:37.443 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-05 09:27:37.483 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-05 09:27:37.484 +04:00 [INF] Hosting environment: Development
+2024-03-05 09:27:37.485 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-05 09:27:38.409 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-05 09:27:38.804 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 395.4613ms
+2024-03-05 09:27:38.808 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-05 09:27:38.808 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-05 09:27:38.826 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 18.8063ms
+2024-03-05 09:27:38.924 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 116.2208ms
+2024-03-05 09:27:39.054 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-05 09:27:39.258 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 204.1548ms
+2024-03-05 09:27:52.146 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-05 09:27:52.168 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 09:27:52.177 +04:00 [INF] CORS policy execution successful.
+2024-03-05 09:27:52.185 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:27:52.234 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-05 09:27:56.280 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 09:27:56.285 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 09:27:56.534 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-05 09:27:57.233 +04:00 [INF] Executed DbCommand (80ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:28:02.564 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:28:04.004 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-05 09:28:04.077 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-05 09:28:04.093 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 11851.2714ms
+2024-03-05 09:28:04.096 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:28:04.100 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 05 Mar 2024 05:28:03 GMT
+Server: Kestrel
+Access-Control-Allow-Origin: [Redacted]
+2024-03-05 09:28:04.120 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 11974.2594ms
+2024-03-05 09:31:26.675 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-05 09:31:26.682 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 09:31:26.684 +04:00 [INF] CORS policy execution successful.
+2024-03-05 09:31:26.685 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:31:26.686 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-05 09:31:29.373 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-05 09:31:29.384 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:32:06.017 +04:00 [INF] Executed DbCommand (30ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:32:09.368 +04:00 [INF] Executed DbCommand (24ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-05 09:32:14.498 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-05 09:32:17.655 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 50966.8106ms
+2024-03-05 09:32:17.656 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:50:53.464 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-05 09:50:53.800 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-05 09:50:53.802 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-05 09:50:53.866 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-05 09:50:53.885 +04:00 [INF] Hosting environment: Development
+2024-03-05 09:50:53.888 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-05 09:50:54.526 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-05 09:50:54.913 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 386.8358ms
+2024-03-05 09:50:54.918 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-05 09:50:54.918 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-05 09:50:54.940 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 16.0997ms
+2024-03-05 09:50:55.045 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 126.6142ms
+2024-03-05 09:50:55.157 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-05 09:50:55.376 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 219.1991ms
+2024-03-05 09:51:07.912 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-05 09:51:07.942 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 09:51:07.947 +04:00 [INF] CORS policy execution successful.
+2024-03-05 09:51:07.959 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:51:08.004 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-05 09:51:22.566 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 09:51:22.568 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 09:51:22.819 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-05 09:51:23.512 +04:00 [INF] Executed DbCommand (74ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:52:18.409 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 09:52:21.979 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-05 09:52:22.040 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-05 09:52:22.059 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 74048.3525ms
+2024-03-05 09:52:22.063 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 09:52:22.067 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+Date: Tue, 05 Mar 2024 05:52:21 GMT
+Server: Kestrel
+Access-Control-Allow-Origin: [Redacted]
+2024-03-05 09:52:22.089 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 74177.1172ms
+2024-03-05 10:17:35.141 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-05 10:17:35.728 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-05 10:17:35.730 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-05 10:17:35.818 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-05 10:17:35.820 +04:00 [INF] Hosting environment: Development
+2024-03-05 10:17:35.821 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-05 10:17:36.423 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-05 10:17:37.031 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 617.7223ms
+2024-03-05 10:17:37.047 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-05 10:17:37.048 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-05 10:17:37.071 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 23.9585ms
+2024-03-05 10:17:37.207 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 159.8730ms
+2024-03-05 10:17:37.373 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-05 10:17:37.726 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 352.9755ms
+2024-03-05 10:17:54.295 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-05 10:17:54.345 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 10:17:54.354 +04:00 [INF] CORS policy execution successful.
+2024-03-05 10:17:54.370 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 10:17:54.483 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-05 10:17:59.748 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 10:17:59.751 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 10:18:00.391 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-05 10:18:02.142 +04:00 [INF] Executed DbCommand (157ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 10:18:06.941 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 10:18:08.385 +04:00 [INF] Executed DbCommand (18ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-05 10:18:08.502 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-05 10:18:08.524 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-03-05 10:18:08.544 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 14041.3565ms
+2024-03-05 10:18:08.552 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 10:18:08.569 +04:00 [INF] ResponseBody: {"data":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibmdyIiwibmJmIjoxNzA5NjE5NDg1LCJleHAiOjE3MDk2MTk1NDUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxNjkiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MTY5In0.VQqi6nybrJfTWJWRaltZqk38gRRmeoAZICb4tQiPWXo","refreshToken":"YP95pHNKUo0jBYGJ8uon2/4m6vD1ZlK8fO/1axIuDgE=","expiration":"2024-03-05T06:19:05.3285774Z"},"statusCode":200,"message":"Successfull"}
+2024-03-05 10:18:08.612 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 14317.7527ms
+2024-03-05 10:18:37.013 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp/GetRangeEmployees?Page=0&Total=5 - -
+2024-03-05 10:18:37.029 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Temp/GetRangeEmployees
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Authorization: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 10:18:37.052 +04:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-03-05 10:18:37.066 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-03-05 10:18:37.303 +04:00 [ERR] Xeta bas verdi No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+2024-03-05 10:18:37.312 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Temp/GetRangeEmployees?Page=0&Total=5 - - - 500 - application/json 300.0583ms
+2024-03-05 10:20:45.181 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-05 10:20:45.641 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-05 10:20:45.643 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-05 10:20:45.777 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-05 10:20:45.779 +04:00 [INF] Hosting environment: Development
+2024-03-05 10:20:45.781 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-05 10:20:46.777 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-05 10:20:47.377 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-05 10:20:47.377 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-05 10:20:47.377 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 606.1742ms
+2024-03-05 10:20:47.400 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 23.8393ms
+2024-03-05 10:20:47.528 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 151.5887ms
+2024-03-05 10:20:47.699 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-05 10:20:48.035 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 335.8377ms
+2024-03-05 10:20:59.084 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-05 10:20:59.116 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 10:20:59.127 +04:00 [INF] CORS policy execution successful.
+2024-03-05 10:20:59.147 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 10:20:59.289 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-05 10:21:06.412 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 10:21:06.416 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-05 10:21:06.974 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-05 10:21:08.539 +04:00 [INF] Executed DbCommand (175ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 10:21:12.510 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-05 10:21:14.205 +04:00 [INF] Executed DbCommand (11ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-05 10:21:14.315 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-05 10:21:14.342 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-03-05 10:21:14.370 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 15061.0261ms
+2024-03-05 10:21:14.392 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-05 10:21:14.408 +04:00 [INF] ResponseBody: {"data":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibmdyIiwibmJmIjoxNzA5NjE5NjcwLCJleHAiOjE3MDk2MTk3MzAsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxNjkiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MTY5In0.9jrl1QDMpwhjvIJnN1enhWE5a7MsWeaX_iUHyaWIONE","refreshToken":"MvjQcAXTO8m3+GrIGsU+6Ue+354hZMuy/CxmOlE173A=","expiration":"2024-03-05T06:22:10.5049961Z"},"statusCode":200,"message":"Successfull"}
+2024-03-05 10:21:14.453 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 15369.3057ms
+2024-03-05 10:21:43.280 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp/GetRangeEmployees?Page=0&Total=5 - -
+2024-03-05 10:21:43.288 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Temp/GetRangeEmployees
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Authorization: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-05 10:21:43.855 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.GetRangeEmployees (HotelFinalAPI.API)'
+2024-03-05 10:21:43.869 +04:00 [INF] Route matched with {action = "GetRangeEmployees", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRangeEmployees(HotelFinalAPI.Application.RequestParameters.Pagination) on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-03-05 10:21:44.247 +04:00 [INF] kdjjadskshks
+2024-03-05 10:21:44.351 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-05 10:21:44.431 +04:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedDate], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Role], [e].[UpdatedDate]
+FROM [Employees] AS [e]
+2024-03-05 10:21:48.743 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HotelFinalAPI.Application.DTOs.EmployeeDTOs.EmployeeGetDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-05 10:21:48.768 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-03-05 10:21:48.770 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.GetRangeEmployees (HotelFinalAPI.API) in 4893.3343ms
+2024-03-05 10:21:48.776 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.GetRangeEmployees (HotelFinalAPI.API)'
+2024-03-05 10:21:48.780 +04:00 [INF] ResponseBody: [{"id":"7dd9b0a7-0549-4bbb-c8ce-08dc2971fc08","firstName":"Nergiz","lastName":"Zeynalova","email":"rzeynalova@gmail.com","role":"Maintenance","createdDate":"0001-01-01T00:00:00","updatedDate":"0001-01-01T00:00:00"},{"id":"14501274-ce56-44fd-c681-08dc2a18fadf","firstName":"Sevda","lastName":"Meherremli","email":"sevdameherremli@gmail.com","role":"Host or hostess","createdDate":"2024-02-10T13:17:07.2790778","updatedDate":"0001-01-01T00:00:00"},{"id":"30f5d13b-4c16-4d11-8b37-08dc2a51128a","firstName":"Elnur","lastName":"Babayev","email":"ebabayev@gmail.com","role":"General Manager","createdDate":"2024-02-10T19:58:31.2285613","updatedDate":"2024-02-10T20:01:41.9450697"},{"id":"372b49f5-757a-4bc1-0a61-08dc2c5f4816","firstName":"Arif","lastName":"Memmedov","email":"amemmedov@gmail.com","role":"Parking Attendant","createdDate":"2024-02-13T10:45:01.2860795","updatedDate":"0001-01-01T00:00:00"},{"id":"fa3a9152-9716-427b-c6da-08dc2c604fc1","firstName":"Ali","lastName":"Necefov","email":"anecefov@gmail.com","role":"Director of Purchasing","createdDate":"2024-02-13T10:53:59.1659028","updatedDate":"0001-01-01T00:00:00"}]
+2024-03-05 10:21:50.059 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Temp/GetRangeEmployees?Page=0&Total=5 - - - 200 - application/json;+charset=utf-8 6779.1834ms
+2024-03-06 11:22:21.610 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 11:22:22.584 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-06 11:22:22.593 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-06 11:22:22.675 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 11:22:22.747 +04:00 [INF] Hosting environment: Development
+2024-03-06 11:22:22.748 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-06 11:22:23.446 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-06 11:22:24.083 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 645.2402ms
+2024-03-06 11:22:24.146 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-06 11:22:24.226 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-06 11:22:24.235 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 88.5675ms
+2024-03-06 11:22:24.428 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 200.7595ms
+2024-03-06 11:22:24.606 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-06 11:22:24.828 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-03-06 11:22:25.220 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 500 - text/plain;+charset=utf-8 614.1077ms
+2024-03-06 11:22:51.439 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 11:22:51.957 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-06 11:22:51.962 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-06 11:22:52.017 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 11:22:52.019 +04:00 [INF] Hosting environment: Development
+2024-03-06 11:22:52.020 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-06 11:22:52.603 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-06 11:22:52.886 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 288.3665ms
+2024-03-06 11:22:52.895 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-06 11:22:52.897 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-06 11:22:52.902 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 6.7308ms
+2024-03-06 11:22:52.997 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 99.9531ms
+2024-03-06 11:22:53.171 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-06 11:22:53.430 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 259.1668ms
+2024-03-06 11:23:34.610 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp?email=nncf%40gmail.com - -
+2024-03-06 11:23:34.630 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Temp
+Accept: text/plain
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-06 11:23:34.711 +04:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-03-06 11:23:34.723 +04:00 [INF] AuthenticationScheme: Admin was challenged.
+2024-03-06 11:23:34.728 +04:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2024-03-06 11:23:34.734 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Temp?email=nncf%40gmail.com - - - 401 0 - 123.4211ms
+2024-03-06 11:23:53.369 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-06 11:23:53.373 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-06 11:23:53.410 +04:00 [INF] CORS policy execution successful.
+2024-03-06 11:23:53.421 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-06 11:23:53.534 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-06 11:23:55.532 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-06 11:23:55.535 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-06 11:23:55.928 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-06 11:23:56.839 +04:00 [INF] Executed DbCommand (81ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-06 11:23:57.535 +04:00 [INF] Executed DbCommand (45ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-06 11:23:57.831 +04:00 [INF] Executed DbCommand (53ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-06 11:23:57.905 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-06 11:23:57.923 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-03-06 11:23:57.940 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 4390.4798ms
+2024-03-06 11:23:57.947 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-06 11:23:57.955 +04:00 [INF] ResponseBody: {"data":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibmdyIiwibmJmIjoxNzA5NzA5ODM3LCJleHAiOjE3MDk3MDk4OTcsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxNjkiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MTY5In0.fdI1yCghHA_tu3fQDKHq1mFfGlMzkvGGynuQQTY1ikQ","refreshToken":"3mTCMc83kL6bZZm+OkPZ0vsm+Iphpk3ul4fCPf7P8sw=","expiration":"2024-03-06T07:24:57.1538103Z"},"statusCode":200,"message":"Successfull"}
+2024-03-06 11:23:57.972 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 4603.2542ms
+2024-03-06 11:24:16.039 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp?email=nncf%40gmail.com - -
+2024-03-06 11:24:16.045 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Temp
+Accept: text/plain
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Authorization: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-06 11:24:16.199 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API)'
+2024-03-06 11:24:16.209 +04:00 [INF] Route matched with {action = "MethodForResetPasswordTemp", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] MethodForResetPasswordTemp(System.String) on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-03-06 11:24:16.444 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API) in 229.7977ms
+2024-03-06 11:24:16.448 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API)'
+2024-03-06 11:24:16.453 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UserManager`1[HotelFinalAPI.API.Controllers.TempController]' while attempting to activate 'HotelFinalAPI.API.Controllers.TempController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method193(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at HotelFinalAPI.API.Program.<>c.<<Main>b__0_4>d.MoveNext() in C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\Program.cs:line 142
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-03-06 11:24:16.561 +04:00 [ERR] Xeta bas verdi Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UserManager`1[HotelFinalAPI.API.Controllers.TempController]' while attempting to activate 'HotelFinalAPI.API.Controllers.TempController'.
+2024-03-06 11:24:16.568 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Temp?email=nncf%40gmail.com - - - 500 - application/json 528.5804ms
+2024-03-06 11:29:14.861 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 11:29:15.064 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-06 11:29:15.068 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-06 11:29:15.124 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 11:29:15.126 +04:00 [INF] Hosting environment: Development
+2024-03-06 11:29:15.127 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-06 11:29:15.570 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-06 11:29:15.826 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 263.8612ms
+2024-03-06 11:29:15.879 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-06 11:29:15.880 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-06 11:29:15.888 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 8.8890ms
+2024-03-06 11:29:15.954 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 73.8456ms
+2024-03-06 11:29:16.142 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-06 11:29:16.303 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 160.8846ms
+2024-03-06 11:29:27.958 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-06 11:29:27.976 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-06 11:29:27.992 +04:00 [INF] CORS policy execution successful.
+2024-03-06 11:29:28.044 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-06 11:29:28.137 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-06 11:29:30.035 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-06 11:29:30.040 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-06 11:29:30.437 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-06 11:29:31.309 +04:00 [INF] Executed DbCommand (77ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-06 11:29:31.887 +04:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-06 11:29:32.173 +04:00 [INF] Executed DbCommand (48ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-06 11:29:32.230 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-06 11:29:32.247 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-03-06 11:29:32.263 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 4107.0273ms
+2024-03-06 11:29:32.267 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-06 11:29:32.274 +04:00 [INF] ResponseBody: {"data":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibmdyIiwibmJmIjoxNzA5NzEwMTcxLCJleHAiOjE3MDk3MTAyMzEsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxNjkiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MTY5In0.e66XcVfMs2wCKEOufx3BhYIORq8zDsQxlYaliLx6mpM","refreshToken":"RZth5MSBDJGvoUC7voEDXMlt6XAlEcEFSgqLNZzvQe4=","expiration":"2024-03-06T07:30:31.6614692Z"},"statusCode":200,"message":"Successfull"}
+2024-03-06 11:29:32.292 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 4333.2612ms
+2024-03-06 11:29:55.962 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp?email=nncf%40gmail.com - -
+2024-03-06 11:29:55.968 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Temp
+Accept: text/plain
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Authorization: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-06 11:29:56.159 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API)'
+2024-03-06 11:29:56.172 +04:00 [INF] Route matched with {action = "MethodForResetPasswordTemp", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] MethodForResetPasswordTemp(System.String) on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-03-06 11:29:56.530 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-06 11:29:56.564 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-03-06 11:29:56.574 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API) in 395.2529ms
+2024-03-06 11:29:56.577 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API)'
+2024-03-06 11:29:56.584 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: No IUserTwoFactorTokenProvider<TUser> named 'Default' is registered.
+   at Microsoft.AspNetCore.Identity.UserManager`1.GenerateUserTokenAsync(TUser user, String tokenProvider, String purpose)
+   at Microsoft.AspNetCore.Identity.UserManager`1.GeneratePasswordResetTokenAsync(TUser user)
+   at HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp(String email) in C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\Controllers\TempController.cs:line 215
+   at lambda_method189(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at HotelFinalAPI.API.Program.<>c.<<Main>b__0_4>d.MoveNext() in C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\Program.cs:line 142
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-03-06 11:29:56.664 +04:00 [ERR] Xeta bas verdi No IUserTwoFactorTokenProvider<TUser> named 'Default' is registered.
+2024-03-06 11:29:56.670 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Temp?email=nncf%40gmail.com - - - 500 - application/json 708.6661ms
+2024-03-06 11:32:36.500 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-06 11:32:37.004 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-06 11:32:37.073 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-06 11:32:37.144 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-06 11:32:37.171 +04:00 [INF] Hosting environment: Development
+2024-03-06 11:32:37.174 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-06 11:32:37.374 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-06 11:32:37.785 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 418.4199ms
+2024-03-06 11:32:37.826 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-06 11:32:37.826 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-06 11:32:37.833 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 6.4181ms
+2024-03-06 11:32:37.878 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.3019ms
+2024-03-06 11:32:38.243 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-06 11:32:38.375 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 131.7688ms
+2024-03-06 11:36:44.019 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0
+2024-03-06 11:36:44.047 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Auth/Login
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 0
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-06 11:36:44.056 +04:00 [INF] CORS policy execution successful.
+2024-03-06 11:36:44.074 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-06 11:36:44.173 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller HotelFinalAPI.API.Controllers.AuthController (HotelFinalAPI.API).
+2024-03-06 11:36:45.885 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-06 11:36:45.888 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-06 11:36:46.248 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-06 11:36:47.081 +04:00 [INF] Executed DbCommand (79ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-06 11:36:47.692 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-06 11:36:47.966 +04:00 [INF] Executed DbCommand (36ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p19='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [RefreshToken] = @p13, [RefreshTokenEndDate] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2024-03-06 11:36:48.027 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.TokenDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-06 11:36:48.040 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-03-06 11:36:48.053 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API) in 3865.2977ms
+2024-03-06 11:36:48.058 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.AuthController.Login (HotelFinalAPI.API)'
+2024-03-06 11:36:48.064 +04:00 [INF] ResponseBody: {"data":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibmdyIiwibmJmIjoxNzA5NzEwNjA3LCJleHAiOjE3MDk3MTA2NjcsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxNjkiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MTY5In0.qCMUlhGILwGrcn3PJaubnbM_Njy7xM_3YxYXVUWK4qU","refreshToken":"982YretLOq21gaZXSCnUERcobEyfehrs06X7oMaXTNc=","expiration":"2024-03-06T07:37:47.453467Z"},"statusCode":200,"message":"Successfull"}
+2024-03-06 11:36:48.082 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Auth/Login?usernameOrEmail=ngr&password=ngrncf%40 - 0 - 200 - application/json;+charset=utf-8 4062.7249ms
+2024-03-06 11:37:09.092 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Temp?email=nncf%40gmail.com - -
+2024-03-06 11:37:09.097 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Temp
+Accept: text/plain
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Authorization: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-06 11:37:09.298 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API)'
+2024-03-06 11:37:09.311 +04:00 [INF] Route matched with {action = "MethodForResetPasswordTemp", controller = "Temp"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] MethodForResetPasswordTemp(System.String) on controller HotelFinalAPI.API.Controllers.TempController (HotelFinalAPI.API).
+2024-03-06 11:37:09.638 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-06 11:37:09.666 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-03-06 11:37:09.721 +04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-03-06 11:37:09.726 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/plain; charset=utf-8
+2024-03-06 11:37:09.728 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API) in 412.8723ms
+2024-03-06 11:37:09.731 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.TempController.MethodForResetPasswordTemp (HotelFinalAPI.API)'
+2024-03-06 11:37:09.736 +04:00 [INF] ResponseBody: CfDJ8Bpm6EDMfzJHm+p6cMi4KTTd5Ke+tuoDKy+UDjH32AsQu9Hiyoh25jY+9877z6JpboHboc8ANlyzI3/JIp7nT5w+ueODKXBYJ9Faq6CFZhYWznR4V0/RVtmgMgOd32GSqnZ/jxYNSyPQsH4EdFjjD2Yfgq3L6QfiLQ1lzhxt8z/8iRtOXQOMEFYP/pfOBpowae2bsJW7+v4eEJSAYpLQV1adqelR0WFvdkqDDH4moF4q
+2024-03-06 11:37:09.740 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Temp?email=nncf%40gmail.com - - - 200 - text/plain;+charset=utf-8 647.9419ms
+2024-03-07 13:59:41.223 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-07 13:59:42.321 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-07 13:59:42.324 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-07 13:59:42.439 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-07 13:59:42.452 +04:00 [INF] Hosting environment: Development
+2024-03-07 13:59:42.453 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-07 13:59:45.684 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-07 13:59:46.481 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 802.4739ms
+2024-03-07 13:59:46.606 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-07 13:59:46.606 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-07 13:59:46.616 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 10.4041ms
+2024-03-07 13:59:47.221 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 615.0978ms
+2024-03-07 13:59:47.374 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-07 13:59:47.665 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 291.3710ms
+2024-03-07 14:00:41.413 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/User application/json 135
+2024-03-07 14:00:41.449 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/User
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 135
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 14:00:41.461 +04:00 [INF] CORS policy execution successful.
+2024-03-07 14:00:41.485 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.UserController.CreateUser (HotelFinalAPI.API)'
+2024-03-07 14:00:41.601 +04:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(HotelFinalAPI.Application.DTOs.UserDTOs.UserCreateDTO) on controller HotelFinalAPI.API.Controllers.UserController (HotelFinalAPI.API).
+2024-03-07 14:00:42.325 +04:00 [INF] RequestBody: {
+  "username": "nrmn",
+  "firstName": "Nermin",
+  "lastName": "Necefova",
+  "email": "nnecefova@gmail.com",
+  "password": "gulbahar"
+}
+2024-03-07 14:00:49.503 +04:00 [WRN] User password validation failed: PasswordRequiresNonAlphanumeric.
+2024-03-07 14:00:49.522 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.UserDTOs.UserCreateResponseDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-07 14:00:49.540 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-03-07 14:00:49.562 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.UserController.CreateUser (HotelFinalAPI.API) in 7940.0851ms
+2024-03-07 14:00:49.581 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.UserController.CreateUser (HotelFinalAPI.API)'
+2024-03-07 14:00:49.596 +04:00 [INF] ResponseBody: {"data":{"succeeded":false,"message":"Unsuccessful"},"statusCode":400,"message":"Couldn't create user"}
+2024-03-07 14:00:49.608 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/User application/json 135 - 400 - application/json;+charset=utf-8 8195.0723ms
+2024-03-07 14:04:45.871 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/User application/json 136
+2024-03-07 14:04:45.883 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/User
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 136
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 14:04:45.888 +04:00 [INF] CORS policy execution successful.
+2024-03-07 14:04:45.890 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.UserController.CreateUser (HotelFinalAPI.API)'
+2024-03-07 14:04:45.894 +04:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(HotelFinalAPI.Application.DTOs.UserDTOs.UserCreateDTO) on controller HotelFinalAPI.API.Controllers.UserController (HotelFinalAPI.API).
+2024-03-07 14:04:45.943 +04:00 [INF] RequestBody: {
+  "username": "nrmn",
+  "firstName": "Nermin",
+  "lastName": "Necefova",
+  "email": "nnecefova@gmail.com",
+  "password": "gulbahar!"
+}
+2024-03-07 14:04:50.475 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-07 14:04:50.479 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-07 14:04:51.043 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-07 14:04:52.881 +04:00 [INF] Executed DbCommand (191ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-07 14:04:56.940 +04:00 [INF] Executed DbCommand (40ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [RefreshToken], [RefreshTokenEndDate], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2024-03-07 14:04:57.069 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.UserDTOs.UserCreateResponseDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-07 14:04:57.071 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-03-07 14:04:57.077 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.UserController.CreateUser (HotelFinalAPI.API) in 11171.8794ms
+2024-03-07 14:04:57.082 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.UserController.CreateUser (HotelFinalAPI.API)'
+2024-03-07 14:04:57.094 +04:00 [INF] ResponseBody: {"data":{"succeeded":true,"message":"Successful"},"statusCode":200,"message":"User created successfully"}
+2024-03-07 14:04:57.141 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/User application/json 136 - 200 - application/json;+charset=utf-8 11269.4514ms
+2024-03-07 14:08:46.018 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/User application/json 134
+2024-03-07 14:08:46.025 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/User
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 134
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 14:08:46.029 +04:00 [INF] CORS policy execution successful.
+2024-03-07 14:08:46.032 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.UserController.CreateUser (HotelFinalAPI.API)'
+2024-03-07 14:08:46.033 +04:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(HotelFinalAPI.Application.DTOs.UserDTOs.UserCreateDTO) on controller HotelFinalAPI.API.Controllers.UserController (HotelFinalAPI.API).
+2024-03-07 14:08:46.052 +04:00 [INF] RequestBody: {
+  "username": "gly",
+  "firstName": "Gulay",
+  "lastName": "Eliyeva",
+  "email": "gulayliyeva22@gmail.com",
+  "password": "gulay!"
+}
+2024-03-07 14:08:49.368 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-07 14:08:49.394 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenEndDate], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-03-07 14:08:50.649 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [RefreshToken], [RefreshTokenEndDate], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2024-03-07 14:08:50.656 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[HotelFinalAPI.Application.DTOs.UserDTOs.UserCreateResponseDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-03-07 14:08:50.659 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-03-07 14:08:50.662 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.UserController.CreateUser (HotelFinalAPI.API) in 4625.2287ms
+2024-03-07 14:08:50.666 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.UserController.CreateUser (HotelFinalAPI.API)'
+2024-03-07 14:08:50.668 +04:00 [INF] ResponseBody: {"data":{"succeeded":true,"message":"Successful"},"statusCode":200,"message":"User created successfully"}
+2024-03-07 14:08:50.672 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/User application/json 134 - 200 - application/json;+charset=utf-8 4656.6305ms
+2024-03-07 20:03:22.353 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-07 20:03:23.300 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-07 20:03:23.302 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-07 20:03:23.365 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-07 20:03:23.370 +04:00 [INF] Hosting environment: Development
+2024-03-07 20:03:23.377 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-07 20:03:24.731 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-07 20:03:25.300 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 572.8770ms
+2024-03-07 20:03:25.394 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-07 20:03:25.415 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-07 20:03:25.424 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 30.3732ms
+2024-03-07 20:03:25.607 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 191.5362ms
+2024-03-07 20:03:25.759 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-07 20:03:26.073 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 314.0034ms
+2024-03-07 20:16:40.002 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-07 20:16:40.414 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-07 20:16:40.418 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-07 20:16:40.462 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-07 20:16:40.462 +04:00 [INF] Hosting environment: Development
+2024-03-07 20:16:40.463 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-07 20:16:41.337 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-07 20:16:41.995 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 666.9769ms
+2024-03-07 20:16:42.035 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-07 20:16:42.035 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-07 20:16:42.044 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 8.7275ms
+2024-03-07 20:16:42.250 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 215.4142ms
+2024-03-07 20:16:42.435 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-07 20:16:42.800 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 365.1485ms
+2024-03-07 20:21:55.886 +04:00 [INF] Request starting HTTP/2 DELETE https://localhost:7169/api/Bill/DeleteBill - -
+2024-03-07 20:21:55.926 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: DELETE
+Scheme: https
+PathBase: 
+Path: /api/Bill/DeleteBill
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 20:21:55.938 +04:00 [INF] CORS policy execution successful.
+2024-03-07 20:21:55.973 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.DeleteBill (HotelFinalAPI.API)'
+2024-03-07 20:21:56.101 +04:00 [INF] Route matched with {action = "DeleteBill", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteBill(System.String) on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-07 20:21:57.460 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-03-07 20:21:57.477 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/problem+json; charset=utf-8
+2024-03-07 20:21:57.498 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.DeleteBill (HotelFinalAPI.API) in 1377.3961ms
+2024-03-07 20:21:57.515 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.DeleteBill (HotelFinalAPI.API)'
+2024-03-07 20:21:57.532 +04:00 [INF] ResponseBody: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-4dc53c968bdc8159c7a93f061c456061-eb62eaceffa30a57-00","errors":{"billId":["The billId field is required."]}}
+2024-03-07 20:22:03.933 +04:00 [INF] Request finished HTTP/2 DELETE https://localhost:7169/api/Bill/DeleteBill - - - 400 - application/problem+json;+charset=utf-8 8046.9343ms
+2024-03-07 20:25:46.742 +04:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7169/api/Bill/DeleteBill?billId=%20%20%20%20%20 - -
+2024-03-07 20:25:46.752 +04:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: DELETE
+Scheme: https
+PathBase: 
+Path: /api/Bill/DeleteBill
+Accept: */*
+Connection: keep-alive
+Host: localhost:7169
+User-Agent: PostmanRuntime/7.36.3
+Accept-Encoding: gzip, deflate, br
+Postman-Token: [Redacted]
+2024-03-07 20:25:46.755 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.DeleteBill (HotelFinalAPI.API)'
+2024-03-07 20:25:46.758 +04:00 [INF] Route matched with {action = "DeleteBill", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteBill(System.String) on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-07 20:25:46.817 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-03-07 20:25:46.821 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/problem+json; charset=utf-8
+2024-03-07 20:25:46.830 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.DeleteBill (HotelFinalAPI.API) in 65.2386ms
+2024-03-07 20:25:46.833 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.DeleteBill (HotelFinalAPI.API)'
+2024-03-07 20:25:46.835 +04:00 [INF] ResponseBody: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-b47f5220dc21cbc8969ed143fa0b610a-90e215e2f588bfc2-00","errors":{"billId":["The billId field is required."]}}
+2024-03-07 20:25:53.811 +04:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7169/api/Bill/DeleteBill?billId=%20%20%20%20%20 - - - 400 - application/problem+json;+charset=utf-8 7069.4627ms
+2024-03-07 20:32:23.413 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7169/api/Bill/CreateBill - -
+2024-03-07 20:32:23.429 +04:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Bill/CreateBill
+Accept: */*
+Connection: keep-alive
+Host: localhost:7169
+User-Agent: PostmanRuntime/7.36.3
+Accept-Encoding: gzip, deflate, br
+Postman-Token: [Redacted]
+2024-03-07 20:32:23.497 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API)'
+2024-03-07 20:32:23.533 +04:00 [INF] Route matched with {action = "CreateBill", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBill(HotelFinalAPI.Application.DTOs.BillDTOs.BillCreateDTO) on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-07 20:32:23.586 +04:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-03-07 20:32:23.600 +04:00 [INF] Response:
+StatusCode: 415
+Content-Type: application/problem+json; charset=utf-8
+2024-03-07 20:32:23.603 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API) in 61.0543ms
+2024-03-07 20:32:23.612 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API)'
+2024-03-07 20:32:23.614 +04:00 [INF] ResponseBody: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.13","title":"Unsupported Media Type","status":415,"traceId":"00-3e428811a14102f3dc17c5da850ff5d2-4b1bc263de4a1525-00"}
+2024-03-07 20:32:29.482 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7169/api/Bill/CreateBill - - - 415 - application/problem+json;+charset=utf-8 6064.2048ms
+2024-03-07 20:32:39.446 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7169/api/Bill/CreateBill - 0
+2024-03-07 20:32:39.447 +04:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Bill/CreateBill
+Accept: */*
+Connection: keep-alive
+Host: localhost:7169
+User-Agent: PostmanRuntime/7.36.3
+Accept-Encoding: gzip, deflate, br
+Content-Length: 0
+Postman-Token: [Redacted]
+2024-03-07 20:32:39.451 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-03-07 20:32:39.454 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-03-07 20:32:39.459 +04:00 [INF] Response:
+StatusCode: 405
+Allow: GET
+2024-03-07 20:32:39.461 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7169/api/Bill/CreateBill - 0 - 405 0 - 16.0038ms
+2024-03-07 20:34:30.662 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7169/api/Bill/CreateBill - 0
+2024-03-07 20:34:30.671 +04:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Bill/CreateBill
+Accept: */*
+Connection: keep-alive
+Host: localhost:7169
+User-Agent: PostmanRuntime/7.36.3
+Accept-Encoding: gzip, deflate, br
+Content-Length: 0
+Postman-Token: [Redacted]
+2024-03-07 20:34:30.674 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-03-07 20:34:30.677 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-03-07 20:34:30.680 +04:00 [INF] Response:
+StatusCode: 405
+Allow: GET
+2024-03-07 20:34:30.683 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7169/api/Bill/CreateBill - 0 - 405 0 - 20.4592ms
+2024-03-07 20:34:45.209 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7169/api/Bill/CreateBill - 0
+2024-03-07 20:34:45.211 +04:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Bill/CreateBill
+Accept: */*
+Connection: keep-alive
+Host: localhost:7169
+User-Agent: PostmanRuntime/7.36.3
+Accept-Encoding: gzip, deflate, br
+Content-Length: 0
+Postman-Token: [Redacted]
+2024-03-07 20:34:45.213 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-03-07 20:34:45.214 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-03-07 20:34:45.216 +04:00 [INF] Response:
+StatusCode: 405
+Allow: GET
+2024-03-07 20:34:45.257 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7169/api/Bill/CreateBill - 0 - 405 0 - 48.0826ms
+2024-03-07 20:34:51.700 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7169/api/Bill/CreateBill application/json 10
+2024-03-07 20:34:51.718 +04:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Bill/CreateBill
+Accept: */*
+Connection: keep-alive
+Host: localhost:7169
+User-Agent: PostmanRuntime/7.36.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 10
+Postman-Token: [Redacted]
+2024-03-07 20:34:51.721 +04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-03-07 20:34:51.724 +04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-03-07 20:34:51.727 +04:00 [INF] RequestBody: 
+2024-03-07 20:34:51.730 +04:00 [INF] Response:
+StatusCode: 405
+Allow: GET
+2024-03-07 20:34:51.732 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7169/api/Bill/CreateBill application/json 10 - 405 0 - 31.8040ms
+2024-03-07 20:36:27.738 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-07 20:36:28.356 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-07 20:36:28.387 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-07 20:36:28.515 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-07 20:36:28.522 +04:00 [INF] Hosting environment: Development
+2024-03-07 20:36:28.532 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-07 20:36:29.503 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-07 20:36:30.179 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 669.8783ms
+2024-03-07 20:36:30.195 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-07 20:36:30.196 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-07 20:36:30.275 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 80.2887ms
+2024-03-07 20:36:30.419 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 223.1148ms
+2024-03-07 20:36:30.585 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-07 20:36:30.936 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 350.8116ms
+2024-03-07 20:36:56.667 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Bill/CreateBill application/json 62
+2024-03-07 20:36:56.714 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Bill/CreateBill
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 62
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 20:36:56.728 +04:00 [INF] CORS policy execution successful.
+2024-03-07 20:36:56.752 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API)'
+2024-03-07 20:36:56.874 +04:00 [INF] Route matched with {action = "CreateBill", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBill(HotelFinalAPI.Application.DTOs.BillDTOs.BillCreateDTO) on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-07 20:36:57.865 +04:00 [INF] RequestBody: {
+  "amount": 0,
+  "paidStatus": true,
+  "guestId": "string"
+}
+2024-03-07 20:36:58.306 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-03-07 20:36:58.318 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/problem+json; charset=utf-8
+2024-03-07 20:36:58.336 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API) in 1442.9433ms
+2024-03-07 20:36:58.346 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API)'
+2024-03-07 20:36:58.352 +04:00 [INF] ResponseBody: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-3ba377f4d3cab97e443ce3720fa10e77-c00ae5d861d65e35-00","errors":{"Amount":["Amount cannot be empty"]}}
+2024-03-07 20:37:02.149 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Bill/CreateBill application/json 62 - 400 - application/problem+json;+charset=utf-8 5481.5926ms
+2024-03-07 20:42:25.645 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Bill/CreateBill application/json 51
+2024-03-07 20:42:25.666 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Bill/CreateBill
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 51
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 20:42:25.669 +04:00 [INF] CORS policy execution successful.
+2024-03-07 20:42:25.672 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API)'
+2024-03-07 20:42:25.675 +04:00 [INF] Route matched with {action = "CreateBill", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBill(HotelFinalAPI.Application.DTOs.BillDTOs.BillCreateDTO) on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-07 20:42:25.703 +04:00 [INF] RequestBody: {
+  "amount": ,
+  "paidStatus": ,
+  "guestId": ""
+}
+2024-03-07 20:42:25.733 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-03-07 20:42:25.738 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/problem+json; charset=utf-8
+2024-03-07 20:42:25.740 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API) in 62.7122ms
+2024-03-07 20:42:25.743 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API)'
+2024-03-07 20:42:25.747 +04:00 [INF] ResponseBody: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-1637b1beaa6d77ea6fad5fd476d4d1d7-bb42924ac0e7e0dd-00","errors":{"billCreateDTO":["The billCreateDTO field is required."],"$.amount":["',' is an invalid start of a value. Path: $.amount | LineNumber: 1 | BytePositionInLine: 12."]}}
+2024-03-07 20:42:28.370 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Bill/CreateBill application/json 51 - 400 - application/problem+json;+charset=utf-8 2724.6851ms
+2024-03-07 21:01:09.926 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7169/api/Bill/CreateBill application/json 3
+2024-03-07 21:01:09.930 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Bill/CreateBill
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 3
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 21:01:09.942 +04:00 [INF] CORS policy execution successful.
+2024-03-07 21:01:09.948 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API)'
+2024-03-07 21:01:09.950 +04:00 [INF] Route matched with {action = "CreateBill", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBill(HotelFinalAPI.Application.DTOs.BillDTOs.BillCreateDTO) on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-07 21:01:09.962 +04:00 [INF] RequestBody: {
+}
+2024-03-07 21:01:28.111 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-03-07 21:01:28.115 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/problem+json; charset=utf-8
+2024-03-07 21:01:28.116 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API) in 18162.7675ms
+2024-03-07 21:01:28.117 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.CreateBill (HotelFinalAPI.API)'
+2024-03-07 21:01:32.970 +04:00 [INF] ResponseBody: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-e4e0f1d987cbcfc2fc61f1858bc9ca40-56e19c8c81fc6fdc-00","errors":{"Amount":["Amount cannot be empty"],"GuestId":["The GuestId field is required.","GuestId cannot be empty"],"PaidStatus":["PaidStatus cannot be empty"]}}
+2024-03-07 21:01:35.389 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7169/api/Bill/CreateBill application/json 3 - 400 - application/problem+json;+charset=utf-8 25462.8074ms
+2024-03-07 21:09:13.145 +04:00 [INF] Request starting HTTP/2 PUT https://localhost:7169/api/Bill/UpdateBill application/json 3
+2024-03-07 21:09:13.158 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: PUT
+Scheme: https
+PathBase: 
+Path: /api/Bill/UpdateBill
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 3
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 21:09:13.161 +04:00 [INF] CORS policy execution successful.
+2024-03-07 21:09:13.164 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.UpdateBill (HotelFinalAPI.API)'
+2024-03-07 21:09:13.231 +04:00 [INF] Route matched with {action = "UpdateBill", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBill(System.String, HotelFinalAPI.Application.DTOs.BillDTOs.BillUpdateDTO) on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-07 21:09:13.256 +04:00 [INF] RequestBody: {
+}
+2024-03-07 21:09:23.202 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-03-07 21:09:23.208 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/problem+json; charset=utf-8
+2024-03-07 21:09:23.209 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.UpdateBill (HotelFinalAPI.API) in 9973.7044ms
+2024-03-07 21:09:23.212 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.UpdateBill (HotelFinalAPI.API)'
+2024-03-07 21:09:23.213 +04:00 [INF] ResponseBody: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-d0911b0891386f88b784022d1b24fcb0-9ae8b2643e91b607-00","errors":{"Amount":["Amount cannot be empty","Amount must be greater than 0"],"billId":["The billId field is required."]}}
+2024-03-07 21:09:25.119 +04:00 [INF] Request finished HTTP/2 PUT https://localhost:7169/api/Bill/UpdateBill application/json 3 - 400 - application/problem+json;+charset=utf-8 11974.4508ms
+2024-03-07 22:10:06.047 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-07 22:10:07.071 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-07 22:10:07.072 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-07 22:10:07.170 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-07 22:10:07.172 +04:00 [INF] Hosting environment: Development
+2024-03-07 22:10:07.174 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-07 22:10:08.097 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-07 22:10:08.766 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 680.9449ms
+2024-03-07 22:10:08.804 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-07 22:10:08.804 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-07 22:10:08.975 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 170.6970ms
+2024-03-07 22:10:09.151 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 346.6908ms
+2024-03-07 22:10:09.303 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-07 22:10:09.681 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 377.7198ms
+2024-03-07 22:10:23.135 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - -
+2024-03-07 22:10:23.182 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Bill/GetAllBills
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 22:10:23.210 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-07 22:10:23.320 +04:00 [INF] Route matched with {action = "GetAllBills", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBills() on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-07 22:10:27.165 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-07 22:10:27.169 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-07 22:10:27.890 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-07 22:10:29.069 +04:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Amount], [b].[CreatedDate], [b].[GuestId], [b].[PaidStatus], [b].[UpdatedDate]
+FROM [Bills] AS [b]
+2024-03-07 22:10:29.218 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[System.Collections.Generic.List`1[[HotelFinalAPI.Application.DTOs.BillDTOs.BillGetDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-07 22:10:29.249 +04:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2024-03-07 22:10:29.266 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API) in 5928.0533ms
+2024-03-07 22:10:29.275 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-07 22:10:29.283 +04:00 [INF] ResponseBody: {"data":[],"statusCode":200,"message":"Successful"}
+2024-03-07 22:10:33.497 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - - - 200 - application/json;+charset=utf-8 10362.6766ms
+2024-03-07 22:26:07.210 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/WeatherForecast - -
+2024-03-07 22:26:07.217 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/WeatherForecast
+Accept: text/plain
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 22:26:07.472 +04:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-03-07 22:26:07.501 +04:00 [INF] AuthenticationScheme: Admin was challenged.
+2024-03-07 22:26:07.504 +04:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2024-03-07 22:26:07.507 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/WeatherForecast - - - 401 0 - 297.6891ms
+2024-03-07 22:26:30.207 +04:00 [INF] Request starting HTTP/1.1 GET https://localhost:7169/api/WeatherForecast - -
+2024-03-07 22:26:30.210 +04:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/WeatherForecast
+Accept: */*
+Connection: keep-alive
+Host: localhost:7169
+User-Agent: PostmanRuntime/7.36.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+2024-03-07 22:26:30.969 +04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2024-03-07 22:26:31.156 +04:00 [INF] Admin was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+2024-03-07 22:26:31.159 +04:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-03-07 22:26:31.174 +04:00 [INF] AuthenticationScheme: Admin was challenged.
+2024-03-07 22:26:31.181 +04:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2024-03-07 22:26:31.207 +04:00 [INF] Request finished HTTP/1.1 GET https://localhost:7169/api/WeatherForecast - - - 401 0 - 999.8806ms
+2024-03-07 23:32:03.603 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-07 23:32:04.256 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-07 23:32:04.258 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-07 23:32:04.337 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-07 23:32:04.347 +04:00 [INF] Hosting environment: Development
+2024-03-07 23:32:04.348 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-07 23:32:05.410 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-07 23:32:05.945 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 543.3469ms
+2024-03-07 23:32:06.007 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-07 23:32:06.007 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-07 23:32:06.015 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 7.3112ms
+2024-03-07 23:32:06.132 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 125.0085ms
+2024-03-07 23:32:06.335 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-07 23:32:06.653 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 318.2590ms
+2024-03-07 23:33:08.909 +04:00 [INF] Request starting HTTP/2 DELETE https://localhost:7169/api/Bill/DeleteBill?billId=14501274-CE56-44FD-C681-08DC2A18FADF - -
+2024-03-07 23:33:08.927 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: DELETE
+Scheme: https
+PathBase: 
+Path: /api/Bill/DeleteBill
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-07 23:33:08.933 +04:00 [INF] CORS policy execution successful.
+2024-03-07 23:33:08.946 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.DeleteBill (HotelFinalAPI.API)'
+2024-03-07 23:33:09.011 +04:00 [INF] Route matched with {action = "DeleteBill", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteBill(System.String) on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-07 23:33:35.610 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-07 23:33:35.613 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-07 23:33:35.845 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-07 23:33:36.747 +04:00 [INF] Executed DbCommand (85ms) [Parameters=[@__Parse_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Amount], [b].[CreatedDate], [b].[GuestId], [b].[PaidStatus], [b].[UpdatedDate]
+FROM [Bills] AS [b]
+WHERE [b].[Id] = @__Parse_0
+2024-03-07 23:34:44.409 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.DeleteBill (HotelFinalAPI.API) in 95388.8172ms
+2024-03-07 23:34:44.416 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.DeleteBill (HotelFinalAPI.API)'
+2024-03-07 23:34:44.526 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+HotelFinalAPI.Application.Exceptions.BillExceptions.BillNotFoundException: The bill with id : 14501274-CE56-44FD-C681-08DC2A18FADF doesn't exists.
+   at HotelFinalAPI.Persistance.Implementation.Services.BillService.DeleteBillById(String id) in C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\Implementation\Services\BillService.cs:line 96
+   at HotelFinalAPI.API.Controllers.BillController.DeleteBill(String billId) in C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\Controllers\BillController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at HotelFinalAPI.API.Program.<>c.<<Main>b__0_4>d.MoveNext() in C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\Program.cs:line 142
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-03-07 23:34:44.618 +04:00 [ERR] Xeta bas verdi The bill with id : 14501274-CE56-44FD-C681-08DC2A18FADF doesn't exists.
+2024-03-07 23:34:46.977 +04:00 [INF] Request finished HTTP/2 DELETE https://localhost:7169/api/Bill/DeleteBill?billId=14501274-CE56-44FD-C681-08DC2A18FADF - - - 404 - application/json 98067.6625ms
+2024-03-08 00:23:29.947 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-08 00:23:30.243 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-08 00:23:30.248 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-08 00:23:30.300 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 00:23:30.303 +04:00 [INF] Hosting environment: Development
+2024-03-08 00:23:30.308 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-08 00:23:30.892 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-08 00:23:31.156 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 269.2684ms
+2024-03-08 00:23:31.200 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-08 00:23:31.202 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-08 00:23:31.206 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 6.4028ms
+2024-03-08 00:23:31.274 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 73.6400ms
+2024-03-08 00:23:31.586 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-08 00:23:31.718 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 132.2880ms
+2024-03-08 00:24:29.266 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - -
+2024-03-08 00:24:29.295 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Bill/GetAllBills
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-08 00:24:29.322 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-08 00:24:29.407 +04:00 [INF] Route matched with {action = "GetAllBills", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBills() on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-08 00:24:31.441 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-08 00:24:31.446 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-08 00:24:31.809 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-08 00:24:32.350 +04:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Amount], [b].[CreatedDate], [b].[GuestId], [b].[PaidStatus], [b].[UpdatedDate]
+FROM [Bills] AS [b]
+2024-03-08 00:24:32.386 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[System.Collections.Generic.List`1[[HotelFinalAPI.Application.DTOs.BillDTOs.BillGetDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-08 00:24:32.396 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-03-08 00:24:32.410 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API) in 2986.1771ms
+2024-03-08 00:24:32.415 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-08 00:24:32.424 +04:00 [INF] ResponseBody: {"data":null,"statusCode":400,"message":"Unsuccessful operation while getting Bills"}
+2024-03-08 00:24:32.435 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - - - 400 - application/json;+charset=utf-8 3169.3257ms
+2024-03-08 00:24:50.933 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-08 00:24:51.556 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-08 00:24:51.558 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-08 00:24:51.652 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 00:24:51.662 +04:00 [INF] Hosting environment: Development
+2024-03-08 00:24:51.664 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-08 00:24:52.303 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-08 00:24:52.927 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 632.9978ms
+2024-03-08 00:24:52.991 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-08 00:24:52.991 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-08 00:24:53.001 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 9.6710ms
+2024-03-08 00:24:53.117 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 126.2277ms
+2024-03-08 00:24:53.261 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-08 00:24:53.580 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 319.7974ms
+2024-03-08 00:25:04.337 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - -
+2024-03-08 00:25:04.376 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Bill/GetAllBills
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-08 00:25:04.402 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-08 00:25:04.501 +04:00 [INF] Route matched with {action = "GetAllBills", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBills() on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-08 00:25:15.172 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-08 00:25:15.176 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-08 00:25:15.651 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-08 00:25:16.441 +04:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Amount], [b].[CreatedDate], [b].[GuestId], [b].[PaidStatus], [b].[UpdatedDate]
+FROM [Bills] AS [b]
+2024-03-08 00:25:26.462 +04:00 [INF] Executing ObjectResult, writing value of type 'HotelFinalAPI.Application.Models.ResponseModels.GenericResponseModel`1[[System.Collections.Generic.List`1[[HotelFinalAPI.Application.DTOs.BillDTOs.BillGetDTO, HotelFinalAPI.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-03-08 00:25:26.477 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/json; charset=utf-8
+2024-03-08 00:25:26.494 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API) in 21973.3365ms
+2024-03-08 00:25:26.504 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-08 00:25:26.509 +04:00 [INF] ResponseBody: {"data":null,"statusCode":400,"message":"Unsuccessful operation while getting Bills"}
+2024-03-08 00:25:27.676 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - - - 400 - application/json;+charset=utf-8 23339.1357ms
+2024-03-08 00:33:38.334 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-08 00:33:39.017 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-08 00:33:39.021 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-08 00:33:39.115 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 00:33:39.127 +04:00 [INF] Hosting environment: Development
+2024-03-08 00:33:39.132 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-08 00:33:39.861 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-08 00:33:40.515 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 663.0239ms
+2024-03-08 00:33:40.556 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-08 00:33:40.556 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-08 00:33:40.571 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 15.2040ms
+2024-03-08 00:33:40.700 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 144.4793ms
+2024-03-08 00:33:40.855 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-08 00:33:41.275 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 419.9679ms
+2024-03-08 00:34:48.611 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - -
+2024-03-08 00:34:48.655 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Bill/GetAllBills
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-08 00:34:48.682 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-08 00:34:48.774 +04:00 [INF] Route matched with {action = "GetAllBills", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBills() on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-08 00:35:13.454 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-08 00:35:13.911 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-08 00:35:13.923 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-08 00:35:14.013 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 00:35:14.030 +04:00 [INF] Hosting environment: Development
+2024-03-08 00:35:14.031 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-08 00:35:14.802 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-08 00:35:15.421 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 627.3916ms
+2024-03-08 00:35:15.462 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-08 00:35:15.464 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-08 00:35:15.475 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 13.7849ms
+2024-03-08 00:35:15.782 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 317.9043ms
+2024-03-08 00:35:15.863 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-08 00:35:16.216 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 353.2854ms
+2024-03-08 00:35:25.766 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - -
+2024-03-08 00:35:25.807 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Bill/GetAllBills
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-08 00:35:25.840 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-08 00:35:25.922 +04:00 [INF] Route matched with {action = "GetAllBills", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBills() on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-08 00:35:54.138 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-08 00:35:54.557 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-08 00:35:54.559 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-08 00:35:54.632 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 00:35:54.633 +04:00 [INF] Hosting environment: Development
+2024-03-08 00:35:54.634 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-08 00:35:55.377 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-08 00:35:56.025 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 657.0660ms
+2024-03-08 00:35:56.035 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-08 00:35:56.035 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-08 00:35:56.059 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 23.2463ms
+2024-03-08 00:35:56.194 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 158.2327ms
+2024-03-08 00:35:56.293 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-08 00:35:56.583 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 289.8256ms
+2024-03-08 00:36:02.952 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - -
+2024-03-08 00:36:02.987 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Bill/GetAllBills
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Referer: [Redacted]
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-08 00:36:03.021 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-08 00:36:03.123 +04:00 [INF] Route matched with {action = "GetAllBills", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllBills() on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-08 00:36:12.119 +04:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Bill'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-08 00:36:12.122 +04:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Room'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-03-08 00:36:12.745 +04:00 [INF] Entity Framework Core 6.0.26 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.26' with options: None
+2024-03-08 00:36:13.802 +04:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Amount], [b].[CreatedDate], [b].[GuestId], [b].[PaidStatus], [b].[UpdatedDate]
+FROM [Bills] AS [b]
+2024-03-08 00:36:25.938 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API) in 22798.7905ms
+2024-03-08 00:36:25.948 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.GetAllBills (HotelFinalAPI.API)'
+2024-03-08 00:36:26.073 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+HotelFinalAPI.Application.Exceptions.BillExceptions.BillNotFoundException: No bills found!
+   at HotelFinalAPI.Persistance.Implementation.Services.BillService.GetAllBills() in C:\Users\Asus\source\repos\HotelFinalAPI\Infrastructure\HotelFinalAPI.Persistance\Implementation\Services\BillService.cs:line 117
+   at HotelFinalAPI.API.Controllers.BillController.GetAllBills() in C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\Controllers\BillController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at HotelFinalAPI.API.Program.<>c.<<Main>b__0_4>d.MoveNext() in C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\Program.cs:line 142
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2024-03-08 00:36:26.293 +04:00 [ERR] Xeta bas verdi No bills found!
+2024-03-08 00:36:29.131 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/api/Bill/GetAllBills - - - 404 - application/json 26178.7157ms
+2024-03-08 01:44:01.828 +04:00 [INF] User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-03-08 01:44:02.936 +04:00 [INF] Now listening on: https://localhost:7169
+2024-03-08 01:44:02.939 +04:00 [INF] Now listening on: http://localhost:5277
+2024-03-08 01:44:03.050 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-08 01:44:03.055 +04:00 [INF] Hosting environment: Development
+2024-03-08 01:44:03.061 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\HotelFinalAPI\Presentation\HotelFinalAPI.API\
+2024-03-08 01:44:03.790 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/index.html - -
+2024-03-08 01:44:04.476 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/index.html - - - 200 - text/html;charset=utf-8 698.4476ms
+2024-03-08 01:44:04.495 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_vs/browserLink - -
+2024-03-08 01:44:04.495 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - -
+2024-03-08 01:44:04.515 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 20.5157ms
+2024-03-08 01:44:04.710 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 215.3975ms
+2024-03-08 01:44:04.838 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - -
+2024-03-08 01:44:05.165 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7169/swagger/v1/swagger.json/ - - - 200 - application/json;charset=utf-8 327.1450ms
+2024-03-08 02:03:26.273 +04:00 [INF] Request starting HTTP/2 PUT https://localhost:7169/api/Bill/UpdateBill?billId=14501274-CE56-44FD-C681-08DC2A18FADF application/json 6
+2024-03-08 02:03:26.334 +04:00 [INF] Request:
+Protocol: HTTP/2
+Method: PUT
+Scheme: https
+PathBase: 
+Path: /api/Bill/UpdateBill
+Accept: */*
+Host: localhost:7169
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,ru;q=0.8
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 6
+sec-ch-ua: "Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-03-08 02:03:26.355 +04:00 [INF] CORS policy execution successful.
+2024-03-08 02:03:26.386 +04:00 [INF] Executing endpoint 'HotelFinalAPI.API.Controllers.BillController.UpdateBill (HotelFinalAPI.API)'
+2024-03-08 02:03:26.530 +04:00 [INF] Route matched with {action = "UpdateBill", controller = "Bill"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBill(System.String, HotelFinalAPI.Application.DTOs.BillDTOs.BillUpdateDTO) on controller HotelFinalAPI.API.Controllers.BillController (HotelFinalAPI.API).
+2024-03-08 02:03:28.432 +04:00 [INF] RequestBody: {
+  
+}
+2024-03-08 02:03:47.940 +04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-03-08 02:03:47.954 +04:00 [INF] Response:
+StatusCode: 400
+Content-Type: application/problem+json; charset=utf-8
+2024-03-08 02:03:47.976 +04:00 [INF] Executed action HotelFinalAPI.API.Controllers.BillController.UpdateBill (HotelFinalAPI.API) in 21421.992ms
+2024-03-08 02:03:47.990 +04:00 [INF] Executed endpoint 'HotelFinalAPI.API.Controllers.BillController.UpdateBill (HotelFinalAPI.API)'
+2024-03-08 02:03:51.426 +04:00 [INF] ResponseBody: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-4d77dea42777b513753ed553b750e432-b32388920c59d445-00","errors":{"Amount":["Amount cannot be empty","Amount must be greater than 0"]}}
+2024-03-08 02:03:54.913 +04:00 [INF] Request finished HTTP/2 PUT https://localhost:7169/api/Bill/UpdateBill?billId=14501274-CE56-44FD-C681-08DC2A18FADF application/json 6 - 400 - application/problem+json;+charset=utf-8 28645.8511ms

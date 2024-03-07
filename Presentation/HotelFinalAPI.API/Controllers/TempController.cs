@@ -11,16 +11,20 @@ using HotelFinalAPI.Application.RequestParameters;
 using HotelFinalAPI.Application.Validators.Bills;
 using HotelFinalAPI.Application.Validators.Employees;
 using HotelFinalAPI.Domain.Entities.DbEntities;
+using HotelFinalAPI.Domain.Entities.IdentityEntities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Serilog.Core;
 
 namespace HotelFinalAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize(AuthenticationSchemes = "Admin")]
     public class TempController : ControllerBase
     {
         
@@ -28,6 +32,7 @@ namespace HotelFinalAPI.API.Controllers
         IWriteRepository<Employee> _employeeWriteRepository;
         private readonly IGuestWriteRepository _guestWriteRepository;
         private readonly IMapper _mapper;
+        private readonly UserManager<AppUser > _userManager;
 
         //IUnitOfWork<Employee> _unitOfWork;
         IUnitOfWork _unitOfWork;
@@ -35,7 +40,7 @@ namespace HotelFinalAPI.API.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
         
 
-        public TempController(IUnitOfWork unitOfWork, ILogger<TempController> logger,IMapper mapper,IWebHostEnvironment webHostEnvironment, IGuestWriteRepository guestWriteRepository)
+        public TempController(IUnitOfWork unitOfWork, ILogger<TempController> logger,IMapper mapper,IWebHostEnvironment webHostEnvironment, IGuestWriteRepository guestWriteRepository, UserManager<AppUser> userManager)
         {
             _unitOfWork = unitOfWork;
             _employeeReadRepository = _unitOfWork.GetReadRepository<Employee>();   
@@ -44,6 +49,7 @@ namespace HotelFinalAPI.API.Controllers
             _mapper = mapper;
             _webHostEnvironment = webHostEnvironment;
             _guestWriteRepository = guestWriteRepository;
+            _userManager = userManager;
 
         }
         [HttpPost("[action]")]
@@ -59,12 +65,12 @@ namespace HotelFinalAPI.API.Controllers
         [HttpGet("[action]")]
         public async Task<Employee> GetById(string id = "30F5D13B-4C16-4D11-8B37-08DC2A51128A")
         {
-            //_logger.LogTrace("This Gulbahar trace");
-            //_logger.LogDebug("Seri Log is Working -> Debug");
-            //_logger.LogInformation("Seri Log is Working -> Information");
-            //_logger.LogWarning("Seri Log is Working -> Warning");
-            //_logger.LogError("Seri Log is Working -> Error");
-            //_logger.LogCritical("Seri Log is Working -> Critical");
+            _logger.LogTrace("This Gulbahar trace");
+            _logger.LogDebug("Seri Log is Working -> Debug");
+            _logger.LogInformation("Seri Log is Working -> Information");
+            _logger.LogWarning("Seri Log is Working -> Warning");
+            _logger.LogError("Seri Log is Working -> Error");
+            _logger.LogCritical("Seri Log is Working -> Critical");
 
             Employee emp = await _employeeReadRepository.GetByIdAsync(id, false);
             emp.FirstName = "Eyyub";
@@ -126,6 +132,7 @@ namespace HotelFinalAPI.API.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> GetRangeEmployees([FromQuery]Pagination pagination)
         {
+            _logger.LogInformation("kdjjadskshks");
             var employeesList = await _employeeReadRepository.GetAll(false).ToListAsync();
             List<EmployeeGetDTO> employees = _mapper.Map<List<EmployeeGetDTO>>(employeesList);
             employees = employees.Skip(pagination.Page * pagination.Total).Take(pagination.Total).ToList();//ToList
@@ -200,6 +207,14 @@ namespace HotelFinalAPI.API.Controllers
             });
             await _unitOfWork.SaveChangesAsync();
             return Ok("user created");
+        }
+        [HttpGet]
+        public async Task<string> MethodForResetPasswordTemp(string email)
+        {//todo GeneratePasswordResetTokenAsync istifade etmek ucun AddIdentity de AddDefaultTokenProviders() yazilmalidir
+            var user = await _userManager.FindByEmailAsync(email);
+            var resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+            Console.WriteLine(resetToken);
+            return resetToken;
         }
     }
 }

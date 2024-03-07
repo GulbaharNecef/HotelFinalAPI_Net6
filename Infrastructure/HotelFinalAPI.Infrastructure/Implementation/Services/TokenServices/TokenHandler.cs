@@ -1,11 +1,13 @@
 ﻿using HotelFinalAPI.Application.Abstraction.Services.Infrastructure.TokenServices;
 using HotelFinalAPI.Application.DTOs;
+using HotelFinalAPI.Domain.Entities.IdentityEntities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +23,7 @@ namespace HotelFinalAPI.Infrastructure.Implementation.Services.TokenServices
             _configuration = configuration;
         }
 
-        public async Task<TokenDTO> CreateAccessTokenAsync(int minute)
+        public async Task<TokenDTO> CreateAccessTokenAsync(int minute,AppUser user)
         {
             TokenDTO token = new();
             //Security Key'in simmetrigini aliriq
@@ -36,7 +38,8 @@ namespace HotelFinalAPI.Infrastructure.Implementation.Services.TokenServices
                 issuer: _configuration["Token:Issuer"],
                 signingCredentials: signingCredentials,
                 expires: token.Expiration,
-                notBefore: DateTime.UtcNow //Token uretildiyi andan ne qeder sonra devreye girsin?now .AddMinutes(1) desem token 1 deqiqe sonra devreye girer, tokenin timesinden cixilir ama
+                notBefore: DateTime.UtcNow, //Token uretildiyi andan ne qeder sonra devreye girsin?now .AddMinutes(1) desem token 1 deqiqe sonra devreye girer, tokenin timesinden cixilir ama
+                claims: new List<Claim> { new(ClaimTypes.Name,user.UserName)}
                 );
 
             //Token olusturucu sinifindan bir ornek alalim
