@@ -1,5 +1,7 @@
 ﻿using HotelFinalAPI.Application.Abstraction.Services.Persistance;
+using HotelFinalAPI.Application.DTOs.GuestDTOs;
 using HotelFinalAPI.Application.DTOs.RoomDTOs;
+using HotelFinalAPI.Persistance.Implementation.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,24 +18,40 @@ namespace HotelFinalAPI.API.Controllers
             _roomService = roomService;
         }
 
-        [HttpPost("[action]")]
-        public async Task<IActionResult> AddRoom(RoomCreateDTO roomCreateDTO)
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetAllRooms()
         {
-            var data = await _roomService.CreateRoom(roomCreateDTO);
-            return StatusCode(data.StatusCode, data);
+            var result = await _roomService.GetAllRooms();
+            return StatusCode(result.StatusCode, result);
+
         }
-        [HttpDelete("[action]")]
-        public async Task<IActionResult> DeleteRoom(string roomId)
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetRoomById(string id)
         {
-            var data = await _roomService.DeleteRoom(roomId);
-            return StatusCode(data.StatusCode, data);
+            var result = await _roomService.GetRoomById(id);
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> CreateRoom(RoomCreateDTO roomCreateDTO)
+        {
+            var result = await _roomService.CreateRoom(roomCreateDTO);
+            return StatusCode(result.StatusCode, result);
         }
 
         [HttpPut("[action]")]
-        public async Task<IActionResult> UpdateRoom(string roomId, RoomUpdateDTO roomUpdateDTO)
+        public async Task<IActionResult> UpdateRoom(string id, RoomUpdateDTO roomUpdateDTO)
         {
-            var data = await _roomService.UpdateRoom(roomId, roomUpdateDTO);
-            return StatusCode(data.StatusCode, data);
+            var result = await _roomService.UpdateRoom(id, roomUpdateDTO);
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpDelete("[action]")]
+        public async Task<IActionResult> DeleteRoomById(string id)
+        {
+            var result = await _roomService.DeleteRoomById(id);
+            return StatusCode(result.StatusCode, result);
         }
     }
 }

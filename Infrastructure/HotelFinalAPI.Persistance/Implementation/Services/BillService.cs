@@ -72,27 +72,23 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 Message = "Unsuccessful operation!"
             };
             if (string.IsNullOrEmpty(id))
-                throw new ArgumentNullException(id);
+                throw new CustomArgumentNullException(id);//nameof() parametrin adini goturur deyerini yox
 
             if (!Guid.TryParse(id, out Guid validId))
-                throw new InvalidIdFormatException();
-            else
+                throw new InvalidIdFormatException(id);
+
+            var deletedBill = await _billReadRepository.GetByIdAsync(id);
+            if (deletedBill is null)
+                throw new BillNotFoundException(id);
+
+            _billWriteRepository.Remove(deletedBill);
+            int affectedRows = await _unitOfWork.SaveChangesAsync();
+            if (affectedRows > 0)
             {
-                var deletedBill = await _billReadRepository.GetByIdAsync(id);
-                if (deletedBill != null)
-                {
-                    _billWriteRepository.Remove(deletedBill);
-                    int affectedRows = await _unitOfWork.SaveChangesAsync();
-                    if (affectedRows > 0)
-                    {
-                        response.Data = true;
-                        response.StatusCode = 200;
-                        response.Message = "Bill deleted successfully";
-                        return response;
-                    }
-                }
-                else
-                    throw new BillNotFoundException(id);
+                response.Data = true;
+                response.StatusCode = 200;
+                response.Message = "Bill deleted successfully";
+                return response;
             }
             return response;
         }
@@ -111,7 +107,6 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 return response;
             }
             throw new BillNotFoundException();
-
         }
 
         public async Task<GenericResponseModel<BillGetDTO>> GetBillById(string id)
@@ -119,7 +114,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             GenericResponseModel<BillGetDTO> response = new();
 
             if (string.IsNullOrEmpty(id))
-                throw new ArgumentNullException(id);
+                throw new CustomArgumentNullException(id);
 
             if (!Guid.TryParse(id, out Guid validId))
                 throw new InvalidIdFormatException(id);
@@ -142,7 +137,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             GenericResponseModel<List<BillGetDTO>> response = new();
 
             if (string.IsNullOrEmpty(guestId))
-                throw new ArgumentNullException(guestId);
+                throw new CustomArgumentNullException(guestId);
 
             if (!Guid.TryParse(guestId, out Guid validId))
                 throw new InvalidIdFormatException(guestId);
@@ -165,7 +160,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             GenericResponseModel<List<BillGetDTO>> response = new();
 
             if (string.IsNullOrEmpty(status))
-                throw new ArgumentNullException();
+                throw new CustomArgumentNullException(status);
 
             if (bool.TryParse(status, out bool result))
             {
@@ -194,7 +189,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
         {
             GenericResponseModel<BillUpdateDTO> response = new();
             if (string.IsNullOrEmpty(id))
-                throw new ArgumentNullException("The 'id' parameter cannot be null or empty.", nameof(id));
+                throw new CustomArgumentNullException(id);
 
             if (!Guid.TryParse(id, out Guid result))
                 throw new InvalidIdFormatException(id);

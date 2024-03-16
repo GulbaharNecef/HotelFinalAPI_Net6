@@ -34,14 +34,7 @@ namespace HotelFinalAPI.Persistance.Registration
         {
             services.AddDbContext<ApplicationDbContext>(option =>
             option.UseSqlServer(Configuration.ConnectionString()));
-            /*
-             services.AddIdentity<AppUser, AppRole>(options => {
-                options.Password.RequiredLength = 3;
-                options.Password.RequireUppercase = false;
-                options.Password.RequireLowercase = false;
-                options.Password.RequireDigit = false;
-            }).AddEntityFrameworkStores<ApplicationDbContext>();
-            */
+           
             services.AddIdentity<AppUser, AppRole>(options => {
                 options.Password.RequiredLength = 3;
                 options.Password.RequireUppercase = false;
@@ -72,6 +65,12 @@ namespace HotelFinalAPI.Persistance.Registration
             services.AddScoped<IRoomService, RoomService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IReservationService, ReservationService>();
+            services.AddScoped<IGuestService, GuestService>();
+          
+            
 
         }
 

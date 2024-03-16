@@ -11,7 +11,13 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
 {
     public interface IUserService
     {
-        public Task<GenericResponseModel<UserCreateResponseDTO>> CreateUser(UserCreateDTO model);
-        public Task UpdateRefreshToken(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate);//default olaraq interfacede methodlar public dir
+        Task<GenericResponseModel<UserCreateResponseDTO>> Register(UserCreateDTO model);//Create user
+        Task UpdateRefreshToken(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate);//default olaraq interfacede methodlar public dir
+        Task<GenericResponseModel<List<UserGetDTO>>> GetAllUsersAsync();
+        Task<GenericResponseModel<bool>> AssignUserToRoleAsync(string userId, string[] roles);
+        Task<GenericResponseModel<string[]>> GetRolesToUserAsync(string userIdOrName);
+        Task<GenericResponseModel<bool>> DeleteUserAsync(string userIdOrName);
+        Task<GenericResponseModel<bool>> UpdateUserAsync(UserUpdateDTO model);
+        //Task UpdatePasswordAsync(string userId, string resetToken, string newPassword);//todo see again
     }
 }

@@ -8,7 +8,7 @@ namespace HotelFinalAPI.Application.Exceptions
 {
     public class UserNotFoundException : NotFoundException
     {
-        public UserNotFoundException(): base("User didn't found") { }
+        public UserNotFoundException(): base("User not found!") { }
         public UserNotFoundException(string message) : base(message) { }
         public UserNotFoundException(string message, Exception innerException) : base(message, innerException) { }
     }

@@ -10,7 +10,9 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
 {
     public interface IAuthService
     {
-        public Task<GenericResponseModel<TokenDTO>> Login(string username, string password/*, int accessTokenLifeTime*/);
-        public Task<GenericResponseModel<TokenDTO>> RefreshTokenLoginAsync(string refreshToken);
+        Task<GenericResponseModel<TokenDTO>> Login(string username, string password/*, int accessTokenLifeTime*/);
+        Task<GenericResponseModel<TokenDTO>> RefreshTokenLoginAsync(string refreshToken);
+        Task<GenericResponseModel<bool>> Logout(string usernameOrEmail);
+        Task<GenericResponseModel<bool>> ResetPasswordAsync(string email, string currentPass, string newPass);
     }
 }

@@ -21,7 +21,7 @@ namespace HotelFinalAPI.Application.Validators.Bills
 
             RuleFor(b => b.GuestId)
                 .NotEmpty().WithMessage("GuestId cannot be empty");
-            
+            //property ile vermeli
         }
     }
 }

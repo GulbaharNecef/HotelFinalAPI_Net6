@@ -11,5 +11,7 @@ namespace HotelFinalAPI.Domain.Entities.BaseEntities
         public Guid Id { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set;}
+        public DateTime CreatedBy { get; set; }
+        public DateTime UpdatedBy { get; set;}
     }
 }

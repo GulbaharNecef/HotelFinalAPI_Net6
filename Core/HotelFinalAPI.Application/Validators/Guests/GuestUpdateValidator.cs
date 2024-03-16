@@ -30,6 +30,19 @@ namespace HotelFinalAPI.Application.Validators.Guests
             RuleFor(g => g.Phone)
                 .NotEmpty().WithMessage("Phone number is required.")
                 .MaximumLength(15).WithMessage("Phone number cannot exceed 15 characters.");
+
+            RuleFor(g => g.DateOfBirth)
+                .NotEmpty().WithMessage("DateOfBirth is required.")
+                .Must(date => date <= DateTime.Now.AddYears(-18)).WithMessage("You must be elder than 18");
+            RuleFor(g => g.Country)
+                .NotEmpty().WithMessage("Country is required.")
+                .MaximumLength(50).WithMessage("Country cannot exceed 50 characters.");
+
+            RuleFor(g => g.SpecialRequests)
+                .MaximumLength(500).WithMessage("Special request cannot exceed 500 characters.");
+
+            RuleFor(g => g.EmergencyContact)
+                .MaximumLength(100).WithMessage("Special request cannot exceed 100 characters.");
         }
     }
 }

@@ -3,6 +3,7 @@ using HotelFinalAPI.API.Extensions;
 using HotelFinalAPI.API.Registration;
 using HotelFinalAPI.Application.AutoMapper;
 using HotelFinalAPI.Application.Validators.Bills;
+using HotelFinalAPI.Infrastructure.Filters;
 using HotelFinalAPI.Infrastructure.Registrations;
 using HotelFinalAPI.Persistance.Contexts;
 using HotelFinalAPI.Persistance.Registration;
@@ -44,9 +45,9 @@ namespace HotelFinalAPI.API
 
 
             //BillCreateDTO verirem o bu clasin oldugu assembly deki butun validasiya classlarina isaredir.Application bir assembly dir:)
-            builder.Services.AddControllers()
-                .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<BillCreateValidator>());
-            //.ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
+            builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
+                .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<BillCreateValidator>())
+            .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
 
             //todo bunu cixart registrationa , burda qalmasin, builder ile bagli error verecek => configuration.cs de handle et) 
             builder.Services.AddAuthentication(options =>
@@ -124,7 +125,7 @@ namespace HotelFinalAPI.API
 
             //logs HTTP request details (such as method, path, status code, and timing), should come before other middlewares like authentication, routing, bunu yazdim deye her endpoint de manually loglama etmeye ehtiyac qalmir.(oz custom mesajimi yazmaq istemiremse)
             //butun requestleri loglayir endpointin icinde _logger cagirmasamda cunki middlewaredi :)
-            
+
 
             app.UseHttpLogging();
 

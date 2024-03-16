@@ -37,6 +37,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HotelFinalAPI.API.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Auth/Logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usernameOrEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/ResetPassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "currentPass",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newPass",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
     "Method": "CreateBill",
     "RelativePath": "api/Bill/CreateBill",
@@ -54,8 +96,8 @@
   },
   {
     "ContainingType": "HotelFinalAPI.API.Controllers.BillController",
-    "Method": "DeleteBill",
-    "RelativePath": "api/Bill/DeleteBill",
+    "Method": "DeleteBillById",
+    "RelativePath": "api/Bill/DeleteBillById",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -148,9 +190,325 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HotelFinalAPI.API.Controllers.EmployeeController",
+    "Method": "CreateEmployee",
+    "RelativePath": "api/Employee/CreateEmployee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeCreateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.EmployeeDTOs.EmployeeCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.EmployeeController",
+    "Method": "DeleteEmployeeById",
+    "RelativePath": "api/Employee/DeleteEmployeeById",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.EmployeeController",
+    "Method": "GetAllEmployee",
+    "RelativePath": "api/Employee/GetAllEmployee",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.EmployeeController",
+    "Method": "GetEmployeeById",
+    "RelativePath": "api/Employee/GetEmployeeById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.EmployeeController",
+    "Method": "UpdateEmployee",
+    "RelativePath": "api/Employee/UpdateEmployee",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "employeeUpdateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.EmployeeDTOs.EmployeeUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.GuestController",
+    "Method": "CreateGuest",
+    "RelativePath": "api/Guest/CreateGuest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "guestCreateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.GuestDTOs.GuestCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.GuestController",
+    "Method": "DeleteGuest",
+    "RelativePath": "api/Guest/DeleteGuest",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.GuestController",
+    "Method": "GetAllGuests",
+    "RelativePath": "api/Guest/GetAllGuests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.GuestController",
+    "Method": "GetGuestById",
+    "RelativePath": "api/Guest/GetGuestById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.GuestController",
+    "Method": "UpdateGuest",
+    "RelativePath": "api/Guest/UpdateGuest",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "guestUpdateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.GuestDTOs.GuestUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.ReservationController",
+    "Method": "CreateReservation",
+    "RelativePath": "api/Reservation/CreateReservation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reservationCreateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.ReservationDTOs.ReservationCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.ReservationController",
+    "Method": "DeleteReservationById",
+    "RelativePath": "api/Reservation/DeleteReservationById",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.ReservationController",
+    "Method": "GetAllReservations",
+    "RelativePath": "api/Reservation/GetAllReservations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.ReservationController",
+    "Method": "GetReservationById",
+    "RelativePath": "api/Reservation/GetReservationById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.ReservationController",
+    "Method": "UpdateReservation",
+    "RelativePath": "api/Reservation/UpdateReservation",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "reservationUpdateDTO",
+        "Type": "HotelFinalAPI.Application.DTOs.ReservationDTOs.ReservationUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoleController",
+    "Method": "CreateRole",
+    "RelativePath": "api/Role/CreateRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoleController",
+    "Method": "DeleteRoleById",
+    "RelativePath": "api/Role/DeleteRoleById",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoleController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Role/GetAllRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoleController",
+    "Method": "GetRoleById",
+    "RelativePath": "api/Role/GetRoleById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoleController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/Role/UpdateRole",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HotelFinalAPI.API.Controllers.RoomController",
-    "Method": "AddRoom",
-    "RelativePath": "api/Room/AddRoom",
+    "Method": "CreateRoom",
+    "RelativePath": "api/Room/CreateRoom",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -165,14 +523,40 @@
   },
   {
     "ContainingType": "HotelFinalAPI.API.Controllers.RoomController",
-    "Method": "DeleteRoom",
-    "RelativePath": "api/Room/DeleteRoom",
+    "Method": "DeleteRoomById",
+    "RelativePath": "api/Room/DeleteRoomById",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "roomId",
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoomController",
+    "Method": "GetAllRooms",
+    "RelativePath": "api/Room/GetAllRooms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.RoomController",
+    "Method": "GetRoomById",
+    "RelativePath": "api/Room/GetRoomById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -188,7 +572,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "roomId",
+        "Name": "id",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -349,8 +733,71 @@
   },
   {
     "ContainingType": "HotelFinalAPI.API.Controllers.UserController",
-    "Method": "CreateUser",
-    "RelativePath": "api/User",
+    "Method": "AssignUserToRoles",
+    "RelativePath": "api/User/AssignUserToRoles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "roles",
+        "Type": "System.String[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/DeleteUser",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userIdOrName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.UserController",
+    "Method": "GetAllUsersAsync",
+    "RelativePath": "api/User/GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.UserController",
+    "Method": "GetRolesToUser",
+    "RelativePath": "api/User/GetRolesToUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userIdOrName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.UserController",
+    "Method": "Register",
+    "RelativePath": "api/User/Register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -358,6 +805,22 @@
       {
         "Name": "model",
         "Type": "HotelFinalAPI.Application.DTOs.UserDTOs.UserCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HotelFinalAPI.API.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/UpdateUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "HotelFinalAPI.Application.DTOs.UserDTOs.UserUpdateDTO",
         "IsRequired": true
       }
     ],

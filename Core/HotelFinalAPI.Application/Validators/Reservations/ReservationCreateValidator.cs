@@ -20,7 +20,7 @@ namespace HotelFinalAPI.Application.Validators.Reservations
                 .Must(guestId => Guid.TryParse(guestId, out _)).WithMessage("Guest Id must be a valid Guid");
 
             RuleFor(r => r.RoomId)
-                .NotEmpty().WithMessage("Room is cannot be empty")
+                .NotEmpty().WithMessage("Room cannot be empty")
                 .Must(roomId => Guid.TryParse(roomId, out _)).WithMessage("Room Id must be valid Guid");
 
             RuleFor(r => r.CheckInDate)
@@ -28,7 +28,10 @@ namespace HotelFinalAPI.Application.Validators.Reservations
                 .Must(BeValidDate).WithMessage("Check-in date must be in the future");
 
             RuleFor(r => r.CheckOutDate)
-                .NotEmpty().WithMessage("Check out date cannot be empty");
+                .NotEmpty().WithMessage("Check out date cannot be empty")
+                .Must((reservation, checkoutDate) => checkoutDate > reservation.CheckInDate).WithMessage("Check out date must be greater than Check in date");
+                //Must() bir delgatedir(predicate dir) hansi ki CheckOutDate qebul edir ve lambda function vasitesile bool donderir
+                //.Must(BeAfterCheckInDate);
         }
 
         //private bool BeValidGuid(string guestId)
@@ -40,10 +43,10 @@ namespace HotelFinalAPI.Application.Validators.Reservations
             //return date.Date != DateTime.MinValue;
             return date.Date >= DateTime.Now;
         }
-        private void BeValidCheckOutDate(DateTime? checkOutDate)
+        private bool BeAfterCheckInDate(ReservationCreateDTO rcDTO, DateTime CheckOutDate)
         {
          //todo Reservasiyanin check out tarixi check in tarixinden boyuk olmalidir   
-         
+         return CheckOutDate > rcDTO.CheckInDate;
         }
 
     }

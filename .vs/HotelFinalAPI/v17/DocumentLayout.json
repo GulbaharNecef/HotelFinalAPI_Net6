@@ -3,52 +3,96 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\infrastructure\\hotelfinalapi.persistance\\implementation\\services\\billservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|solutionrelative:infrastructure\\hotelfinalapi.persistance\\implementation\\services\\billservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\infrastructure\\hotelfinalapi.persistance\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|solutionrelative:infrastructure\\hotelfinalapi.persistance\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\validators\\bills\\billupdatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\validators\\bills\\billupdatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BE3B30F-B0A9-44A9-A9BA-D1C4A92BD06D}|Infrastructure\\HotelFinalAPI.Infrastructure\\HotelFinalAPI.Infrastructure.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\infrastructure\\hotelfinalapi.infrastructure\\filters\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BE3B30F-B0A9-44A9-A9BA-D1C4A92BD06D}|Infrastructure\\HotelFinalAPI.Infrastructure\\HotelFinalAPI.Infrastructure.csproj|solutionrelative:infrastructure\\hotelfinalapi.infrastructure\\filters\\validationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\presentation\\hotelfinalapi.api\\controllers\\billcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|solutionrelative:presentation\\hotelfinalapi.api\\controllers\\billcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\dtos\\roomdtos\\roomcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\dtos\\roomdtos\\roomcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\presentation\\hotelfinalapi.api\\extensions\\configureexceptionhandlerextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|solutionrelative:presentation\\hotelfinalapi.api\\extensions\\configureexceptionhandlerextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\exceptions\\billexceptions\\billnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\exceptions\\billexceptions\\billnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\infrastructure\\hotelfinalapi.persistance\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|solutionrelative:infrastructure\\hotelfinalapi.persistance\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\infrastructure\\hotelfinalapi.persistance\\implementation\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|solutionrelative:infrastructure\\hotelfinalapi.persistance\\implementation\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\infrastructure\\hotelfinalapi.persistance\\implementation\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|solutionrelative:infrastructure\\hotelfinalapi.persistance\\implementation\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\presentation\\hotelfinalapi.api\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|solutionrelative:presentation\\hotelfinalapi.api\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\infrastructure\\hotelfinalapi.persistance\\implementation\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|solutionrelative:infrastructure\\hotelfinalapi.persistance\\implementation\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\validators\\rooms\\roomcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\validators\\rooms\\roomcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA7F4A9-5634-4DED-A73F-8FC4DBEE0DA4}|Core\\HotelFinalAPI.Domain\\HotelFinalAPI.Domain.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.domain\\enums\\roomtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEA7F4A9-5634-4DED-A73F-8FC4DBEE0DA4}|Core\\HotelFinalAPI.Domain\\HotelFinalAPI.Domain.csproj|solutionrelative:core\\hotelfinalapi.domain\\enums\\roomtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\presentation\\hotelfinalapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|solutionrelative:presentation\\hotelfinalapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\validators\\guests\\guestcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\validators\\guests\\guestcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\validators\\bills\\billcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\validators\\bills\\billcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\presentation\\hotelfinalapi.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|solutionrelative:presentation\\hotelfinalapi.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\presentation\\hotelfinalapi.api\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|solutionrelative:presentation\\hotelfinalapi.api\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\irepositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\irepositories\\iwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\dtos\\guestdtos\\guestupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\dtos\\guestdtos\\guestupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\validators\\rooms\\roomupdatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\validators\\rooms\\roomupdatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA7F4A9-5634-4DED-A73F-8FC4DBEE0DA4}|Core\\HotelFinalAPI.Domain\\HotelFinalAPI.Domain.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.domain\\entities\\baseentities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEA7F4A9-5634-4DED-A73F-8FC4DBEE0DA4}|Core\\HotelFinalAPI.Domain\\HotelFinalAPI.Domain.csproj|solutionrelative:core\\hotelfinalapi.domain\\entities\\baseentities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\dtos\\roomdtos\\roomupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\dtos\\roomdtos\\roomupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\presentation\\hotelfinalapi.api\\controllers\\guestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{394DED7F-B840-4B1A-972F-A88B90870CA9}|Presentation\\HotelFinalAPI.API\\HotelFinalAPI.API.csproj|solutionrelative:presentation\\hotelfinalapi.api\\controllers\\guestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\infrastructure\\hotelfinalapi.persistance\\implementation\\services\\guestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57082DE6-754B-4D1D-AB27-BFDD5747B1BC}|Infrastructure\\HotelFinalAPI.Persistance\\HotelFinalAPI.Persistance.csproj|solutionrelative:infrastructure\\hotelfinalapi.persistance\\implementation\\services\\guestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\dtos\\guestdtos\\guestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\dtos\\guestdtos\\guestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\abstraction\\services\\persistance\\iguestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\abstraction\\services\\persistance\\iguestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\dtos\\guestdtos\\guestgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\dtos\\guestdtos\\guestgetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.application\\validators\\guests\\guestupdatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{836ABFCD-5CC8-4588-992B-66188DA83C10}|Core\\HotelFinalAPI.Application\\HotelFinalAPI.Application.csproj|solutionrelative:core\\hotelfinalapi.application\\validators\\guests\\guestupdatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA7F4A9-5634-4DED-A73F-8FC4DBEE0DA4}|Core\\HotelFinalAPI.Domain\\HotelFinalAPI.Domain.csproj|c:\\users\\asus\\source\\repos\\hotelfinalapi\\core\\hotelfinalapi.domain\\entities\\dbentities\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEA7F4A9-5634-4DED-A73F-8FC4DBEE0DA4}|Core\\HotelFinalAPI.Domain\\HotelFinalAPI.Domain.csproj|solutionrelative:core\\hotelfinalapi.domain\\entities\\dbentities\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,33 +102,131 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BillService.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\BillService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\BillService.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\BillService.cs",
-              "RelativeToolTip": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\BillService.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAqwEIAAAAIAAAA",
+              "DocumentIndex": 18,
+              "Title": "GuestCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestCreateDTO.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestCreateDTO.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestCreateDTO.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestCreateDTO.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T09:25:36.045Z",
+              "WhenOpened": "2024-03-15T19:40:33.094Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BillController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\BillController.cs",
-              "RelativeDocumentMoniker": "Presentation\\HotelFinalAPI.API\\Controllers\\BillController.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\BillController.cs",
-              "RelativeToolTip": "Presentation\\HotelFinalAPI.API\\Controllers\\BillController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAhwCsAAAAMAAAA",
+              "DocumentIndex": 22,
+              "Title": "Guest.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Domain\\Entities\\DbEntities\\Guest.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Domain\\Entities\\DbEntities\\Guest.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Domain\\Entities\\DbEntities\\Guest.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Domain\\Entities\\DbEntities\\Guest.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T16:02:48Z",
+              "WhenOpened": "2024-03-15T18:15:54.084Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GuestService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\GuestService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\GuestService.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\GuestService.cs",
+              "RelativeToolTip": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\GuestService.cs",
+              "ViewState": "AQIAAIUAAAAAAAAAAAAcwKEAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T19:01:57.539Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GuestGetDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestGetDTO.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestGetDTO.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestGetDTO.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestGetDTO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:41:51.762Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GuestUpdateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestUpdateDTO.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestUpdateDTO.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestUpdateDTO.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\DTOs\\GuestDTOs\\GuestUpdateDTO.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA1wA8AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:41:58.947Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GuestCreateValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Guests\\GuestCreateValidator.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\Validators\\Guests\\GuestCreateValidator.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Guests\\GuestCreateValidator.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\Validators\\Guests\\GuestCreateValidator.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwCUAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:42:53.583Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GuestUpdateValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Guests\\GuestUpdateValidator.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\Validators\\Guests\\GuestUpdateValidator.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Guests\\GuestUpdateValidator.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\Validators\\Guests\\GuestUpdateValidator.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAuwCMAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:42:56.898Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GuestController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\GuestController.cs",
+              "RelativeDocumentMoniker": "Presentation\\HotelFinalAPI.API\\Controllers\\GuestController.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\GuestController.cs",
+              "RelativeToolTip": "Presentation\\HotelFinalAPI.API\\Controllers\\GuestController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:43:35.559Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IGuestService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Abstraction\\Services\\Persistance\\IGuestService.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\Abstraction\\Services\\Persistance\\IGuestService.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Abstraction\\Services\\Persistance\\IGuestService.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\Abstraction\\Services\\Persistance\\IGuestService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T19:44:02.839Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -94,130 +236,184 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConfigureExceptionHandlerExtension.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Extensions\\ConfigureExceptionHandlerExtension.cs",
-              "RelativeDocumentMoniker": "Presentation\\HotelFinalAPI.API\\Extensions\\ConfigureExceptionHandlerExtension.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Extensions\\ConfigureExceptionHandlerExtension.cs",
-              "RelativeToolTip": "Presentation\\HotelFinalAPI.API\\Extensions\\ConfigureExceptionHandlerExtension.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAgwCsAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T19:11:38.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BillUpdateValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillUpdateValidator.cs",
-              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillUpdateValidator.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillUpdateValidator.cs",
-              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillUpdateValidator.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAIAAAA",
+              "Title": "RoomCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\RoomDTOs\\RoomCreateDTO.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\DTOs\\RoomDTOs\\RoomCreateDTO.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\RoomDTOs\\RoomCreateDTO.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\DTOs\\RoomDTOs\\RoomCreateDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T18:09:59.15Z",
+              "WhenOpened": "2024-03-15T20:51:25.061Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BillCreateValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillCreateValidator.cs",
-              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillCreateValidator.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillCreateValidator.cs",
-              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillCreateValidator.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T16:28:11.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\UnitOfWorks\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\HotelFinalAPI.Persistance\\UnitOfWorks\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\UnitOfWorks\\UnitOfWork.cs",
-              "RelativeToolTip": "Infrastructure\\HotelFinalAPI.Persistance\\UnitOfWorks\\UnitOfWork.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAqwDQAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T16:02:47.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BillNotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Exceptions\\BillExceptions\\BillNotFoundException.cs",
-              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\Exceptions\\BillExceptions\\BillNotFoundException.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Exceptions\\BillExceptions\\BillNotFoundException.cs",
-              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\Exceptions\\BillExceptions\\BillNotFoundException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T20:31:38.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "RoomService.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\RoomService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\RoomService.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\RoomService.cs",
               "RelativeToolTip": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\RoomService.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAqwCgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T16:02:48.02Z",
+              "WhenOpened": "2024-03-15T22:24:45.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Contexts\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\HotelFinalAPI.Persistance\\Contexts\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Contexts\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\HotelFinalAPI.Persistance\\Contexts\\ApplicationDbContext.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAzwC0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T21:38:48.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\UnitOfWorks\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\HotelFinalAPI.Persistance\\UnitOfWorks\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\UnitOfWorks\\UnitOfWork.cs",
+              "RelativeToolTip": "Infrastructure\\HotelFinalAPI.Persistance\\UnitOfWorks\\UnitOfWork.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAqwDAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T22:24:03.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ValidationFilter.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Infrastructure\\Filters\\ValidationFilter.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\HotelFinalAPI.Infrastructure\\Filters\\ValidationFilter.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Infrastructure\\Filters\\ValidationFilter.cs",
+              "RelativeToolTip": "Infrastructure\\HotelFinalAPI.Infrastructure\\Filters\\ValidationFilter.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T22:24:03.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoomController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\RoomController.cs",
+              "RelativeDocumentMoniker": "Presentation\\HotelFinalAPI.API\\Controllers\\RoomController.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\RoomController.cs",
+              "RelativeToolTip": "Presentation\\HotelFinalAPI.API\\Controllers\\RoomController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAiwCUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T22:24:32.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RoomCreateValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Rooms\\RoomCreateValidator.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\Validators\\Rooms\\RoomCreateValidator.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Rooms\\RoomCreateValidator.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\Validators\\Rooms\\RoomCreateValidator.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAiwA4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T20:50:04.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\UserService.cs",
-              "RelativeToolTip": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\UserService.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAADwvxcAAAAIAAAA",
+              "Title": "RoomTypes.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Domain\\Enums\\RoomTypes.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Domain\\Enums\\RoomTypes.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Domain\\Enums\\RoomTypes.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Domain\\Enums\\RoomTypes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T09:59:20.701Z",
+              "WhenOpened": "2024-03-15T23:29:38.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\HotelFinalAPI.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Program.cs",
+              "RelativeToolTip": "Presentation\\HotelFinalAPI.API\\Program.cs",
+              "ViewState": "AQIAAIYAAAAAAAAAAAAAAI8AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T22:28:01.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BillCreateValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillCreateValidator.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillCreateValidator.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillCreateValidator.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\Validators\\Bills\\BillCreateValidator.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T22:24:03.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "IWriteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\IRepositories\\IWriteRepository.cs",
-              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\IRepositories\\IWriteRepository.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\IRepositories\\IWriteRepository.cs",
-              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\IRepositories\\IWriteRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Presentation\\HotelFinalAPI.API\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Presentation\\HotelFinalAPI.API\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T09:38:58.029Z"
+              "WhenOpened": "2024-03-15T23:04:49.431Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Presentation\\HotelFinalAPI.API\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Presentation\\HotelFinalAPI.API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Presentation\\HotelFinalAPI.API\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 14,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Domain\\Entities\\BaseEntities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Domain\\Entities\\BaseEntities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Domain\\Entities\\BaseEntities\\BaseEntity.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Domain\\Entities\\BaseEntities\\BaseEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T10:01:16.722Z"
+              "WhenOpened": "2024-03-15T22:04:46.554Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "Infrastructure\\HotelFinalAPI.Persistance\\Implementation\\Services\\EmployeeService.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAjwDsAAAA6AAAA",
+              "DocumentIndex": 13,
+              "Title": "RoomUpdateValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Rooms\\RoomUpdateValidator.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\Validators\\Rooms\\RoomUpdateValidator.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\Validators\\Rooms\\RoomUpdateValidator.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\Validators\\Rooms\\RoomUpdateValidator.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAQwA4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T09:26:32.689Z",
+              "WhenOpened": "2024-03-15T21:15:33.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RoomUpdateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\RoomDTOs\\RoomUpdateDTO.cs",
+              "RelativeDocumentMoniker": "Core\\HotelFinalAPI.Application\\DTOs\\RoomDTOs\\RoomUpdateDTO.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\HotelFinalAPI\\Core\\HotelFinalAPI.Application\\DTOs\\RoomDTOs\\RoomUpdateDTO.cs",
+              "RelativeToolTip": "Core\\HotelFinalAPI.Application\\DTOs\\RoomDTOs\\RoomUpdateDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T20:49:36.695Z",
               "EditorCaption": ""
             }
           ]

@@ -1,12 +1,15 @@
 ﻿using AutoMapper;
 using HotelFinalAPI.Application.Abstraction.Services.Persistance;
+using HotelFinalAPI.Application.DTOs.BillDTOs;
 using HotelFinalAPI.Application.DTOs.RoomDTOs;
+using HotelFinalAPI.Application.Exceptions.BillExceptions;
 using HotelFinalAPI.Application.Exceptions.CommonExceptions;
 using HotelFinalAPI.Application.Exceptions.RoomExceptions;
 using HotelFinalAPI.Application.IRepositories.IRoomRepos;
 using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Application.Models.ResponseModels;
 using HotelFinalAPI.Domain.Entities.DbEntities;
+using HotelFinalAPI.Domain.Enums;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -39,14 +42,14 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             GenericResponseModel<RoomCreateDTO> response = new()
             {
                 Data = null,
-                StatusCode = 400,
-                Message = "Unsuccessful"
+                Message = "Unsuccessful operation while creating Room",
+                StatusCode = 400
             };
             var room = new Room()
             {
-                Price = roomCreateDTO.Price,
                 RoomNumber = roomCreateDTO.RoomNumber,
-                RoomType = roomCreateDTO.RoomType,
+                RoomType = Enum.Parse<RoomTypes>(roomCreateDTO.RoomType),
+                Price = roomCreateDTO.Price,
                 Status = roomCreateDTO.Status
             };
             await _roomWriteRepository.AddAsync(room);
@@ -55,107 +58,109 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             {
                 response.Data = roomCreateDTO;
                 response.StatusCode = 200;
-                response.Message = "Room created successfully";
+                response.Message = "Room Created";
                 return response;
-            }
-            return response;//bunun yerine bidene exception at , cunki microsofda gordum uazmisdi ki null return etmekdense exception throw ele
-        }
-
-        public async Task<GenericResponseModel<bool>> DeleteRoom(string id)
-        {
-            GenericResponseModel<bool> response = new();
-            if (Guid.TryParse(id, out var _))
-            {
-                var deletedRoom = await _roomReadRepository.GetByIdAsync(id);
-                if (deletedRoom is null)
-                    throw new RoomNotFoundException($"Room with id: {id} not found");
-
-                _roomWriteRepository.Remove(deletedRoom);
-                //await _roomWriteRepository.RemoveByIdAsync(id);
-                var affectedRows = await _unitOfWork.SaveChangesAsync();
-                if (affectedRows > 0)
-                {
-                    response.Data = true;
-                    response.StatusCode = 200;
-                    response.Message = $"The room with ID: {id} deleted";
-                }
-                else
-                {
-                    response.Data = false;
-                    response.StatusCode = 400;
-                    response.Message = $"Deletion failed with ID: {id}";
-                }
-                return response;
-            }
-            else
-                throw new InvalidIdFormatException(id);
-        }
-
-        public async Task<GenericResponseModel<List<RoomGetDTO>>> GetAllRooms()
-        {
-            GenericResponseModel<List<RoomGetDTO>> response = new();
-            var rooms = _roomReadRepository.GetAll(false);
-            if (rooms.Count() > 0)
-            {
-                var roomGetDTO = _mapper.Map<List<RoomGetDTO>>(rooms);
-                response.Data = roomGetDTO;
-                response.StatusCode = 200;
-                response.Message = "Success";
-            }
-            else
-            {
-                response.StatusCode = 404;
-                response.Message = "No rooms found";
             }
             return response;
         }
 
-        public async Task<GenericResponseModel<RoomGetDTO>> GetRoomById(string id)
-        {
-            GenericResponseModel<RoomGetDTO> response = new();
-            var room = await _roomReadRepository.GetByIdAsync(id);
-            if (room is not null)
-            {
-                var roomGetDTO = _mapper.Map<RoomGetDTO>(room);
-                response.Data = roomGetDTO;
-                response.StatusCode = 200;
-                response.Message = "Success";
-            }
-            else
-            {
-                response.StatusCode = 404;
-                response.Message = "No room found";
-            }
-            return response;
-        }
-
-        public async Task<GenericResponseModel<bool>> UpdateRoom(string id, RoomUpdateDTO roomUpdateDTO)
+        public async Task<GenericResponseModel<bool>> DeleteRoomById(string id)
         {
             GenericResponseModel<bool> response = new()
             {
                 Data = false,
                 StatusCode = 400,
-                Message = "Something went wrong"
+                Message = "Unsuccessful operation!"
             };
-            var updatedRoom = await _roomReadRepository.GetByIdAsync(id, false);//false mi?
-            if (updatedRoom is null) { throw new RoomNotFoundException($"Room with id: {id} didn't found"); }
+            if (string.IsNullOrEmpty(id))
+                throw new CustomArgumentNullException(id);
 
-            var room = new Room()
-            {
-                RoomNumber = updatedRoom.RoomNumber,
-                RoomType = updatedRoom.RoomType,
-                Price = updatedRoom.Price,
-                Status = updatedRoom.Status
-            };
-            _roomWriteRepository.Update(room);
-            var affectedRows = await _unitOfWork.SaveChangesAsync();
+            if (!Guid.TryParse(id, out Guid validId))
+                throw new InvalidIdFormatException(id);
+
+            var deletedRoom = await _roomReadRepository.GetByIdAsync(id);
+            if (deletedRoom is null)
+                throw new RoomNotFoundException(id);
+
+            _roomWriteRepository.Remove(deletedRoom);
+            int affectedRows = await _unitOfWork.SaveChangesAsync();
             if (affectedRows > 0)
             {
                 response.Data = true;
                 response.StatusCode = 200;
-                response.Message = $"The Room with ID: {id} updated successfully";
+                response.Message = "Room deleted successfully";
+                return response;
             }
             return response;
+        }
+
+        public async Task<GenericResponseModel<List<RoomGetDTO>>> GetAllRooms()
+        {
+            GenericResponseModel<List<RoomGetDTO>> response = new();
+
+            var rooms = _roomReadRepository.GetAll(false).ToList();
+            if (rooms.Count() > 0)//Count()=>Linq; Count=>ICollection)
+            {
+                var roomGetDTO = _mapper.Map<List<RoomGetDTO>>(rooms);
+                response.Data = roomGetDTO;
+                response.StatusCode = 200;
+                response.Message = "Successful";
+                return response;
+            }
+            throw new RoomNotFoundException();
+        }
+
+        public async Task<GenericResponseModel<RoomGetDTO>> GetRoomById(string id)
+        {
+            GenericResponseModel<RoomGetDTO> response = new();
+
+            if (string.IsNullOrEmpty(id))
+                throw new CustomArgumentNullException(id);
+
+            if (!Guid.TryParse(id, out Guid validId))
+                throw new InvalidIdFormatException(id);
+
+            var room = await _roomReadRepository.GetByIdAsync(id);
+            if (room != null)
+            {
+                var roomDTO = _mapper.Map<RoomGetDTO>(room);
+                response.Data = roomDTO;
+                response.StatusCode = 200;
+                response.Message = "Successful";
+                return response;
+            }
+            else
+                throw new RoomNotFoundException(id);
+        }
+
+        public async Task<GenericResponseModel<RoomUpdateDTO>> UpdateRoom(string id, RoomUpdateDTO roomUpdateDTO)
+        {
+            GenericResponseModel<RoomUpdateDTO> response = new();
+            if (string.IsNullOrEmpty(id))
+                throw new CustomArgumentNullException(id);
+
+            if (!Guid.TryParse(id, out Guid result))
+                throw new InvalidIdFormatException(id);
+
+            var updatedRoom = await _roomReadRepository.GetByIdAsync(id);
+            if (updatedRoom is null)
+                throw new RoomNotFoundException(id);
+
+            updatedRoom.RoomNumber = roomUpdateDTO.RoomNumber;
+            updatedRoom.RoomType = roomUpdateDTO.RoomType;
+            updatedRoom.Price = roomUpdateDTO.Price;
+            updatedRoom.Status = roomUpdateDTO.Status;
+
+            _roomWriteRepository.Update(updatedRoom);
+            var affectedRows = await _unitOfWork.SaveChangesAsync();
+            if (affectedRows > 0)
+            {
+                response.Data = roomUpdateDTO;
+                response.StatusCode = 200;
+                response.Message = "Room Updated successfully";
+                return response;
+            }
+            throw new Exception("Unexpected error occurred while updating the room.");//todo bu bele best practicedirmi acaba🤔
         }
     }
 }

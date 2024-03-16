@@ -1,5 +1,7 @@
 ﻿using HotelFinalAPI.Application.Abstraction.Services.Persistance;
 using HotelFinalAPI.Application.DTOs.BillDTOs;
+using HotelFinalAPI.Application.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -46,6 +48,7 @@ namespace HotelFinalAPI.API.Controllers
         }
 
         [HttpGet("[action]")]
+        [AuthorizeAttribute(Roles =$"{Roles.User},{Roles.Admin}")]// i donno way
         public async Task<IActionResult> GetBillsByGuestId(string guestId)
         {
             var data = await _billService.GetBillsByGuestId(guestId);
@@ -72,7 +75,7 @@ namespace HotelFinalAPI.API.Controllers
             return StatusCode(data.StatusCode, data);
         }
         [HttpDelete("[action]")]
-        public async Task<IActionResult> DeleteBill(string billId)
+        public async Task<IActionResult> DeleteBillById(string billId)
         {
             var data = await _billService.DeleteBillById(billId);
             return StatusCode(data.StatusCode, data);

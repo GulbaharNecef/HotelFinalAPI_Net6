@@ -4,7 +4,9 @@ using HotelFinalAPI.Application.DTOs.EmployeeDTOs;
 using HotelFinalAPI.Application.DTOs.GuestDTOs;
 using HotelFinalAPI.Application.DTOs.ReservationDTOs;
 using HotelFinalAPI.Application.DTOs.RoomDTOs;
+using HotelFinalAPI.Application.DTOs.UserDTOs;
 using HotelFinalAPI.Domain.Entities.DbEntities;
+using HotelFinalAPI.Domain.Entities.IdentityEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,7 @@ namespace HotelFinalAPI.Application.AutoMapper
             CreateMap<Guest, GuestGetDTO>().ReverseMap();
             CreateMap<Reservation, ReservationGetDTO>().ReverseMap();
             CreateMap<Room, RoomGetDTO>().ReverseMap();
+            CreateMap<AppUser, UserGetDTO>().ReverseMap();
 
 
             //CreateMap<Bill, BillGetDTO>()
