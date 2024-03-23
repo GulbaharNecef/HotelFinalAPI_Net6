@@ -105,7 +105,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             GenericResponseModel<List<GuestGetDTO>> response = new();
 
             var guests = _guestReadRepository.GetAll(false).ToList();
-            if (guests.Count() > 0)
+            if (guests is not null && guests.Count() > 0)
             {
                 var guestGetDTO = _mapper.Map<List<GuestGetDTO>>(guests);
                 response.Data = guestGetDTO;
@@ -113,7 +113,14 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 response.Message = "Successful";
                 return response;
             }
-            throw new GuestNotFoundException();
+            else
+            {
+                response.Data = null;
+                response.StatusCode = 404;
+                response.Message = "No guests found.";
+                return response;
+            }
+            throw new GuestGetFailedException();
         }
 
         public async Task<GenericResponseModel<GuestGetDTO>> GetGuestById(string id)

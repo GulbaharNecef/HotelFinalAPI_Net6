@@ -34,13 +34,14 @@ namespace HotelFinalAPI.API.Extensions
                             InvalidIdFormatException => StatusCodes.Status400BadRequest,
                             AuthenticationErrorException => StatusCodes.Status400BadRequest,
                             ArgumentNullException => StatusCodes.Status400BadRequest,
+                            GetFailedException => StatusCodes.Status404NotFound,
                             _ => StatusCodes.Status500InternalServerError
                         };
 
                         await context.Response.WriteAsync(JsonSerializer.Serialize(new // new ile anonim yaziriq ErrorModel clasi yaratmaq da possible dir
                         {
                            // StatusCode = context.Response.StatusCode,
-                            Message = contextFeature.Error.Message,
+                            Message = contextFeature.Error.Message + contextFeature.Error.InnerException,
                             Title = "Error happened!"
                         }));
                     }

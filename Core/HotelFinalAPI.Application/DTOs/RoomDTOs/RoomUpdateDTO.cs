@@ -10,7 +10,7 @@ namespace HotelFinalAPI.Application.DTOs.RoomDTOs
     public class RoomUpdateDTO
     {
         public string RoomNumber { get; set; }
-        public RoomTypes RoomType { get; set; }
+        public string RoomType { get; set; }
         public string Status { get; set; }
         public decimal Price { get; set; }
     }

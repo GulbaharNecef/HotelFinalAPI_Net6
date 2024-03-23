@@ -1,6 +1,8 @@
 ﻿using HotelFinalAPI.Application.Abstraction.Services.Persistance;
 using HotelFinalAPI.Application.DTOs.EmployeeDTOs;
+using HotelFinalAPI.Application.Enums;
 using HotelFinalAPI.Persistance.Implementation.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +11,7 @@ namespace HotelFinalAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = "Admin", Roles = Roles.Admin)]
     public class RoleController : ControllerBase
     {
         private readonly IRoleService _roleService;
@@ -18,35 +21,35 @@ namespace HotelFinalAPI.API.Controllers
             _roleService = roleService;
         }
 
-        [HttpGet("[action]")]
+        [HttpGet]
         public async Task<IActionResult> GetAllRoles()
         {
             var result = await _roleService.GetAllRoles();
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpGet("[action]")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetRoleById(string id)
         {
             var result = await _roleService.GetRoleById(id);
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPost("[action]")]
+        [HttpPost]
         public async Task<IActionResult> CreateRole(string name)
         {
             var result = await _roleService.CreateRole(name);
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPut("[action]")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateRole(string id, string name)
         {
             var result = await _roleService.UpdateRole(id, name);
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpDelete("[action]")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRoleById(string id)
         {
             var result = await _roleService.DeleteRoleById(id);

@@ -17,8 +17,9 @@ namespace HotelFinalAPI.Application.Validators.Bills
                 .GreaterThan(0).WithMessage("Amount must be greater than 0");
 
             RuleFor(b => b.PaidStatus)
-                .NotEmpty().WithMessage("PaidStatus cannot be empty")
-                .NotNull().WithMessage("PaidStatus cannot be null");
+                        .NotNull().WithMessage("PaidStatus cannot be empty")
+                        .Must(value => value == true || value == false)
+                        .WithMessage("PaidStatus must be either true or false");
         }
     }
 }

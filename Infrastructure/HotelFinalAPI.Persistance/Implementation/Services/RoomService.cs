@@ -8,8 +8,11 @@ using HotelFinalAPI.Application.Exceptions.RoomExceptions;
 using HotelFinalAPI.Application.IRepositories.IRoomRepos;
 using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Application.Models.ResponseModels;
+using HotelFinalAPI.Application.RequestParameters;
 using HotelFinalAPI.Domain.Entities.DbEntities;
 using HotelFinalAPI.Domain.Enums;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -45,20 +48,27 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 Message = "Unsuccessful operation while creating Room",
                 StatusCode = 400
             };
-            var room = new Room()
+            if (Enum.TryParse<RoomTypes>(roomCreateDTO.RoomType, out RoomTypes roomType) && Enum.TryParse<RoomStatus>(roomCreateDTO.Status, out RoomStatus roomStatus))
             {
-                RoomNumber = roomCreateDTO.RoomNumber,
-                RoomType = Enum.Parse<RoomTypes>(roomCreateDTO.RoomType),
-                Price = roomCreateDTO.Price,
-                Status = roomCreateDTO.Status
-            };
-            await _roomWriteRepository.AddAsync(room);
-            int affectedRows = await _unitOfWork.SaveChangesAsync();
-            if (affectedRows > 0)
+                var room = new Room()
+                {
+                    RoomNumber = roomCreateDTO.RoomNumber,
+                    RoomType = roomType,
+                    Price = roomCreateDTO.Price,
+                    Status = roomStatus
+                };
+                await _roomWriteRepository.AddAsync(room);
+                int affectedRows = await _unitOfWork.SaveChangesAsync();
+                if (affectedRows > 0)
+                {
+                    response.Data = roomCreateDTO;
+                    response.StatusCode = 200;
+                    response.Message = "Room Created";
+                }
+            }
+            else
             {
-                response.Data = roomCreateDTO;
-                response.StatusCode = 200;
-                response.Message = "Room Created";
+                response.Message = "Enter valid RoomType or RoomStatus";
                 return response;
             }
             return response;
@@ -98,7 +108,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
         {
             GenericResponseModel<List<RoomGetDTO>> response = new();
 
-            var rooms = _roomReadRepository.GetAll(false).ToList();
+            var rooms = await _roomReadRepository.GetAll(false).ToListAsync();
             if (rooms.Count() > 0)//Count()=>Linq; Count=>ICollection)
             {
                 var roomGetDTO = _mapper.Map<List<RoomGetDTO>>(rooms);
@@ -107,7 +117,14 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 response.Message = "Successful";
                 return response;
             }
-            throw new RoomNotFoundException();
+            else
+            {
+                response.Data = null;
+                response.StatusCode = 404;
+                response.Message = "No rooms found.";
+                return response;
+            }
+            throw new RoomGetFailedException();
         }
 
         public async Task<GenericResponseModel<RoomGetDTO>> GetRoomById(string id)
@@ -147,9 +164,9 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 throw new RoomNotFoundException(id);
 
             updatedRoom.RoomNumber = roomUpdateDTO.RoomNumber;
-            updatedRoom.RoomType = roomUpdateDTO.RoomType;
+            updatedRoom.RoomType = Enum.Parse<RoomTypes>(roomUpdateDTO.RoomType);
             updatedRoom.Price = roomUpdateDTO.Price;
-            updatedRoom.Status = roomUpdateDTO.Status;
+            updatedRoom.Status = Enum.Parse<RoomStatus>(roomUpdateDTO.Status);
 
             _roomWriteRepository.Update(updatedRoom);
             var affectedRows = await _unitOfWork.SaveChangesAsync();
@@ -161,6 +178,18 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 return response;
             }
             throw new Exception("Unexpected error occurred while updating the room.");//todo bu bele best practicedirmi acaba🤔
+        }
+
+        public async Task<GenericResponseModel<List<RoomGetDTO>>> GetRoomsRange(Pagination pageDetails)
+        {
+            GenericResponseModel<List<RoomGetDTO>> response = new();
+            var rooms = await _roomReadRepository.GetAll().ToListAsync();
+            var roomGetDTO = _mapper.Map<List<RoomGetDTO>>(rooms);
+            var pagedRooms = roomGetDTO.Skip(pageDetails.Page * pageDetails.Total).Take(pageDetails.Total).ToList();
+            response.Data = pagedRooms;
+            response.StatusCode = 200;
+            response.Message = "Getting paged rooms successful";
+            return response;
         }
     }
 }

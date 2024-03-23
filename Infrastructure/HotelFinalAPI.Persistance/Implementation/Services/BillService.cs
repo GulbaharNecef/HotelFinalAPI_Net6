@@ -98,7 +98,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             GenericResponseModel<List<BillGetDTO>> response = new();
 
             var bills = _billReadRepository.GetAll(false).ToList();
-            if (bills.Count() > 0)//Count()=>Linq; Count=>ICollection)
+            if (bills != null && bills.Count() > 0)//Count()=>Linq; Count=>ICollection)
             {
                 var billGetDTO = _mapper.Map<List<BillGetDTO>>(bills);
                 response.Data = billGetDTO;
@@ -106,7 +106,14 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 response.Message = "Successful";
                 return response;
             }
-            throw new BillNotFoundException();
+            else
+            {
+                response.Data = null;
+                response.StatusCode = 404;
+                response.Message = "No bills found.";
+                return response;
+            }//todo Hilal mlm dedi ki burda 404 qaytarma bos array qaytar
+            throw new BillGetFailedException();
         }
 
         public async Task<GenericResponseModel<BillGetDTO>> GetBillById(string id)
@@ -129,7 +136,13 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 return response;
             }
             else
-                throw new BillNotFoundException(id);
+            {
+                response.Data = null;
+                response.StatusCode = 400;
+                response.Message = "Bill not found";
+                return response;
+            }
+                //throw new BillNotFoundException(id);
         }
 
         public async Task<GenericResponseModel<List<BillGetDTO>>> GetBillsByGuestId(string guestId)

@@ -1,5 +1,6 @@
 ﻿using HotelFinalAPI.Application.DTOs.RoomDTOs;
 using HotelFinalAPI.Application.Models.ResponseModels;
+using HotelFinalAPI.Application.RequestParameters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
         Task<GenericResponseModel<RoomCreateDTO>> CreateRoom(RoomCreateDTO roomCreateDTO);
         Task<GenericResponseModel<RoomUpdateDTO>> UpdateRoom(string id, RoomUpdateDTO roomUpdateDTO);
         Task<GenericResponseModel<bool>> DeleteRoomById(string id);
+        Task<GenericResponseModel<List<RoomGetDTO>>> GetRoomsRange(Pagination pageDetails);
     }
 }

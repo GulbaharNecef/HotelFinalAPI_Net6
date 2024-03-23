@@ -12,7 +12,7 @@ namespace HotelFinalAPI.Application.DTOs.RoomDTOs
     {
         public Guid Id { get; set; }
         public string RoomNumber { get; set; }
-        public RoomTypes RoomType { get; set; }
+        public string RoomType { get; set; }
         public string Status { get; set; }
         public decimal Price { get; set; }
         public ICollection<ReservationGetDTO> Reservations { get; set; }// RoomGetDTO includes a nested DTO for Reservation

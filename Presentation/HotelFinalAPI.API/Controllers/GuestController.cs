@@ -1,7 +1,9 @@
 ﻿using HotelFinalAPI.Application.Abstraction.Services.Persistance;
 using HotelFinalAPI.Application.DTOs.EmployeeDTOs;
 using HotelFinalAPI.Application.DTOs.GuestDTOs;
+using HotelFinalAPI.Application.Enums;
 using HotelFinalAPI.Persistance.Implementation.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,37 +19,43 @@ namespace HotelFinalAPI.API.Controllers
         {
             _guestService = guestService;
         }
-        [HttpGet("[action]")]
+        [HttpGet]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = Roles.Admin)]
         public async Task<IActionResult> GetAllGuests()
         {
-            //var result = await _guestService.GetAllGuests();
-            //return StatusCode(result.StatusCode, result);
-            return StatusCode((await _guestService.GetAllGuests()).StatusCode);
+            var result = await _guestService.GetAllGuests();
+            return StatusCode(result.StatusCode, result);
+            //todo
+            //return StatusCode((await _guestService.GetAllGuests()).StatusCode);
 
         }
 
-        [HttpGet("[action]")]
+        [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
         public async Task<IActionResult> GetGuestById(string id)
         {
             var result = await _guestService.GetGuestById(id);
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPost("[action]")]
+        [HttpPost]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
         public async Task<IActionResult> CreateGuest(GuestCreateDTO guestCreateDTO)
         {
             var result = await _guestService.CreateGuest(guestCreateDTO);
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpPut("[action]")]
+        [HttpPut("{id}")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
         public async Task<IActionResult> UpdateGuest(string id, GuestUpdateDTO guestUpdateDTO)
         {
             var result = await _guestService.UpdateGuest(id, guestUpdateDTO);
             return StatusCode(result.StatusCode, result);
         }
 
-        [HttpDelete("[action]")]
+        [HttpDelete("{id}")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
         public async Task<IActionResult> DeleteGuest(string id)
         {
             var result = await _guestService.DeleteGuestById(id);

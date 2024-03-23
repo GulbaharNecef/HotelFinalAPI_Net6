@@ -104,7 +104,14 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 response.Message = "Successful";
                 return response;
             }
-            throw new EmployeeNotFoundException();
+            else
+            {
+                response.Data = null;
+                response.StatusCode = 404;
+                response.Message = "No employees found.";
+                return response;
+            }
+            throw new EmployeeGetFailedException();
         }
 
         public async Task<GenericResponseModel<EmployeeGetDTO>> GetEmployeeById(string id)

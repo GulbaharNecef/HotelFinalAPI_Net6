@@ -3,6 +3,7 @@ using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Domain.Entities.BaseEntities;
 using HotelFinalAPI.Persistance.Contexts;
 using HotelFinalAPI.Persistance.Repositories;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,8 @@ namespace HotelFinalAPI.Persistance.UnitOfWorks
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
-        private Dictionary<Type, object> _repositories; 
+        private Dictionary<Type, object> _repositories;
+        private IDbContextTransaction _transaction;
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
@@ -48,6 +50,41 @@ namespace HotelFinalAPI.Persistance.UnitOfWorks
         public void Dispose()
         {
             _context.Dispose();
+        }
+
+        public async Task BeginTransactionAsync()
+        {
+            _transaction = await _context.Database.BeginTransactionAsync();
+        }
+
+        public async Task CommitAsync()
+        {
+            try
+            {
+                await _transaction.CommitAsync();
+            }
+            catch
+            {
+                // Handle exception
+                await RollbackAsync();
+                throw; // Re-throw the exception
+            }
+            finally
+            {
+                _transaction.Dispose();
+            }
+        }
+
+        public async Task RollbackAsync()
+        {
+            try
+            {
+                await _transaction.RollbackAsync();
+            }
+            finally
+            {
+                _transaction.Dispose();
+            }
         }
 
         /*

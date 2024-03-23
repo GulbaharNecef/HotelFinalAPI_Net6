@@ -21,8 +21,7 @@ namespace HotelFinalAPI.Application.Validators.Rooms
                 .Must(BeValidRoomType).WithMessage("Invalid room type.");
 
             RuleFor(room => room.Status)
-                .NotEmpty().WithMessage("Room status is required.")
-                .MaximumLength(50).WithMessage("Room status cannot exceed 50 characters.");
+                .Must(BeValidRoomStatus).WithMessage("Invalid room status");
 
             RuleFor(r => r.Price)
                 .NotEmpty().WithMessage("Price cannot be null")
@@ -33,6 +32,11 @@ namespace HotelFinalAPI.Application.Validators.Rooms
         private bool BeValidRoomType(string roomType)
         {
             return Enum.IsDefined(typeof(RoomTypes), roomType);
+        }
+
+        private bool BeValidRoomStatus(string roomStatus)
+        {
+            return Enum.IsDefined(typeof(RoomStatus), roomStatus);
         }
     }
 }

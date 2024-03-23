@@ -3,9 +3,13 @@ using HotelFinalAPI.Application.Abstraction.Services.Persistance;
 using HotelFinalAPI.Application.DTOs.UserDTOs;
 using HotelFinalAPI.Application.Enums;
 using HotelFinalAPI.Application.Exceptions;
+using HotelFinalAPI.Application.Exceptions.UserExceptions;
 using HotelFinalAPI.Application.Models.ResponseModels;
 using HotelFinalAPI.Domain.Entities.IdentityEntities;
+using HotelFinalAPI.Persistance.Contexts;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
@@ -20,10 +24,12 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly IMapper _mapper;
-        public UserService(UserManager<AppUser> userManager, IMapper mapper)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public UserService(UserManager<AppUser> userManager, IMapper mapper, IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _mapper = mapper;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<GenericResponseModel<bool>> AssignUserToRoleAsync(string userId, string[] roles)
@@ -85,7 +91,14 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 response.Message = "Getting users successful";
                 return response;
             }
-            throw new UserNotFoundException("Users not found!");
+            else
+            {
+                response.Data = null;
+                response.StatusCode = 404;
+                response.Message = "No users found.";
+                return response;
+            }
+            throw new UserGetFailedException();
         }
 
         public async Task<GenericResponseModel<string[]>> GetRolesToUserAsync(string userIdOrName)
@@ -117,22 +130,21 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 LastName = model.LastName
             };
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
-            GenericResponseModel<UserCreateResponseDTO> response = new() { /*Data = new UserCreateResponseDTO { Succeeded = result.Succeeded, Message = result.Succeeded ? "Successful" : "Unsuccessful" } */};
-
+            GenericResponseModel<UserCreateResponseDTO> response = new() { Data = new UserCreateResponseDTO { Succeeded = result.Succeeded, Message = result.Succeeded ? "Successful" : "Unsuccessful" } };
             response.StatusCode = result.Succeeded ? 200 : 400;
-            response.Data = new UserCreateResponseDTO { Succeeded = true, Message = "Successful" };
 
             if (!result.Succeeded)
             {
                 response.Message = string.Join("/n", result.Errors.Select(e => $"{e.Code} - {e.Description}"));
                 return response;
             }
-
+            
             var newUser = await _userManager.FindByNameAsync(model.Username);
             if(newUser == null)
                 newUser = await _userManager.FindByEmailAsync(model.Email);
             if(newUser is not null)
                 await _userManager.AddToRoleAsync(newUser, Enum.GetName(typeof(RolesEnum),0));
+            response.Message = "User creation successful";
             return response;
         }
 
@@ -176,6 +188,14 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 return response;
             }
             throw new Exception("Error happened while deleting User");//todo change to custom exception
+        }
+       public async Task<string> GetCurrentSessionUserId(IdentityDbContext<AppUser, AppRole, string> dbContext)
+        {
+            var currentSessionUser = _httpContextAccessor.HttpContext.User.Identity.Name;
+
+            var user = await dbContext.Users
+                .SingleAsync(u => u.UserName.Equals(currentSessionUser));
+            return user.Id;
         }
     }
 }

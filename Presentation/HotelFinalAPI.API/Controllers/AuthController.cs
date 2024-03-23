@@ -1,4 +1,7 @@
-﻿using HotelFinalAPI.Application.Abstraction.Services.Persistance;
+﻿using HotelFinalAPI.API.RequestModels;
+using HotelFinalAPI.Application.Abstraction.Services.Persistance;
+using HotelFinalAPI.Application.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,28 +16,29 @@ namespace HotelFinalAPI.API.Controllers
         {
             _authService = authService;
         }
-        [HttpPost("[action]")]
-        public async Task<IActionResult> Login([FromQuery] string usernameOrEmail, [FromQuery] string password /* ,int accessTokenLifeTime*/)
+        [HttpPost("login")]
+        public async Task<IActionResult> Login( LoginModel model /*string usernameOrEmail,  string password*/ )
         {
-            var data = await _authService.Login(usernameOrEmail, password/*, 1*/);
+            var data = await _authService.Login(model.usernameOrEmail, model.password);
             return StatusCode(data.StatusCode, data);
         }
 
-        [HttpPost("[action]")]
+        [HttpPost("refresh-token")]
         public async Task<IActionResult> LoginWithRefreshToken([FromBody] string refreshToken)
         {
             var data = await _authService.RefreshTokenLoginAsync(refreshToken);
             return StatusCode(data.StatusCode, data);
         }
 
-        [HttpPost("[action]")]
+        [HttpPost("logout")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
         public async Task<IActionResult> Logout(string usernameOrEmail)
         {
             var data = await _authService.Logout(usernameOrEmail);
             return StatusCode(data.StatusCode, data);
         }
 
-        [HttpPut("[action]")]
+        [HttpPut("reset-password")]
         public async Task<IActionResult> ResetPassword(string email, string currentPass, string newPass)
         {
             var data = await _authService.ResetPasswordAsync(email, currentPass, newPass);

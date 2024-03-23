@@ -13,7 +13,7 @@ namespace HotelFinalAPI.Domain.Entities.DbEntities
         //public Guid RoomId { get; set; }
         public string RoomNumber { get; set; }
         public RoomTypes RoomType { get; set; }
-        public string Status { get; set; }
+        public RoomStatus Status { get; set; }
         public decimal Price { get; set; }
         public ICollection<Reservation> Reservations { get; set; }//navigation property
     }

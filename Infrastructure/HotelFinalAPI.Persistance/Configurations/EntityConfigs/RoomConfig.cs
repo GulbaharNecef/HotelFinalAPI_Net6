@@ -19,8 +19,8 @@ namespace HotelFinalAPI.Persistance.Configurations.EntityConfigs
             //builder.Property(r => r.RoomId).IsRequired();
             builder.Property(r => r.Id).IsRequired().HasDefaultValueSql("NEWID()");//id nin ssms de avtomatic artan(elave olunan) olmasi ucun
             builder.Property(r => r.RoomNumber).IsRequired().HasMaxLength(50);
-            builder.Property(r => r.RoomType).IsRequired().HasMaxLength(50);
-            builder.Property(r => r.Status).IsRequired().HasMaxLength(50);
+            builder.Property(r => r.RoomType).IsRequired();
+            builder.Property(r => r.Status).IsRequired();
             builder.Property(r => r.Price).IsRequired();
             builder.Property(r => r.CreatedDate).IsRequired();
             builder.Property(r => r.UpdatedDate).IsRequired();

@@ -1,3 +1,4 @@
+using HotelFinalAPI.Application.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -5,7 +6,7 @@ namespace HotelFinalAPI.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(AuthenticationSchemes = "Admin")]
+    [Authorize(AuthenticationSchemes = "Admin", Roles = Roles.User)]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

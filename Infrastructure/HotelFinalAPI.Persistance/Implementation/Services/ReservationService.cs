@@ -5,12 +5,14 @@ using HotelFinalAPI.Application.DTOs.ReservationDTOs;
 using HotelFinalAPI.Application.Exceptions.BillExceptions;
 using HotelFinalAPI.Application.Exceptions.CommonExceptions;
 using HotelFinalAPI.Application.Exceptions.ReservationExceptions;
+using HotelFinalAPI.Application.IRepositories.IBillRepos;
 using HotelFinalAPI.Application.IRepositories.IGuestRepos;
 using HotelFinalAPI.Application.IRepositories.IReservationRepos;
 using HotelFinalAPI.Application.IRepositories.IRoomRepos;
 using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Application.Models.ResponseModels;
 using HotelFinalAPI.Domain.Entities.DbEntities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,48 +27,74 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
         private readonly IReservationWriteRepository _reservationWriteRepository;
         private readonly IGuestReadRepository _guestReadRepository;
         private readonly IRoomReadRepository _roomReadRepository;
+        private readonly IRoomWriteRepository _roomWriteRepository;
+        private readonly IBillWriteRepository _billWriteRepository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public ReservationService(IReservationReadRepository reservationReadRepository, IReservationWriteRepository reservationWriteRepository, IGuestReadRepository guestReadRepository,IRoomReadRepository roomReadRepository, IUnitOfWork unitOfWork, IMapper mapper)
+        public ReservationService(IReservationReadRepository reservationReadRepository, IReservationWriteRepository reservationWriteRepository, IGuestReadRepository guestReadRepository, IRoomReadRepository roomReadRepository, IUnitOfWork unitOfWork, IMapper mapper, IBillWriteRepository billWriteRepository, IRoomWriteRepository roomWriteRepository)
         {
             _reservationReadRepository = reservationReadRepository;
             _reservationWriteRepository = reservationWriteRepository;
             _guestReadRepository = guestReadRepository;
             _roomReadRepository = roomReadRepository;
+            _roomWriteRepository = roomWriteRepository;
+            _billWriteRepository = billWriteRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
         public async Task<GenericResponseModel<ReservationCreateDTO>> CreateReservation(ReservationCreateDTO reservationCreateDTO)
-        {//todo do i need to check that if reservationCreateDTO is null???🤔
+        {
             GenericResponseModel<ReservationCreateDTO> response = new()
             {
                 Data = null,
-                Message = "Unsuccessful operation while creating Bill",
+                Message = "Please, be sure that you enter valid data.",
                 StatusCode = 400
             };
-            var validGuest = await _guestReadRepository.GetByIdAsync(reservationCreateDTO.GuestId);
-            if(validGuest != null)
+            if (await ValidateReservation(reservationCreateDTO))
             {
-                var validRoom = await _roomReadRepository.GetByIdAsync(reservationCreateDTO.RoomId);
-                if(validRoom != null)
+                using (var transaction = _unitOfWork.BeginTransactionAsync())
                 {
-                    var reservation = new Reservation()
+                    try
                     {
-                        CheckInDate = reservationCreateDTO.CheckInDate,
-                        CheckOutDate = reservationCreateDTO.CheckOutDate,
-                        GuestId = Guid.Parse(reservationCreateDTO.GuestId),
-                        RoomId = Guid.Parse(reservationCreateDTO.RoomId)
-                    };
-                    await _reservationWriteRepository.AddAsync(reservation);
-                    int affectedRows = await _unitOfWork.SaveChangesAsync();
-                    if (affectedRows > 0)
+                        var reservation = new Reservation()
+                        {
+                            CheckInDate = reservationCreateDTO.CheckInDate,
+                            CheckOutDate = reservationCreateDTO.CheckOutDate,
+                            GuestId = Guid.Parse(reservationCreateDTO.GuestId),
+                            RoomId = Guid.Parse(reservationCreateDTO.RoomId)
+                        };
+                        var createdReserv = await _reservationWriteRepository.AddAsync(reservation);
+                        if (createdReserv)
+                        {
+                            var room = await _roomReadRepository.GetByIdAsync(reservationCreateDTO.RoomId);
+                            room.Status = Domain.Enums.RoomStatus.Reserved;
+                            _roomWriteRepository.Update(room);
+                            await _unitOfWork.SaveChangesAsync();
+
+                            //Add bill
+                            await _billWriteRepository.AddAsync(new()
+                            {
+                                Amount = await CalculateBill(reservationCreateDTO),
+                                GuestId = Guid.Parse(reservationCreateDTO.GuestId),
+                                PaidStatus = false
+                            });
+                            await _unitOfWork.SaveChangesAsync();
+
+                            await _unitOfWork.CommitAsync();
+                            response.Message = "Reservation created";
+                            response.StatusCode = 201;
+                            response.Data = reservationCreateDTO;
+                            return response;
+                        }
+                    }
+                    catch (Exception ex)
                     {
-                        response.Data = reservationCreateDTO;
-                        response.StatusCode = 200;
-                        response.Message = "Reservation Created";
-                        return response;
+                        // Rollback transaction if any operation fails
+                        await _unitOfWork.RollbackAsync();
+                        //todo loga yaz  
+                        response.Message = "Error occurred while processing the reservation.";
                     }
                 }
             }
@@ -106,9 +134,10 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
         public async Task<GenericResponseModel<List<ReservationGetDTO>>> GetAllReservations()
         {
             GenericResponseModel<List<ReservationGetDTO>> response = new();
-
-            var reservations = _reservationReadRepository.GetAll(false).ToList();
-            if (reservations.Count() > 0)//Count()=>Linq; Count=>ICollection)
+            //var reservations = _reservationReadRepository.GetAll(false).ToList();
+            var reservations = _reservationReadRepository.GetAll(false)
+            .Include(r => r.Guest).Include(r => r.Room).ToList();
+            if (reservations.Any())
             {
                 var reservationGetDTO = _mapper.Map<List<ReservationGetDTO>>(reservations);
                 response.Data = reservationGetDTO;
@@ -116,7 +145,14 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 response.Message = "Successful";
                 return response;
             }
-            throw new ReservationNotFoundException();
+            else
+            {
+                response.Data = null;
+                response.StatusCode = 404;
+                response.Message = "No reservations found.";
+                return response;
+            }
+            throw new ReservationGetFailedException();
         }
 
         public async Task<GenericResponseModel<ReservationGetDTO>> GetReservationById(string id)
@@ -170,6 +206,36 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 return response;
             }
             throw new Exception("Unexpected error occurred while updating the Reservation.");//todo bu bele best practicedirmi acaba🤔
+        }
+
+        private async Task<bool> ValidateReservation(ReservationCreateDTO reservationCreateDTO)
+        {
+
+            if (!Guid.TryParse(reservationCreateDTO.GuestId, out _))
+                throw new InvalidIdFormatException();
+            if (!Guid.TryParse(reservationCreateDTO.RoomId, out _))
+                throw new InvalidIdFormatException();
+            var room = await _roomReadRepository.GetByIdAsync(reservationCreateDTO.RoomId);
+            if (room != null && room.Status == Domain.Enums.RoomStatus.Available)
+            {//todo otaq indi available olmaya biler amma belke check in check out geleceydedirse onda available olacaq
+                var guest = await _guestReadRepository.GetByIdAsync(reservationCreateDTO.GuestId);
+                if (guest != null)
+                {
+                    return true;
+                }
+            }
+            else
+                return false;
+            return false;
+        }
+
+        private async Task<decimal> CalculateBill(ReservationCreateDTO reservationCreateDTO)
+        {
+            var room = await _roomReadRepository.GetByIdAsync(reservationCreateDTO.RoomId);
+            var roomPrice = room.Price;
+            var numberofNights = (int)(reservationCreateDTO.CheckOutDate - reservationCreateDTO.CheckInDate).TotalDays;
+            decimal totalPrice = roomPrice * numberofNights;
+            return totalPrice;
         }
     }
 }

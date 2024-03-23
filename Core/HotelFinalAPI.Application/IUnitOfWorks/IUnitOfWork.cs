@@ -13,5 +13,8 @@ namespace HotelFinalAPI.Application.IUnitOfWorks
         IReadRepository<TEntity> GetReadRepository<TEntity>() where TEntity : BaseEntity;
         IWriteRepository<TEntity> GetWriteRepository<TEntity>() where TEntity : BaseEntity;
         Task<int> SaveChangesAsync();
+        Task BeginTransactionAsync();
+        Task CommitAsync();
+        Task RollbackAsync();
     }
 }

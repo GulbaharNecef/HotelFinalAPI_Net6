@@ -33,7 +33,7 @@ namespace HotelFinalAPI.Application.Validators.Guests
 
             RuleFor(g => g.DateOfBirth)
                 .NotEmpty().WithMessage("DateOfBirth is required.")
-                .Must(date => date <= DateTime.Now.AddYears(-18)).WithMessage("You must be elder than 18");
+                .Must(date => date <= DateTime.Now.AddYears(-18)).WithMessage("Guest must be elder than 18");
             RuleFor(g => g.Country)
                 .NotEmpty().WithMessage("Country is required.")
                 .MaximumLength(50).WithMessage("Country cannot exceed 50 characters.");

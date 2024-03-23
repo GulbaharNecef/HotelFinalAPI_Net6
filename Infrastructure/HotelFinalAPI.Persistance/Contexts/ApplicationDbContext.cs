@@ -1,6 +1,10 @@
-﻿using HotelFinalAPI.Domain.Entities.BaseEntities;
+﻿using HotelFinalAPI.Application.Abstraction.Services.Persistance;
+using HotelFinalAPI.Domain.Entities.BaseEntities;
 using HotelFinalAPI.Domain.Entities.DbEntities;
 using HotelFinalAPI.Domain.Entities.IdentityEntities;
+using HotelFinalAPI.Persistance.Configurations;
+using HotelFinalAPI.Persistance.Implementation.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +15,7 @@ using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +23,8 @@ namespace HotelFinalAPI.Persistance.Contexts
 {
     public class ApplicationDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        //private readonly IUserService _userService;
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options/*, IUserService userService*/) : base(options)
         {
         }
         public DbSet<Bill> Bills { get; set; }
@@ -46,6 +52,11 @@ namespace HotelFinalAPI.Persistance.Contexts
         {
             //ChangeTracker : DbContext de bir propertydir. Entity ler uzerinden yapilan deyisikliklerin ve ya yeni eklenen verinin yakalanmasini saglayan property dir.Update Operasyonlarinda track edilen verileri yakalayip elde etmemizi saglar
             // bu islem intersektor adlanir, yeni insert ve ya updade islemlerinde araya girib gerekli datalari elave edecek
+
+            //var dbContext = (IdentityDbContext<AppUser, AppRole, string>)this;
+
+            //var currentSessionUserId = await _userService.GetCurrentSessionUserId(dbContext);
+
             var datas = ChangeTracker.Entries<BaseEntity>();
             foreach (var data in datas)
             {
@@ -55,8 +66,10 @@ namespace HotelFinalAPI.Persistance.Contexts
                     EntityState.Modified => data.Entity.UpdatedDate = DateTime.Now,
                     _ => DateTime.Now
                 };
+
             }
             return await base.SaveChangesAsync(cancellationToken);
+
         }
     }
 }

@@ -26,7 +26,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             if (data.Succeeded)
                 return new() { Data = data.Succeeded, Message = "Role created", StatusCode = 201 };
             else
-                return new() { Data = data.Succeeded, Message = "Role creation failed!" };
+                return new() { Data = data.Succeeded, Message = "Role creation failed!", StatusCode = 400 };
         }
         public async Task<GenericResponseModel<bool>> DeleteRoleById(string id)
         {
@@ -45,7 +45,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
 
         public async Task<GenericResponseModel<object>> GetAllRoles()
         {
-            GenericResponseModel<object> response = new() { Data = null, Message = "Getting roles failed", StatusCode = 400 };
+            GenericResponseModel<object> response = new() { Data = null, Message = "Getting roles failed", StatusCode = 404 };
             var data = await _roleManager.Roles.ToListAsync();
             if (data != null)
                 return new() { Data = data, StatusCode = 200, Message = "Getting roles successful" };

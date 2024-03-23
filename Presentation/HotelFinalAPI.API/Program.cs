@@ -5,6 +5,7 @@ using HotelFinalAPI.Application.AutoMapper;
 using HotelFinalAPI.Application.Validators.Bills;
 using HotelFinalAPI.Infrastructure.Filters;
 using HotelFinalAPI.Infrastructure.Registrations;
+using HotelFinalAPI.Persistance.Configurations;
 using HotelFinalAPI.Persistance.Contexts;
 using HotelFinalAPI.Persistance.Registration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -17,6 +18,7 @@ using Serilog.Context;
 using Serilog.Core;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace HotelFinalAPI.API
 {
@@ -48,6 +50,9 @@ namespace HotelFinalAPI.API
             builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
                 .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<BillCreateValidator>())
             .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
+            /*.AddJsonOptions(options=>
+            options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve
+            );*/
 
             //todo bunu cixart registrationa , burda qalmasin, builder ile bagli error verecek => configuration.cs de handle et) 
             builder.Services.AddAuthentication(options =>
@@ -66,7 +71,8 @@ namespace HotelFinalAPI.API
                     ValidIssuer = builder.Configuration["Token:Issuer"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
                     LifetimeValidator = (notBefore, expires, securityToken, validationParameters) => expires != null ? expires > DateTime.UtcNow : false,//to do see again jwt nin vaxti 5 deq uzanirdi, bununla 1 deq veriremse 1 deqe de bitir
-                    NameClaimType = ClaimTypes.Name // JWT uzerinde name claimine karsilik gelen degeri User.Identity.Name propertisindenn elde ede biliriz
+                    NameClaimType = ClaimTypes.Name, // JWT uzerinde name claimine karsilik gelen degeri User.Identity.Name propertisindenn elde ede biliriz
+                    RoleClaimType = ClaimTypes.Role
                 });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -138,7 +144,7 @@ namespace HotelFinalAPI.API
 
             app.Use(async (context, next) =>
             {
-                var username = context.User?.Identity?.IsAuthenticated != null || true ? context.User.Identity.Name : null;
+                string? username = context.User?.Identity?.IsAuthenticated != null || true ? context.User.Identity.Name : null;
                 LogContext.PushProperty("User_Name", username);
                 await next(context);
             });

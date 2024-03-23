@@ -17,5 +17,6 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
         public Task<GenericResponseModel<ReservationUpdateDTO>> UpdateReservation(string id, ReservationUpdateDTO reservationUpdateDTO);
         public Task<GenericResponseModel<bool>> DeleteReservationById(string id);
 
+
     }
 }
