@@ -13,6 +13,8 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
     {
         public Task<GenericResponseModel<List<ReservationGetDTO>>> GetAllReservations();
         public Task<GenericResponseModel<ReservationGetDTO>> GetReservationById(string id);
+        public Task<GenericResponseModel<List<ReservationGetDTO>>> GetReservationsByGuestId(string guestId);
+        public Task<GenericResponseModel<List<ReservationGetDTO>>> GetReservationAfterCheckOut();
         public Task<GenericResponseModel<ReservationCreateDTO>> CreateReservation(ReservationCreateDTO reservationCreateDTO);
         public Task<GenericResponseModel<ReservationUpdateDTO>> UpdateReservation(string id, ReservationUpdateDTO reservationUpdateDTO);
         public Task<GenericResponseModel<bool>> DeleteReservationById(string id);

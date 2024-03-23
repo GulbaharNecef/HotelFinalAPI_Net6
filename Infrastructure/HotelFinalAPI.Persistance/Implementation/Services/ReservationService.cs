@@ -12,6 +12,7 @@ using HotelFinalAPI.Application.IRepositories.IRoomRepos;
 using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Application.Models.ResponseModels;
 using HotelFinalAPI.Domain.Entities.DbEntities;
+using HotelFinalAPI.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -135,11 +136,21 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
         {
             GenericResponseModel<List<ReservationGetDTO>> response = new();
             //var reservations = _reservationReadRepository.GetAll(false).ToList();
-            var reservations = _reservationReadRepository.GetAll(false)
+            var reservations = _reservationReadRepository.GetAll()
             .Include(r => r.Guest).Include(r => r.Room).ToList();
+
+            // Project the desired properties
+            //var reservationDTOs = reservations.Select(r => new ReservationGetDTO
+            //{
+            //    GuestName = r.Guest.FirstName,
+            //    RoomNumber = r.Room.RoomNumber,
+            //    // Include other properties as needed
+            //}).ToList();
+
             if (reservations.Any())
             {
                 var reservationGetDTO = _mapper.Map<List<ReservationGetDTO>>(reservations);
+                //reservationGetDTO.GuestName = reservations.Select(Guest.)
                 response.Data = reservationGetDTO;
                 response.StatusCode = 200;
                 response.Message = "Successful";
@@ -148,7 +159,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             else
             {
                 response.Data = null;
-                response.StatusCode = 404;
+                response.StatusCode = 200;
                 response.Message = "No reservations found.";
                 return response;
             }
@@ -236,6 +247,52 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             var numberofNights = (int)(reservationCreateDTO.CheckOutDate - reservationCreateDTO.CheckInDate).TotalDays;
             decimal totalPrice = roomPrice * numberofNights;
             return totalPrice;
+        }
+
+        public async Task<GenericResponseModel<List<ReservationGetDTO>>> GetReservationAfterCheckOut()
+        {
+            GenericResponseModel<List<ReservationGetDTO>> response = new();
+            //var reservations = _reservationReadRepository.GetAll(false).ToList();
+            var reservations = _reservationReadRepository.GetWhere(r => r.CheckOutDate < DateTime.Now);
+            
+            if (reservations.Any())
+            {
+                var reservationGetDTO = _mapper.Map<List<ReservationGetDTO>>(reservations);
+                response.Data = reservationGetDTO;
+                response.StatusCode = 200;
+                response.Message = "Successful";
+                return response;
+            }
+            else
+            {
+                response.Data = null;
+                response.StatusCode = 200;
+                response.Message = "No reservations found.";
+                return response;
+            }
+            throw new ReservationGetFailedException();
+        }
+
+        public async Task<GenericResponseModel<List<ReservationGetDTO>>> GetReservationsByGuestId(string guestId)
+        {
+            GenericResponseModel<List<ReservationGetDTO>> response = new();
+
+            if (string.IsNullOrEmpty(guestId))
+                throw new CustomArgumentNullException(guestId);
+
+            if (!Guid.TryParse(guestId, out Guid validId))
+                throw new InvalidIdFormatException(guestId);
+            var reservation = await _reservationReadRepository.GetAll(false).Include(r=>r.Guest).Include(r=>r.Room).Where(r => r.GuestId == validId).ToListAsync();
+            if (reservation != null)
+            {
+                var reservationDTO = _mapper.Map<List<ReservationGetDTO>>(reservation);
+                response.Data = reservationDTO;
+                response.StatusCode = 200;
+                response.Message = "Successful";
+                return response;
+            }
+            else
+                throw new ReservationNotFoundException(guestId);
         }
     }
 }

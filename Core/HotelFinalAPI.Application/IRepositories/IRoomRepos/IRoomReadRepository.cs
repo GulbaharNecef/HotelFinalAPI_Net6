@@ -1,4 +1,5 @@
-﻿using HotelFinalAPI.Domain.Entities.DbEntities;
+﻿using HotelFinalAPI.Application.Helpers;
+using HotelFinalAPI.Domain.Entities.DbEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace HotelFinalAPI.Application.IRepositories.IRoomRepos
 {
     public interface IRoomReadRepository : IReadRepository<Room>
     {
+        IQueryable<Room> GetFiltered(QueryObject query,bool tracking = true);
     }
 }

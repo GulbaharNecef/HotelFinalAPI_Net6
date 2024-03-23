@@ -84,6 +84,14 @@ namespace HotelFinalAPI.API.Controllers
             var data = await _billService.UpdateBill(billId, billUpdateDTO);
             return StatusCode(data.StatusCode, data);
         }
+
+        [HttpPut("paid-status-{billId}")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = Roles.Admin)]
+        public async Task<IActionResult> UpdateBillStatusAfterPayment(string billId)
+        {
+            var data = await _billService.UpdateBillStatusAfterPayment(billId);
+            return StatusCode(data.StatusCode, data);
+        }
         [HttpDelete("{billId}")]
         [Authorize(AuthenticationSchemes = "Admin", Roles = Roles.Admin)]
         public async Task<IActionResult> DeleteBillById(string billId)

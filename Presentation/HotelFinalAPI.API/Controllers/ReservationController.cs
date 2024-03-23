@@ -25,7 +25,6 @@ namespace HotelFinalAPI.API.Controllers
         {
             var result = await _reservationService.GetAllReservations();
             return StatusCode(result.StatusCode, result);
-
         }
 
         [HttpGet("{id}")]
@@ -36,6 +35,13 @@ namespace HotelFinalAPI.API.Controllers
             return StatusCode(result.StatusCode, result);
         }
 
+        [HttpGet("by-guest-id/{guestId}")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = Roles.Admin)]
+        public async Task<IActionResult> GetReservationsByGuestId(string guestId)
+        {
+            var result = await _reservationService.GetReservationsByGuestId(guestId);
+            return StatusCode(result.StatusCode, result);
+        }
         [HttpPost]
         [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
         public async Task<IActionResult> CreateReservation(ReservationCreateDTO reservationCreateDTO)
@@ -57,6 +63,14 @@ namespace HotelFinalAPI.API.Controllers
         public async Task<IActionResult> DeleteReservationById(string id)
         {
             var result = await _reservationService.DeleteReservationById(id);
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpGet("after-checkout")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = Roles.Admin)]
+        public async Task<IActionResult> GetReservationAfterCheckOut()
+        {
+            var result = await _reservationService.GetReservationAfterCheckOut();
             return StatusCode(result.StatusCode, result);
         }
     }

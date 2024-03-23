@@ -5,6 +5,7 @@ using HotelFinalAPI.Application.DTOs.RoomDTOs;
 using HotelFinalAPI.Application.Exceptions.BillExceptions;
 using HotelFinalAPI.Application.Exceptions.CommonExceptions;
 using HotelFinalAPI.Application.Exceptions.RoomExceptions;
+using HotelFinalAPI.Application.Helpers;
 using HotelFinalAPI.Application.IRepositories.IRoomRepos;
 using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Application.Models.ResponseModels;
@@ -189,6 +190,42 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             response.Data = pagedRooms;
             response.StatusCode = 200;
             response.Message = "Getting paged rooms successful";
+            return response;
+        }
+
+        public async Task<GenericResponseModel<bool>> UpdateRoomAfterCheckOut(string id)
+        {
+            GenericResponseModel<bool> response = new();
+            if (string.IsNullOrEmpty(id))
+                throw new CustomArgumentNullException(id);
+            if (!Guid.TryParse(id, out Guid result))
+                throw new InvalidIdFormatException(id);
+            var updatedRoom = await _roomReadRepository.GetByIdAsync(id);
+            if (updatedRoom != null)
+            {
+                updatedRoom.Status = RoomStatus.Available;
+                _roomWriteRepository.Update(updatedRoom);
+                int affectedRows = await _unitOfWork.SaveChangesAsync();
+                if (affectedRows > 0)
+                {
+                    response.Data = true;
+                    response.StatusCode = 200;
+                    response.Message = "Successful";
+                }
+            }
+            response.Data = false;
+            response.StatusCode = 400;
+            return response;
+        }
+
+        public async Task<GenericResponseModel<List<RoomGetDTO>>> GetRoomsFiltered(QueryObject query)
+        {
+            GenericResponseModel<List<RoomGetDTO>> response = new();
+            var rooms = _roomReadRepository.GetFiltered(query);
+            var mappedRooms = _mapper.Map<List<RoomGetDTO>>(rooms);
+            response.Data = mappedRooms;
+            response.StatusCode = 200;
+            response.Message = "Getting filtered rooms successful.";
             return response;
         }
     }

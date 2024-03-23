@@ -4,6 +4,7 @@ using HotelFinalAPI.Application.DTOs.BillDTOs;
 using HotelFinalAPI.Application.Exceptions.BillExceptions;
 using HotelFinalAPI.Application.Exceptions.CommonExceptions;
 using HotelFinalAPI.Application.IRepositories.IBillRepos;
+using HotelFinalAPI.Application.IRepositories.IGuestRepos;
 using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Application.Models.ResponseModels;
 using HotelFinalAPI.Domain.Entities.DbEntities;
@@ -22,15 +23,17 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
     {
         private readonly IBillWriteRepository _billWriteRepository;
         private readonly IBillReadRepository _billReadRepository;
+        private readonly IGuestReadRepository _guestReadRepository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private ILogger<Bill> _logger;
 
 
-        public BillService(IBillWriteRepository billWriteRepository, IBillReadRepository billReadRepository, IUnitOfWork unitOfWork, IMapper mapper, ILogger<Bill> logger)
+        public BillService(IBillWriteRepository billWriteRepository, IBillReadRepository billReadRepository, IGuestReadRepository guestReadRepository, IUnitOfWork unitOfWork, IMapper mapper, ILogger<Bill> logger)
         {
             _billWriteRepository = billWriteRepository;
             _billReadRepository = billReadRepository;
+            _guestReadRepository = guestReadRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _logger = logger;
@@ -44,6 +47,15 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 Message = "Unsuccessful operation while creating Bill",
                 StatusCode = 400
             };
+            if (Guid.TryParse(billCreateDTO.GuestId, out _))
+            {
+                var guest = await _guestReadRepository.GetByIdAsync(billCreateDTO.GuestId);
+                if (guest == null)
+                {
+                    response.Message = "Please enter correct GuestId";
+                    return response;
+                }
+            }
             var bill = new Bill()
             {
                 Amount = billCreateDTO.Amount,
@@ -59,7 +71,6 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 response.Message = "Bill Created";
                 return response;
             }
-
             return response;
         }
 
@@ -142,7 +153,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 response.Message = "Bill not found";
                 return response;
             }
-                //throw new BillNotFoundException(id);
+            //throw new BillNotFoundException(id);
         }
 
         public async Task<GenericResponseModel<List<BillGetDTO>>> GetBillsByGuestId(string guestId)
@@ -223,6 +234,31 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 return response;
             }
             throw new Exception("Unexpected error occurred while updating the bill.");//todo bu bele best practicedirmi acaba🤔
+        }
+
+        public async Task<GenericResponseModel<bool>> UpdateBillStatusAfterPayment(string id)
+        {
+            GenericResponseModel<bool> response = new();
+            if (string.IsNullOrEmpty(id))
+                throw new CustomArgumentNullException(id);
+            if (!Guid.TryParse(id, out Guid result))
+                throw new InvalidIdFormatException(id);
+            var updatedBill = await _billReadRepository.GetByIdAsync(id);
+            if (updatedBill != null)
+            {
+                updatedBill.PaidStatus = true;
+                var affectedRows = await _unitOfWork.SaveChangesAsync();
+                if (affectedRows > 0)
+                {
+                    response.Data = true;
+                    response.StatusCode = 200;
+                    response.Message = "Successful";
+                    return response;
+                }
+            }
+            response.Data = false;
+            response.StatusCode = 400;
+            return response;
         }
     }
 }

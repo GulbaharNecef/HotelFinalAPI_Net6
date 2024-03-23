@@ -21,7 +21,7 @@ namespace HotelFinalAPI.Application.DTOs.GuestDTOs
         public string? EmergencyContact { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
-        public List<ReservationGetDTO> Reservations { get; set; } // Eager loaded reservations
-        public List<BillGetDTO> Bills { get; set; } // Eager loaded bills
+        //public List<ReservationGetDTO> Reservations { get; set; } // Eager loaded reservations
+        //public List<BillGetDTO> Bills { get; set; } // Eager loaded bills
     }
 }

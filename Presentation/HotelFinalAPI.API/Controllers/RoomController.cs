@@ -2,6 +2,7 @@
 using HotelFinalAPI.Application.DTOs.GuestDTOs;
 using HotelFinalAPI.Application.DTOs.RoomDTOs;
 using HotelFinalAPI.Application.Enums;
+using HotelFinalAPI.Application.Helpers;
 using HotelFinalAPI.Application.RequestParameters;
 using HotelFinalAPI.Persistance.Implementation.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -29,6 +30,13 @@ namespace HotelFinalAPI.API.Controllers
             return StatusCode(result.StatusCode, result);
         }
 
+        [HttpGet("filter")]
+        public async Task<IActionResult> GetAllRooms([FromQuery] QueryObject query)
+        {
+            var result = await _roomService.GetRoomsFiltered(query);
+            return StatusCode(result.StatusCode, result);
+        }
+
         [HttpGet("id")]
         [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
         public async Task<IActionResult> GetRoomById(string id)
@@ -50,6 +58,14 @@ namespace HotelFinalAPI.API.Controllers
         public async Task<IActionResult> UpdateRoom(string id, RoomUpdateDTO roomUpdateDTO)
         {
             var result = await _roomService.UpdateRoom(id, roomUpdateDTO);
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpPut("after-checkout-{id}")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = Roles.Admin)]
+        public async Task<IActionResult> UpdateRoomAfterCheckOut(string id)
+        {
+            var result = await _roomService.UpdateRoomAfterCheckOut(id);
             return StatusCode(result.StatusCode, result);
         }
 

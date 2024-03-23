@@ -11,6 +11,7 @@ using HotelFinalAPI.Persistance.Registration;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -49,7 +50,12 @@ namespace HotelFinalAPI.API
             //BillCreateDTO verirem o bu clasin oldugu assembly deki butun validasiya classlarina isaredir.Application bir assembly dir:)
             builder.Services.AddControllers(options => options.Filters.Add<ValidationFilter>())
                 .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<BillCreateValidator>())
-            .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
+            .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true)
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                options.JsonSerializerOptions.WriteIndented = true;
+            });
             /*.AddJsonOptions(options=>
             options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve
             );*/

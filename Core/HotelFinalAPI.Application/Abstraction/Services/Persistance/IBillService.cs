@@ -16,6 +16,7 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
         public Task<GenericResponseModel<List<BillGetDTO>>> GetBillsByPaidStatus(string status);//Repository deki GetWhere ile ola biler 
         public Task<GenericResponseModel<BillCreateDTO>> CreateBill(BillCreateDTO billCreateDTO);
         public Task<GenericResponseModel<BillUpdateDTO>> UpdateBill(string id, BillUpdateDTO billUpdateDTO);
+        public Task<GenericResponseModel<bool>> UpdateBillStatusAfterPayment(string id);
         public Task<GenericResponseModel<bool>> DeleteBillById(string id);
        
     }

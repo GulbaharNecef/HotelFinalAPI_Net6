@@ -23,9 +23,12 @@ namespace HotelFinalAPI.Application.AutoMapper
             CreateMap<Bill, BillGetDTO>().ReverseMap();
             CreateMap<Employee, EmployeeGetDTO>().ReverseMap();
             CreateMap<Guest, GuestGetDTO>().ReverseMap();
-            CreateMap<Reservation, ReservationGetDTO>().ReverseMap();
+            //CreateMap<Reservation, ReservationGetDTO>().ReverseMap();
             CreateMap<Room, RoomGetDTO>().ReverseMap();
             CreateMap<AppUser, UserGetDTO>().ReverseMap();
+            CreateMap<Reservation, ReservationGetDTO>()
+           .ForMember(dest => dest.GuestName, opt => opt.MapFrom(src => src.Guest.FirstName))
+           .ForMember(dest => dest.RoomNumber, opt => opt.MapFrom(src => src.Room.RoomNumber));
 
 
             //CreateMap<Bill, BillGetDTO>()
