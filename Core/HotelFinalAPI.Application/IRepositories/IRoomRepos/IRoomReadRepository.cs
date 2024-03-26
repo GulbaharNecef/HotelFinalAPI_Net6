@@ -10,6 +10,6 @@ namespace HotelFinalAPI.Application.IRepositories.IRoomRepos
 {
     public interface IRoomReadRepository : IReadRepository<Room>
     {
-        IQueryable<Room> GetFiltered(QueryObject query,bool tracking = true);
+        IQueryable<Room> GetFiltered(QueryObjectRoom query,bool tracking = true);
     }
 }

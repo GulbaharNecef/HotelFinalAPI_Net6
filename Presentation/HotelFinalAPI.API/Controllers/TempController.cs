@@ -186,9 +186,8 @@ namespace HotelFinalAPI.API.Controllers
                 await file.CopyToAsync(fileStream);
                 //filestreami temizleme islemi
                 await fileStream.FlushAsync();
-
             }
-
+            
             return Ok();
 
             /*

@@ -4,6 +4,7 @@ using HotelFinalAPI.Application.DTOs;
 using HotelFinalAPI.Application.Exceptions;
 using HotelFinalAPI.Application.Models.ResponseModels;
 using HotelFinalAPI.Domain.Entities.IdentityEntities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +26,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
         private readonly ITokenHandler _tokenHandler;
         private readonly IUserService _userService;
         private readonly IConfiguration _configuration;
-        public AuthService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenHandler tokenHandler, IUserService userService, IConfiguration configuration, RoleManager<AppRole> roleManager)
+        public AuthService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenHandler tokenHandler, IUserService userService, IConfiguration configuration, RoleManager<AppRole> roleManager,IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -129,5 +130,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             }
             throw new AuthenticationErrorException();
         }
+
+       
     }
 }

@@ -14,5 +14,7 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
         Task<GenericResponseModel<TokenDTO>> RefreshTokenLoginAsync(string refreshToken);
         Task<GenericResponseModel<bool>> Logout(string usernameOrEmail);
         Task<GenericResponseModel<bool>> ResetPasswordAsync(string email, string currentPass, string newPass);
+
+        
     }
 }

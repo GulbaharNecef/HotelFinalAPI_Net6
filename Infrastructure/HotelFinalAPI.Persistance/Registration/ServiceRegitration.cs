@@ -16,6 +16,7 @@ using HotelFinalAPI.Persistance.Repositories.GuestRepos;
 using HotelFinalAPI.Persistance.Repositories.ReservationRepos;
 using HotelFinalAPI.Persistance.Repositories.RoomRepos;
 using HotelFinalAPI.Persistance.UnitOfWorks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +33,7 @@ namespace HotelFinalAPI.Persistance.Registration
     {
         public static void AddPersistanceRegistration(this IServiceCollection services)
         {
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDbContext<ApplicationDbContext>(option =>
             option.UseSqlServer(Configuration.ConnectionString()));
            

@@ -19,7 +19,7 @@ namespace HotelFinalAPI.Persistance.Repositories.RoomRepos
         {
         }
 
-        public IQueryable<Room> GetFiltered(QueryObject query, bool tracking = true)
+        public IQueryable<Room> GetFiltered(QueryObjectRoom query, bool tracking = true)
         {
             var rooms = Table.AsQueryable();
             if (!string.IsNullOrWhiteSpace(query.RoomType) && Enum.TryParse(query.RoomType, out RoomTypes roomType))
@@ -30,13 +30,17 @@ namespace HotelFinalAPI.Persistance.Repositories.RoomRepos
             {
                 rooms = Table.Where(r=>r.Status == status);
             }
-            if(query.MinPrice is not null)
+            if(query.MinPrice is not null && query.MaxPrice is not null)
             {
-                rooms = Table.Where(r => r.Price > query.MinPrice);
+                rooms = Table.Where(r => r.Price >= query.MinPrice && r.Price <= query.MaxPrice);
             }
-            if(query.MaxPrice is not null)
+            else if(query.MinPrice is not null)
             {
-                rooms = Table.Where(r => r.Price < query.MaxPrice);
+                rooms = Table.Where(r => r.Price >= query.MinPrice);
+            }
+            else if(query.MaxPrice is not null)
+            {
+                rooms = Table.Where(r => r.Price <= query.MaxPrice);
             }
             return rooms;
         }

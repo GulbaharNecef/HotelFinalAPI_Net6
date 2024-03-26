@@ -3,6 +3,7 @@ using HotelFinalAPI.Application.Abstraction.Services.Persistance;
 using HotelFinalAPI.Application.DTOs.UserDTOs;
 using HotelFinalAPI.Application.Enums;
 using HotelFinalAPI.Application.Exceptions;
+using HotelFinalAPI.Application.Exceptions.CommonExceptions;
 using HotelFinalAPI.Application.Exceptions.UserExceptions;
 using HotelFinalAPI.Application.Models.ResponseModels;
 using HotelFinalAPI.Domain.Entities.IdentityEntities;
@@ -189,13 +190,28 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             }
             throw new Exception("Error happened while deleting User");//todo change to custom exception
         }
-       public async Task<string> GetCurrentSessionUserId(IdentityDbContext<AppUser, AppRole, string> dbContext)
-        {
-            var currentSessionUser = _httpContextAccessor.HttpContext.User.Identity.Name;
+      
 
-            var user = await dbContext.Users
-                .SingleAsync(u => u.UserName.Equals(currentSessionUser));
-            return user.Id;
+        public async Task<GenericResponseModel<UserGetDTO>> GetUserById(string userId)
+        {
+            if (string.IsNullOrEmpty(userId))
+                throw new CustomArgumentNullException(userId);
+            if(!Guid.TryParse(userId, out var id))
+                throw new InvalidIdFormatException();
+
+            GenericResponseModel<UserGetDTO> response = new()
+            {
+                Data = null,
+                StatusCode = 400,
+                Message = "Getting user failed."
+            };
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+                return response;
+            response.Data = _mapper.Map<UserGetDTO>(user);
+            response.StatusCode = 200;
+            response.Message = "Getting user successful.";
+            return response;
         }
     }
 }

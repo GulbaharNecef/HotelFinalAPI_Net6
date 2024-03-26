@@ -30,10 +30,11 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
         private readonly IRoomReadRepository _roomReadRepository;
         private readonly IRoomWriteRepository _roomWriteRepository;
         private readonly IBillWriteRepository _billWriteRepository;
+        private readonly IUserService _userService;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public ReservationService(IReservationReadRepository reservationReadRepository, IReservationWriteRepository reservationWriteRepository, IGuestReadRepository guestReadRepository, IRoomReadRepository roomReadRepository, IUnitOfWork unitOfWork, IMapper mapper, IBillWriteRepository billWriteRepository, IRoomWriteRepository roomWriteRepository)
+        public ReservationService(IReservationReadRepository reservationReadRepository, IReservationWriteRepository reservationWriteRepository, IGuestReadRepository guestReadRepository, IRoomReadRepository roomReadRepository, IUnitOfWork unitOfWork, IMapper mapper, IBillWriteRepository billWriteRepository, IRoomWriteRepository roomWriteRepository, IUserService userService)
         {
             _reservationReadRepository = reservationReadRepository;
             _reservationWriteRepository = reservationWriteRepository;
@@ -43,6 +44,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             _billWriteRepository = billWriteRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _userService = userService;
         }
 
         public async Task<GenericResponseModel<ReservationCreateDTO>> CreateReservation(ReservationCreateDTO reservationCreateDTO)
@@ -72,7 +74,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                             var room = await _roomReadRepository.GetByIdAsync(reservationCreateDTO.RoomId);
                             room.Status = Domain.Enums.RoomStatus.Reserved;
                             _roomWriteRepository.Update(room);
-                            await _unitOfWork.SaveChangesAsync();
+                            //await _unitOfWork.SaveChangesAsync();
 
                             //Add bill
                             await _billWriteRepository.AddAsync(new()
@@ -81,9 +83,10 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                                 GuestId = Guid.Parse(reservationCreateDTO.GuestId),
                                 PaidStatus = false
                             });
-                            await _unitOfWork.SaveChangesAsync();
 
+                            await _unitOfWork.SaveChangesAsync();
                             await _unitOfWork.CommitAsync();
+
                             response.Message = "Reservation created";
                             response.StatusCode = 201;
                             response.Data = reservationCreateDTO;
@@ -139,13 +142,13 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             var reservations = _reservationReadRepository.GetAll()
             .Include(r => r.Guest).Include(r => r.Room).ToList();
 
-            // Project the desired properties
-            //var reservationDTOs = reservations.Select(r => new ReservationGetDTO
-            //{
-            //    GuestName = r.Guest.FirstName,
-            //    RoomNumber = r.Room.RoomNumber,
-            //    // Include other properties as needed
-            //}).ToList();
+            /*Project the desired properties
+            var reservationDTOs = reservations.Select(r => new ReservationGetDTO
+            {
+                GuestName = r.Guest.FirstName,
+                RoomNumber = r.Room.RoomNumber,
+                // Include other properties as needed
+            }).ToList();*/
 
             if (reservations.Any())
             {
@@ -254,7 +257,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             GenericResponseModel<List<ReservationGetDTO>> response = new();
             //var reservations = _reservationReadRepository.GetAll(false).ToList();
             var reservations = _reservationReadRepository.GetWhere(r => r.CheckOutDate < DateTime.Now);
-            
+
             if (reservations.Any())
             {
                 var reservationGetDTO = _mapper.Map<List<ReservationGetDTO>>(reservations);
@@ -282,7 +285,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
 
             if (!Guid.TryParse(guestId, out Guid validId))
                 throw new InvalidIdFormatException(guestId);
-            var reservation = await _reservationReadRepository.GetAll(false).Include(r=>r.Guest).Include(r=>r.Room).Where(r => r.GuestId == validId).ToListAsync();
+            var reservation = await _reservationReadRepository.GetAll(false).Include(r => r.Guest).Include(r => r.Room).Where(r => r.GuestId == validId).ToListAsync();
             if (reservation != null)
             {
                 var reservationDTO = _mapper.Map<List<ReservationGetDTO>>(reservation);
@@ -293,6 +296,88 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             }
             else
                 throw new ReservationNotFoundException(guestId);
+        }
+
+        public async Task<GenericResponseModel<ReservationCancellationDTO>> CancelReservation(string reservationId)
+        {
+            GenericResponseModel<ReservationCancellationDTO> response = new()
+            {
+                Data = null,
+                Message = "Unable to cancel the reservation.",
+                StatusCode = 400
+            };
+
+            var reservation = await _reservationReadRepository.GetByIdAsync(reservationId);
+
+            if (reservation == null)
+            {
+                response.Message = "Reservation not found.";
+                response.StatusCode = 404;
+                return response;
+            }
+
+            using (var transaction = _unitOfWork.BeginTransactionAsync())
+            {
+                try
+                {
+                    // Update room status
+                    var room = await _roomReadRepository.GetByIdAsync(reservation.RoomId.ToString());
+                    room.Status = RoomStatus.Available;
+                    _roomWriteRepository.Update(room);
+
+                    // Remove the reservation
+                    var deleted = await _reservationWriteRepository.RemoveByIdAsync(reservationId);
+                    if (!deleted)
+                    {
+                        response.Message = "Failed to cancel the reservation.";
+                        return response;
+                    }
+
+                    await _unitOfWork.SaveChangesAsync();
+                    await _unitOfWork.CommitAsync();
+
+                    response.Message = "Reservation cancelled successfully.You don't have to do anything.";
+                    response.StatusCode = 200;
+                    return response;
+                }
+                catch (Exception ex)
+                {
+                    // Rollback transaction if any operation fails
+                    await _unitOfWork.RollbackAsync();
+                    // Todo: Log error
+                    response.Message = "An error occurred while processing the cancellation request.";
+                    return response;
+                }
+            }
+        }
+
+        public async Task<GenericResponseModel<List<ReservationGetDTO>>> GetReservationByUserId(string userId)
+        {
+            GenericResponseModel<List<ReservationGetDTO>> response = new()
+            {
+                Data = null,
+                Message = "Unable to get the reservation.",
+                StatusCode = 400
+            };
+
+            if (string.IsNullOrEmpty(userId))
+                throw new CustomArgumentNullException(userId);
+
+            if (!Guid.TryParse(userId, out Guid validId))
+                throw new InvalidIdFormatException(userId);
+
+            var user = await _userService.GetUserById(userId);
+            var reservation = await _reservationReadRepository.GetWhere(r => r.CreatedBy == user.Data.UserName).Include(r=>r.Room).Include(r=>r.Guest).ToListAsync();
+            if (reservation == null)
+            {
+                response.Message = "Reservation didn't found.";
+                return response;
+            }
+
+            response.Message = "Getting reservation successful.";
+            response.Data = _mapper.Map<List<ReservationGetDTO>>(reservation);
+            response.StatusCode = 200;
+            return response;
         }
     }
 }

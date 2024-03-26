@@ -22,6 +22,6 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
         Task<GenericResponseModel<bool>> UpdateUserAsync(UserUpdateDTO model);
         //Task UpdatePasswordAsync(string userId, string resetToken, string newPassword);//todo see again
 
-        Task<string> GetCurrentSessionUserId(IdentityDbContext<AppUser, AppRole, string> dbContext);
+        Task<GenericResponseModel<UserGetDTO>> GetUserById(string userId);
     }
 }

@@ -28,7 +28,7 @@ namespace HotelFinalAPI.API.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = Roles.Admin)]
         public async Task<IActionResult> GetReservationById(string id)
         {
             var result = await _reservationService.GetReservationById(id);
@@ -42,6 +42,16 @@ namespace HotelFinalAPI.API.Controllers
             var result = await _reservationService.GetReservationsByGuestId(guestId);
             return StatusCode(result.StatusCode, result);
         }
+
+
+        [HttpGet("get-by-userid{id}")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
+        public async Task<IActionResult> GetReservationsByUserId(string id)
+        {
+            var result = await _reservationService.GetReservationByUserId(id);
+            return StatusCode(result.StatusCode, result);
+        }
+
         [HttpPost]
         [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
         public async Task<IActionResult> CreateReservation(ReservationCreateDTO reservationCreateDTO)
@@ -71,6 +81,14 @@ namespace HotelFinalAPI.API.Controllers
         public async Task<IActionResult> GetReservationAfterCheckOut()
         {
             var result = await _reservationService.GetReservationAfterCheckOut();
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpPut("cancel-reservation{id}")]
+        [Authorize(AuthenticationSchemes = "Admin", Roles = $"{Roles.Admin},{Roles.User}")]
+        public async Task<IActionResult> CancelReservation(string id)
+        {
+            var result = await _reservationService.CancelReservation(id);
             return StatusCode(result.StatusCode, result);
         }
     }

@@ -14,7 +14,7 @@ namespace HotelFinalAPI.Application.Abstraction.Services.Persistance
     {
         Task<GenericResponseModel<List<RoomGetDTO>>> GetAllRooms();
         Task<GenericResponseModel<RoomGetDTO>> GetRoomById(string id);
-        Task<GenericResponseModel<List<RoomGetDTO>>> GetRoomsFiltered(QueryObject query);
+        Task<GenericResponseModel<List<RoomGetDTO>>> GetRoomsFiltered(QueryObjectRoom query);
         Task<GenericResponseModel<RoomCreateDTO>> CreateRoom(RoomCreateDTO roomCreateDTO);
         Task<GenericResponseModel<RoomUpdateDTO>> UpdateRoom(string id, RoomUpdateDTO roomUpdateDTO);
         Task<GenericResponseModel<bool>> UpdateRoomAfterCheckOut(string id);

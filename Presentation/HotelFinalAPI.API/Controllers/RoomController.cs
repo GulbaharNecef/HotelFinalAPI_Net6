@@ -31,7 +31,7 @@ namespace HotelFinalAPI.API.Controllers
         }
 
         [HttpGet("filter")]
-        public async Task<IActionResult> GetAllRooms([FromQuery] QueryObject query)
+        public async Task<IActionResult> GetAllRooms([FromQuery] QueryObjectRoom query)
         {
             var result = await _roomService.GetRoomsFiltered(query);
             return StatusCode(result.StatusCode, result);

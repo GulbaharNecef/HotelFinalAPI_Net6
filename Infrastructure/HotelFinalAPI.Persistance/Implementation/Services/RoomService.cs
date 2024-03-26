@@ -14,6 +14,7 @@ using HotelFinalAPI.Domain.Entities.DbEntities;
 using HotelFinalAPI.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -110,7 +111,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             GenericResponseModel<List<RoomGetDTO>> response = new();
 
             var rooms = await _roomReadRepository.GetAll(false).ToListAsync();
-            if (rooms.Count() > 0)//Count()=>Linq; Count=>ICollection)
+            if (rooms.Count >= 0)//Count()=>Linq; Count=>ICollection) ve ya Any()
             {
                 var roomGetDTO = _mapper.Map<List<RoomGetDTO>>(rooms);
                 response.Data = roomGetDTO;
@@ -211,22 +212,43 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                     response.Data = true;
                     response.StatusCode = 200;
                     response.Message = "Successful";
+                    return response;
                 }
             }
             response.Data = false;
             response.StatusCode = 400;
+            response.Message = $"The room with id: {id} didn't found";
             return response;
         }
 
-        public async Task<GenericResponseModel<List<RoomGetDTO>>> GetRoomsFiltered(QueryObject query)
+        public async Task<GenericResponseModel<List<RoomGetDTO>>> GetRoomsFiltered(QueryObjectRoom query)
         {
             GenericResponseModel<List<RoomGetDTO>> response = new();
-            var rooms = _roomReadRepository.GetFiltered(query);
+            var roomsQuery = _roomReadRepository.GetAll();
+
+            if (query.MinPrice is not null && query.MaxPrice is not null)
+            {
+                roomsQuery = roomsQuery.Where(r => r.Price >= query.MinPrice && r.Price <= query.MaxPrice);
+            }
+
+            if (!string.IsNullOrWhiteSpace(query.RoomType) && Enum.TryParse(query.RoomType, out RoomTypes roomType))
+            {
+                roomsQuery = roomsQuery.Where(r => r.RoomType == roomType);
+            }
+
+            if (!string.IsNullOrWhiteSpace(query.Status) && Enum.TryParse(query.Status, out RoomStatus status))
+            {
+                roomsQuery = roomsQuery.Where(r => r.Status == status);
+            }
+
+            var rooms = await roomsQuery.ToListAsync();
+
             var mappedRooms = _mapper.Map<List<RoomGetDTO>>(rooms);
             response.Data = mappedRooms;
             response.StatusCode = 200;
             response.Message = "Getting filtered rooms successful.";
             return response;
+
         }
     }
 }
