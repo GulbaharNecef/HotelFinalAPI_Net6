@@ -13,7 +13,9 @@ using HotelFinalAPI.Application.IUnitOfWorks;
 using HotelFinalAPI.Application.Models.ResponseModels;
 using HotelFinalAPI.Domain.Entities.DbEntities;
 using HotelFinalAPI.Domain.Enums;
+using HotelFinalAPI.Persistance.Repositories.GuestRepos;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,11 +32,12 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
         private readonly IRoomReadRepository _roomReadRepository;
         private readonly IRoomWriteRepository _roomWriteRepository;
         private readonly IBillWriteRepository _billWriteRepository;
+        private readonly IGuestWriteRepository _guestWriteRepository;
         private readonly IUserService _userService;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-
-        public ReservationService(IReservationReadRepository reservationReadRepository, IReservationWriteRepository reservationWriteRepository, IGuestReadRepository guestReadRepository, IRoomReadRepository roomReadRepository, IUnitOfWork unitOfWork, IMapper mapper, IBillWriteRepository billWriteRepository, IRoomWriteRepository roomWriteRepository, IUserService userService)
+        private readonly ILogger<Reservation> _logger;
+        public ReservationService(IReservationReadRepository reservationReadRepository, IReservationWriteRepository reservationWriteRepository, IGuestReadRepository guestReadRepository, IRoomReadRepository roomReadRepository, IUnitOfWork unitOfWork, IMapper mapper, IBillWriteRepository billWriteRepository, IRoomWriteRepository roomWriteRepository, IUserService userService, IGuestWriteRepository guestWriteRepository, ILogger<Reservation> logger)
         {
             _reservationReadRepository = reservationReadRepository;
             _reservationWriteRepository = reservationWriteRepository;
@@ -45,42 +48,68 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
             _unitOfWork = unitOfWork;
             _mapper = mapper;
             _userService = userService;
+            _guestWriteRepository = guestWriteRepository;
+            _logger = logger;
         }
 
         public async Task<GenericResponseModel<ReservationCreateDTO>> CreateReservation(ReservationCreateDTO reservationCreateDTO)
         {
-            GenericResponseModel<ReservationCreateDTO> response = new()
+            GenericResponseModel<ReservationCreateDTO> response = new GenericResponseModel<ReservationCreateDTO>()
             {
                 Data = null,
                 Message = "Please, be sure that you enter valid data.",
                 StatusCode = 400
             };
+
             if (await ValidateReservation(reservationCreateDTO))
             {
                 using (var transaction = _unitOfWork.BeginTransactionAsync())
                 {
                     try
                     {
+                        // Check if guest with the provided email already exists
+                        var existingGuest = _guestReadRepository.GetWhere(g => g.Email == reservationCreateDTO.Email).FirstOrDefault();
+                        if (existingGuest == null)
+                        {
+                            // If guest doesn't exist, create a new one
+                            var newGuest = new Guest()
+                            {
+                                FirstName = reservationCreateDTO.FirstName,
+                                LastName = reservationCreateDTO.LastName,
+                                Country = reservationCreateDTO.Country,
+                                Email = reservationCreateDTO.Email,
+                                Phone = reservationCreateDTO.Phone,
+                                DateOfBirth = reservationCreateDTO.DateOfBirth,
+                                EmergencyContact = reservationCreateDTO.EmergencyContact,
+                                SpecialRequests = reservationCreateDTO.SpecialRequests
+                            };
+                            // Add the new guest to the database
+                             await _guestWriteRepository.AddAsync(newGuest);
+                            await _unitOfWork.SaveChangesAsync();
+                            existingGuest = _guestReadRepository.GetWhere(g=>g.Email ==  reservationCreateDTO.Email).FirstOrDefault();
+                        }
+
+                        // Create the reservation
                         var reservation = new Reservation()
                         {
                             CheckInDate = reservationCreateDTO.CheckInDate,
                             CheckOutDate = reservationCreateDTO.CheckOutDate,
-                            GuestId = Guid.Parse(reservationCreateDTO.GuestId),
+                            GuestId = existingGuest?.Id,
                             RoomId = Guid.Parse(reservationCreateDTO.RoomId)
                         };
                         var createdReserv = await _reservationWriteRepository.AddAsync(reservation);
                         if (createdReserv)
                         {
+                            // Update room status to Reserved
                             var room = await _roomReadRepository.GetByIdAsync(reservationCreateDTO.RoomId);
-                            room.Status = Domain.Enums.RoomStatus.Reserved;
+                            room.Status = RoomStatus.Reserved;
                             _roomWriteRepository.Update(room);
-                            //await _unitOfWork.SaveChangesAsync();
 
-                            //Add bill
-                            await _billWriteRepository.AddAsync(new()
+                            // Add bill
+                            await _billWriteRepository.AddAsync(new Bill()
                             {
                                 Amount = await CalculateBill(reservationCreateDTO),
-                                GuestId = Guid.Parse(reservationCreateDTO.GuestId),
+                                GuestId = existingGuest.Id,
                                 PaidStatus = false
                             });
 
@@ -97,7 +126,8 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                     {
                         // Rollback transaction if any operation fails
                         await _unitOfWork.RollbackAsync();
-                        //todo loga yaz  
+                        // Log the exception
+                        _logger.LogError(ex, "Error occurred while processing the reservation.");
                         response.Message = "Error occurred while processing the reservation.";
                     }
                 }
@@ -225,22 +255,17 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
         private async Task<bool> ValidateReservation(ReservationCreateDTO reservationCreateDTO)
         {
 
-            if (!Guid.TryParse(reservationCreateDTO.GuestId, out _))
-                throw new InvalidIdFormatException();
+            //if (!Guid.TryParse(reservationCreateDTO.GuestId, out _))
+            //    throw new InvalidIdFormatException();
             if (!Guid.TryParse(reservationCreateDTO.RoomId, out _))
                 throw new InvalidIdFormatException();
             var room = await _roomReadRepository.GetByIdAsync(reservationCreateDTO.RoomId);
-            if (room != null && room.Status == Domain.Enums.RoomStatus.Available)
-            {//todo otaq indi available olmaya biler amma belke check in check out geleceydedirse onda available olacaq
-                var guest = await _guestReadRepository.GetByIdAsync(reservationCreateDTO.GuestId);
-                if (guest != null)
-                {
-                    return true;
-                }
+            if (room != null && room.Status == RoomStatus.Available)
+            {//todo otaq indi available olmaya biler amma belke check in check out geleceydedirse onda available olacaq                
+                return true;
             }
             else
                 return false;
-            return false;
         }
 
         private async Task<decimal> CalculateBill(ReservationCreateDTO reservationCreateDTO)
@@ -367,7 +392,7 @@ namespace HotelFinalAPI.Persistance.Implementation.Services
                 throw new InvalidIdFormatException(userId);
 
             var user = await _userService.GetUserById(userId);
-            var reservation = await _reservationReadRepository.GetWhere(r => r.CreatedBy == user.Data.UserName).Include(r=>r.Room).Include(r=>r.Guest).ToListAsync();
+            var reservation = await _reservationReadRepository.GetWhere(r => r.CreatedBy == user.Data.UserName).Include(r => r.Room).Include(r => r.Guest).ToListAsync();
             if (reservation == null)
             {
                 response.Message = "Reservation didn't found.";

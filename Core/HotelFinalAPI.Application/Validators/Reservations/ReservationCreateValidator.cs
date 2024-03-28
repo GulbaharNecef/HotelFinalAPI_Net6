@@ -15,9 +15,9 @@ namespace HotelFinalAPI.Application.Validators.Reservations
     {
         public ReservationCreateValidator()
         {
-            RuleFor(r => r.GuestId)
-                .NotEmpty().WithMessage("GuestId cannot be empty")
-                .Must(guestId => Guid.TryParse(guestId, out _)).WithMessage("Guest Id must be a valid Guid");
+            //RuleFor(r => r.GuestId)
+            //    .NotEmpty().WithMessage("GuestId cannot be empty")
+            //    .Must(guestId => Guid.TryParse(guestId, out _)).WithMessage("Guest Id must be a valid Guid");
 
             RuleFor(r => r.RoomId)
                 .NotEmpty().WithMessage("Room cannot be empty")

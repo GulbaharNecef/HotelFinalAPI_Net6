@@ -18,6 +18,10 @@ namespace HotelFinalAPI.Persistance.Configurations.EntityConfigs
                 .WithMany(g => g.Reservations)
                 .HasForeignKey(g => g.GuestId);
 
+            //builder.HasOne<Bill>(b => b.Bill)
+            //    .WithOne(b=>b.Reservation)
+            //    .HasForeignKey<Bill>(b=>b.ReservationId);
+
             //builder.HasKey(r => r.ReservationId);Id leri base de tutacam 
 
             //Room ve Rezervasiya arasinda one to many relationship
